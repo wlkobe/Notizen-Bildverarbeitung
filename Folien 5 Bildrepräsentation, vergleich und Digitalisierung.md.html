@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>Folien 5 Bildrepräsentation, vergleich und Digitalisierung</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); border-image: initial; background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.04); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.markdown-preview pre.editor-colors { user-select: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.markdown-preview ul label { vertical-align: top; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher.bracket-matcher {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+
+.ftpconfig_line_error {
+  background: rgba(255, 0, 0, 0.5) !important;
+}
+.btn.btn-float-left {
+  float: left !important;
+}
+.btn.btn-float-right {
+  float: right !important;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 139, 255, 0.24);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #528bff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #abb2bf;
+}
+.syntax--comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #5c6370;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #98c379;
+}
+.syntax--keyword {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--control {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #61afef;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #d19a66;
+}
+.syntax--storage {
+  color: #c678dd;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #c678dd;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #abb2bf;
+}
+.syntax--constant {
+  color: #d19a66;
+}
+.syntax--constant.syntax--variable {
+  color: #d19a66;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--numeric {
+  color: #d19a66;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #56b6c2;
+}
+.syntax--variable {
+  color: #e06c75;
+}
+.syntax--variable.syntax--interpolation {
+  color: #be5046;
+}
+.syntax--variable.syntax--parameter {
+  color: #abb2bf;
+}
+.syntax--string {
+  color: #98c379;
+}
+.syntax--string > .syntax--source,
+.syntax--string .syntax--embedded {
+  color: #abb2bf;
+}
+.syntax--string.syntax--regexp {
+  color: #56b6c2;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #e5c07b;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e06c75;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #5c6370;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #61afef;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #be5046;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #abb2bf;
+}
+.syntax--support.syntax--class {
+  color: #e5c07b;
+}
+.syntax--support.syntax--type {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e06c75;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #d19a66;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #61afef;
+}
+.syntax--meta.syntax--class {
+  color: #e5c07b;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e06c75;
+}
+.syntax--meta.syntax--link {
+  color: #d19a66;
+}
+.syntax--meta.syntax--require {
+  color: #61afef;
+}
+.syntax--meta.syntax--selector {
+  color: #c678dd;
+}
+.syntax--meta.syntax--separator {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--tag {
+  color: #abb2bf;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #abb2bf;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: white !important;
+  background-color: #e05252 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #c678dd;
+}
+.syntax--markup.syntax--deleted {
+  color: #e06c75;
+}
+.syntax--markup.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e06c75;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #61afef;
+}
+.syntax--markup.syntax--link {
+  color: #56b6c2;
+}
+.syntax--markup.syntax--inserted {
+  color: #98c379;
+}
+.syntax--markup.syntax--quote {
+  color: #d19a66;
+}
+.syntax--markup.syntax--raw {
+  color: #98c379;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--constant.syntax--language,
+.syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
+.syntax--source.syntax--elixir .syntax--constant.syntax--definition {
+  color: #61afef;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--definition,
+.syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
+  color: #c678dd;
+}
+.syntax--source.syntax--elixir .syntax--parameter.syntax--variable.syntax--function {
+  color: #d19a66;
+  font-style: italic;
+}
+.syntax--source.syntax--elixir .syntax--quoted {
+  color: #98c379;
+}
+.syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--section,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--regexp.syntax--section,
+.syntax--source.syntax--elixir .syntax--regexp.syntax--string {
+  color: #be5046;
+}
+.syntax--source.syntax--elixir .syntax--separator,
+.syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
+  color: #d19a66;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--constant {
+  color: #e5c07b;
+}
+.syntax--source.syntax--elixir .syntax--array,
+.syntax--source.syntax--elixir .syntax--scope,
+.syntax--source.syntax--elixir .syntax--section {
+  color: #828997;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #61afef;
+}
+.syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
+  color: #c678dd;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e06c75;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #c678dd;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e06c75;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #abb2bf;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
+  color: #c678dd;
+}
+.syntax--source.syntax--ts .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--flow .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--interpolation {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation.syntax--begin,
+.syntax--ng.syntax--interpolation.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--function {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation .syntax--function.syntax--begin,
+.syntax--ng.syntax--interpolation .syntax--function.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--bool {
+  color: #d19a66;
+}
+.syntax--ng.syntax--interpolation .syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--pipe,
+.syntax--ng.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--tag {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--attribute-name {
+  color: #e5c07b;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string {
+  color: #c678dd;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--begin,
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--end {
+  color: #abb2bf;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
+  color: inherit;
+}
+.syntax--source.syntax--php .syntax--class.syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
+  color: #c678dd;
+}
+.syntax--source.syntax--python .syntax--variable.syntax--parameter {
+  color: #d19a66;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><ul>
+<li><a href="#folien-5-bildrepräsentation-vergleich-und-digitalisierung">Folien 5 Bildrepräsentation, vergleich und Digitalisierung</a><ul>
+<li><a href="#51-bildanalyse">5.1 Bildanalyse</a><ul>
+<li><a href="#511-motivation-der-lehrveranstaltung">5.1.1 Motivation der Lehrveranstaltung</a></li>
+<li><a href="#512-beispiel-deep-learning-architektur">5.1.2 Beispiel: Deep Learning Architektur</a></li>
+</ul>
+</li>
+<li><a href="#52-bildrepräsentation">5.2 Bildrepräsentation</a><ul>
+<li><a href="#521-digitale-bilder-im-ortsraum">5.2.1 Digitale Bilder im Ortsraum</a><ul>
+<li><a href="#5211-art-der-information">5.2.1.1 Art der Information</a></li>
+<li><a href="#5212-pixel">5.2.1.2 Pixel</a></li>
+<li><a href="#5213-pixel-und-voxel">5.2.1.3 Pixel und Voxel</a></li>
+<li><a href="#5214-auflösung">5.2.1.4 Auflösung</a></li>
+<li><a href="#5215-quantisierung">5.2.1.5 Quantisierung</a></li>
+<li><a href="#5216-speicherbedarf">5.2.1.6 Speicherbedarf</a></li>
+<li><a href="#5217-nachbarschaftsoperationen">5.2.1.7 Nachbarschaftsoperationen</a></li>
+<li><a href="#5218-distanzen">5.2.1.8 Distanzen</a></li>
+</ul>
+</li>
+<li><a href="#522-bilder-als-vektoren">5.2.2 Bilder als Vektoren</a></li>
+<li><a href="#523-zerlegung-und-rekonstruktion">5.2.3 Zerlegung und Rekonstruktion</a><ul>
+<li><a href="#5231-unüberwachtes-lernen">5.2.3.1 Unüberwachtes Lernen</a></li>
+<li><a href="#basisbilder">Basisbilder</a></li>
+</ul>
+</li>
+<li><a href="#524-wellenzahlraum">5.2.4 Wellenzahlraum</a><ul>
+<li><a href="#5241-periodische-basisbilder-im-ortsraum">5.2.4.1 Periodische Basisbilder im Ortsraum</a></li>
+<li><a href="#5242-2d-fouriertransformation">5.2.4.2 2D Fouriertransformation</a></li>
+<li><a href="#5243-2d-diskrete-fouriertransformation">5.2.4.3 2D Diskrete Fouriertransformation</a></li>
+<li><a href="#5244-komplexe-basisbilder">5.2.4.4 Komplexe Basisbilder</a></li>
+</ul>
+</li>
+<li><a href="#525-fouriertransformation">5.2.5 Fouriertransformation</a><ul>
+<li><a href="#5251-beispiel">5.2.5.1 Beispiel</a></li>
+<li><a href="#5252-separabilität">5.2.5.2 Separabilität</a></li>
+<li><a href="#5253-faltungstheorem">5.2.5.3 Faltungstheorem</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#53-2d-signalverarbeitung">5.3 2D Signalverarbeitung</a><ul>
+<li><a href="#531-nachbarschaftsoperationen">5.3.1 Nachbarschaftsoperationen</a><ul>
+<li><a href="#5311-bedeutung">5.3.1.1 Bedeutung</a></li>
+<li><a href="#5312-definition">5.3.1.2 Definition</a></li>
+<li><a href="#5313-diskrete-faltung">5.3.1.3 Diskrete Faltung</a></li>
+<li><a href="#5314-faltung-korrelation">5.3.1.4 Faltung &amp; Korrelation</a><ul>
+<li><a href="#53141-randbehandlung">5.3.1.4.1 Randbehandlung</a></li>
+<li><a href="#53142-effektive-berechnung">5.3.1.4.2 Effektive Berechnung</a><ul>
+<li><a href="#531421-ipp-vergleich">5.3.1.4.2.1 IPP Vergleich</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#5315-faltung">5.3.1.5 Faltung</a><ul>
+<li><a href="#53151-punktantwort">5.3.1.5.1 Punktantwort</a></li>
+<li><a href="#53152-transferfunktion">5.3.1.5.2 Transferfunktion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#54-digitale-kamera">5.4 Digitale Kamera</a><ul>
+<li><a href="#541-digitalisierung">5.4.1 Digitalisierung</a><ul>
+<li><a href="#5411-mathematische-beschreibung">5.4.1.1 Mathematische Beschreibung</a></li>
+<li><a href="#5412-intensitätsmittelung">5.4.1.2 Intensitätsmittelung</a></li>
+<li><a href="#5413-abtastung">5.4.1.3 Abtastung</a></li>
+<li><a href="#5414-abtasttheorem">5.4.1.4 Abtasttheorem</a></li>
+<li><a href="#5415-ortsbegrenzung">5.4.1.5 Ortsbegrenzung</a></li>
+<li><a href="#5416-perfekte-rekonstruktion">5.4.1.6 Perfekte Rekonstruktion</a></li>
+</ul>
+</li>
+<li><a href="#542-aliasing">5.4.2 Aliasing</a><ul>
+<li><a href="#5421-moire-effekt">5.4.2.1 Moire-Effekt</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<h1 id="folien-5-bildrepr-sentation-vergleich-und-digitalisierung">Folien 5 Bildrepräsentation, vergleich und Digitalisierung</h1>
+<hr>
+<h2 id="5-1-bildanalyse">5.1 Bildanalyse</h2>
+<p><strong>Bildanalyse</strong> ist ein <em>spezieller Teilbereich der Mustererkennung</em> und damit Teilgebiet der künstlichen Intelligenz
+图像分析是模式识别的一个特殊部分，因此也是人工智能的一部分</p>
+<p><strong>Mustererkennung</strong> hat seinen Ursprung in den <em>Ingenieurswissenschaften</em> und das <strong>Maschinelle Lernen</strong> entstand in der <em>Informatik</em>
+模式识别起源于计算机科学中的工程和机器学习</p>
+<p>Beide Forschungsfelder behandeln den gleichen Stoff mit unterschiedlichen Akzenten
+两个研究领域都用不同的口音对待同一种物质</p>
+<p>Wir fokussieren uns in dieser Veranstaltung auf die <strong>signaltheoretischen Aspekte</strong> zum Erzeugen von <em>geeigneten Repräsentationen von Bildern</em>.
+在这种情况下，我们专注于信号理论方面，以产生适当的图像表示</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_1.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_2.png"></p>
+<p><em>Repräsentationen von Bildern oder Bildausschnitten</em> werden in <strong>Merkmalsvektoren</strong>, auch <strong>Deskriptoren</strong> genannt, abgelegt
+图像或图像部分的表示存储在特征向量中，也称为描述符</p>
+<p>Diese <strong>Repräsentationen</strong> können <em>von Hand entworfen</em> werden, oder <em>über eine Lernarchitektur anhand von Daten</em> gelernt werden, wobei dann der <em>Entwurf der Lernarchitektur</em> und die <em>Auswahl der Lerndaten</em> <strong>von Hand</strong> ausgeführt werden muss
+这些表示可以手工设计或通过学习架构从数据中学习，然后学习架构的设计和学习数据的选择必须手工完成</p>
+<p>Beim <strong>Lernen von Merkmalsvektoren</strong> werden vorrangig <em>unüberwachte Lernmethoden</em> eingesetzt.
+在学习特征向量时，优先考虑无监督学习方法</p>
+<h3 id="5-1-1-motivation-der-lehrveranstaltung">5.1.1 Motivation der Lehrveranstaltung</h3>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_3.png"></p>
+<ul>
+<li>Wie wird ein <strong>Bildverarbeitungsproblem</strong> gelöst?<ul>
+<li>Mathematische Modelle für 数学模型<ul>
+<li>Geometrie und Physik der Welt 世界的几何和物理</li>
+<li><strong>Zusammenhang</strong> zwischen <em>Bilddaten und visuellen Zuständen</em> 图像数据与视觉状态之间的关系</li>
+<li><strong>Zusammenhang</strong> zwischen <em>visuellen Zuständen</em>. 视觉状态之间的关系</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-1-2-beispiel-deep-learning-architektur">5.1.2 Beispiel: Deep Learning Architektur</h3>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_4.png"></p>
+<ul>
+<li><p>Beispiel von gelernten Filtermasken zur <strong>Merkmalsextraktion</strong> auf unterschiedlichen Abstraktionsebenen (lokal - global)
+用于在不同抽象级别（本地 - 全局）的特征提取的学习过滤器掩码的示例</p>
+</li>
+<li><p>Diese <strong>gelernten Filtermasken</strong> besitzen viele Eigenschaften, welche von Hand entworfene Filter ebenfalls besitzen
+这些学习过滤掩模具有许多属性，这些属性也具有手工设计的滤波器</p>
+</li>
+<li><p>Um gelernte Filtermasken zu <strong>bewerten</strong>, ist auch <em>ein gutes Verständnis</em> über den Entwurf von Filtern und deren Implementierung <em>nötig</em>.
+评估学习过滤器掩模需要很好地理解过滤器的设计及其实现</p>
+</li>
+</ul>
+<hr>
+<h2 id="5-2-bildrepr-sentation">5.2 Bildrepräsentation</h2>
+<h3 id="5-2-1-digitale-bilder-im-ortsraum">5.2.1 Digitale Bilder im Ortsraum</h3>
+<h4 id="5-2-1-1-art-der-information">5.2.1.1 Art der Information</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_5.png"></p>
+<p>Bilder stellen eine flächenhafte Verteilung der Bestrahlungsstärke E eines bestimmten Ausschnittes der Umwelt in einer Ebene (x, y) dar.
+图像表示平面（x，y）中环境的特定部分的辐照度E的平面分布</p>
+<h4 id="5-2-1-2-pixel">5.2.1.2 Pixel</h4>
+<p><strong>Digitalisierung</strong> ist die <em>Rasterung eines Bildes E(x)</em> mit kontinuierlichen Koordinaten x = [x, y]T auf eine zweidimensionale Bildmatrix {G = G(p)}p mit den Rasterpunkten p = [m, n]T.
+数字化是将具有连续坐标x = [x，y] T的图像E（x）光栅化到具有光栅点p = [m，n] T的二维图像矩阵{G = G（p）} p上</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_6.png"></p>
+<p>Einen Bildpunkt auf dem Gitter nennt man <strong>Pixel (picture element)</strong> mit der rechteckigen Pixelfläche ∆x×∆y
+网格上的像素被称为具有矩形像素区域Δx×Δy的像素（像素）</p>
+<p>Die <strong>Pixelposition p = [m, n]T</strong> wird mit einem Zahlenpaar angegeben, wobei m als Zeilenindex und n als Spaltenindex bezeichnet wird
+像素位置p由一对数字表示，其中m称为行索引，n是列索引</p>
+<p>M ist die Zeilenanzahl und N die Spaltenanzahl der Bildmatrix.
+M是行数，N是图像矩阵的列数</p>
+<h4 id="5-2-1-3-pixel-und-voxel">5.2.1.3 Pixel und Voxel</h4>
+<p>Jedes <strong>Pixel</strong> repäsentiert eine rechteckige Region, eine Elementarzelle, des Gitters
+每个像素表示网格的矩形区域，基本单元格</p>
+<p>Der dazugehörige Wert entspricht der <strong>mittleren Bestrahlungsstärke</strong>
+相应的值对应于平均辐照度</p>
+<p>In der Bildverarbeitung kommen auch <strong>drei- oder höherdimensionale Signale</strong> vor
+在图像处理中，也发生三维或更高维信号</p>
+<ul>
+<li>Farbbilder (RGB-Kanalbilder)
+彩色图像（RGB通道图像）</li>
+<li>Reihe von Schnittbildern (z.B. Tomographie)
+系列截面图像（例如 : 断层扫描）</li>
+<li>Videosequenz von Grau- oder Farbbildern
+灰度或彩色图像的视频序列</li>
+</ul>
+<p>3-D Bilder bestehen aus <strong>Voxel</strong> (volume element), deren Wert <strong>G(m, n, l)</strong> den <em>mittleren Grauwert eines Würfelelementes</em> an der Stelle (x, y, z) repräsentieren.
+3-D图像由体素（体积元素）组成，其值G（m，n，l）表示位置（x，y，z）处的立方体元素的平均灰度值</p>
+<h4 id="5-2-1-4-aufl-sung">5.2.1.4 Auflösung</h4>
+<p>Je niedriger die Abtastung, desto kleiner die Auflösung des digitalen Bildes
+采样越低，数字图像的分辨率越小</p>
+<p><strong>Welche räumliche (und zeitliche) Auflösung ist nötig/sinnvoll?</strong>
+哪种空间（和时间）分辨率是必要/有用的？</p>
+<p>Die <em>Frage ist abhängig von der Aufgabe</em>:
+问题取决于任务：</p>
+<ul>
+<li><strong>Bildbetrachtung</strong>: Pixelgröße sollte z.B. <em>kleiner als die visuelle Auflösung</em> des menschlichen Sehsystems sein
+图片评论：例如，像素尺寸应小于人类视觉系统的视觉分辨率</li>
+<li><strong>Objekterkennung</strong>: Pixelgröße sollte z.B. <em>kleiner sein als die kleinsten Objekte</em>, die untersucht werden sollen
+对象检测：例如，像素大小应小于要检查的最小对象</li>
+<li><strong>Bildbewegungen</strong>: Die <strong>Zeitdiskretisierung</strong> muss so fein sein, das z.B. alle zu analysierenden Pixel trotz <em>Pixelverschiebungen</em> zwischen zwei aufeinanderfolgenden Bildern <em>innerhalb einer ROI</em> (Region of Interest) verbleiben.
+图像移动：时间离散化必须非常精细，例如，尽管两个连续图像之间的像素移位，但是要分析的所有像素仍保持在ROI（感兴趣区域）内</li>
+</ul>
+<h4 id="5-2-1-5-quantisierung">5.2.1.5 Quantisierung</h4>
+<p>Der kontinuierliche Wertebereich der gemessenen Bestrahlungsstärke wird auf eine begrenzte Anzahl Q (Quantisierungsstufen) diskreter Grauwerte abgebildet
+测量的辐照度的连续值范围被映射到离散灰度值的有限数量Q（量化水平）</p>
+<p><strong>Wieviele Quantisierungsstufen sind nötig?</strong>
+需要多少量化级别？</p>
+<p>Diese Frage hängt wieder von der Aufgabe ab:
+这个问题又取决于任务：</p>
+<ul>
+<li><p>Wie hoch ist der <strong>Kontrast</strong> in den Bildbereichen, in denen ich z.B. ein Objekt erkennen möchte
+我喜欢的图像区域的对比度是多少,想要识别一个物体</p>
+</li>
+<li><p>Ab wieviel <strong>Quantisierungsstufen</strong> nimmt der <em>Mensch Grauwertübergange als kontinuierlich</em> war?
+从多少量化级别来看，人类将灰度级转换视为连续的？</p>
+</li>
+<li><p>Werden <strong>falsche Kanten</strong> erzeugt?
+是否创建错误的边缘？</p>
+</li>
+</ul>
+<h4 id="5-2-1-6-speicherbedarf">5.2.1.6 Speicherbedarf</h4>
+<p><strong>Standardmäßig</strong> werden <em>Grauwertbilder</em> bzw ein Farbkanal mit einer <em>Farb-Bit-Tiefe von 8 Bit</em>, was 256 ganzzahligen Wertestufen entspricht, quantisiert
+默认情况下，灰度级图像或颜色位深度为8位的颜色通道（对应于256个整数值级别）被量化</p>
+<p>Für eine <strong>Standardauflösung von 640 × 480 Pixel</strong> (z.B Graphikstandard VGA=Video Graphics Array), einer Farbtiefe von 8 Bit (z.B RGB-Farbraum) pro Farbkanal und einer Bildwiederholrate von 25 Hertz (PAL Fernsehnorm), ergibt sich folgender Speicherbedarf
+对于640×480像素的标准分辨率（例如图形标准VGA =视频图形阵列），每个颜色通道的颜色深度为8位（例如RGB颜色空间），图像重复率为25赫兹（PAL电视标准）结果遵循内存要求</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_7.png"></p>
+<h4 id="5-2-1-7-nachbarschaftsoperationen">5.2.1.7 Nachbarschaftsoperationen</h4>
+<p><strong>Objekte</strong> bedecken fast immer eine <em>zusammenhängende Region von einzelnen Pixeln</em>
+对象几乎总是覆盖单个像素的连续区域</p>
+<p>Zur <strong>Beschreibung eines Objektes</strong> bzw einer Bildregion spielt die Auswertung von <strong>Nachbarschaftsbeziehungen</strong> eine <strong>grundlegende Rolle</strong>
+对于对象或图像区域的描述，对邻居关系的分析起着基本作用</p>
+<p>Ein <strong>direkter Nachbarpixel</strong> muss eine <em>gemeinsame Kante oder mindestens eine gemeinsame Ecke aufweisen</em>
+直接相邻像素必须具有公共边缘或至少具有公共角</p>
+<p><strong>Prinzipiell</strong> können aber auch <em>größere Nachbarschaften für einen Pixel</em> definiert werden, wobei <em>nicht alle Nachbarpixel direkt angrenzen</em>.
+原则上，也可以为一个像素定义较大的邻域，但并非所有相邻像素都直接相邻</p>
+<h4 id="5-2-1-8-distanzen">5.2.1.8 Distanzen</h4>
+<p>Jeder <strong>Gitterpunkt p</strong> eines diskreten Bildes hat einen <strong>Gittervektor</strong>
+离散图像的每个网格点p具有网格矢量</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_8.png"></p>
+<p>Damit ergibt sich die <strong>euklidische Distanz</strong> auf einem diskreten Gitter wie folgt:
+这会在离散网格上产生欧几里德距离，如下所示：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_9.png"></p>
+<p>Es lassen sich noch <strong>weitere Distanzen</strong> auf einem Gitter definieren, die jedoch <em>für praktische Anwendungen</em>, wie z.B Vermessungsaufgaben, nicht relevant sind, da sie <strong>richtungsabhängig</strong> sind.
+可以在网格上定义其他距离，但这些距离与实际应用无关，例如测量任务，因为它们是方向相关的</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_10.png"></p>
+<h3 id="5-2-2-bilder-als-vektoren">5.2.2 Bilder als Vektoren</h3>
+<h3 id="5-2-3-zerlegung-und-rekonstruktion">5.2.3 Zerlegung und Rekonstruktion</h3>
+<h4 id="5-2-3-1-un-berwachtes-lernen">5.2.3.1 Unüberwachtes Lernen</h4>
+<p>Generatives Modell:
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_11.png"></p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_13.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_14.png"></p>
+<p>Gütekriterium:
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_12.png"></p>
+<p><strong>Anwendungen</strong></p>
+<ul>
+<li>PCA, ICA, NMF, ..</li>
+<li>K-Means, Gaussian Mixtures, Fuzzy-C-means, ..</li>
+<li>Codebook/Representation learning, Klassifikation, ...</li>
+</ul>
+<h4 id="basisbilder">Basisbilder</h4>
+<p>Man kann sich jedes M×N Bild G als gewichtete Summe aus M×N unterschiedlichen Basisbildern Bm,n mit den einzelnen Grauwerten Gm,n als Gewichte vorstellen:
+可以将每个M×N图像G想象为M×N个不同基本图像Bm，n的加权和，其中各个灰度值Gm，n作为权重：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_15.png"></p>
+<p>Jedes <strong>Basisbild Bm,n</strong> hat <strong>nur</strong> <em>an einem Bildpunkt (m, n) den Wert eins</em>, an allen <em>anderen Bildpunkten den Wert null</em>:
+每个基本图像Bm，n仅在一个图像点（m，n）处具有值1，并且在所有其他图像点处的值为零：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_17.png"></p>
+<p>Diese <strong>Basisbilder bilden eine orthonormale Basis</strong>, da das <em>innere Produkt</em> zweier unterschiedlicher Basisvektoren:
+这些基本图像形成了一个标准正交基础，因为两个不同基向量的内积：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_16.png"></p>
+<p><em>immer null</em> ergibt und das <em>innere Produkt eines Basisbildes mit sich selbst immer eins</em>
+始终为零，基本图像的内在产品本身就是一个</p>
+<p>Die <strong>Basisvektoren</strong> spannen damit einen M × N - dimensionalen Vektorraum auf
+因此，基矢量跨越M×N维向量空间</p>
+<p>Ein <strong>Bild</strong> entspricht also einem <em>M×N - dimensionalen Vektor</em> in diesem Vektorraum
+因此，图像对应于该向量空间中的M×N维向量</p>
+<p>Ändert man nun die Koordinaten, geht keine Bildinformation verloren, sondern nur die Koordinaten werden verändert
+如果现在更改坐标，则不会丢失任何图像信息，只会更改坐标</p>
+<blockquote>
+<p>Das bedeutet, die gleiche Information wird aus einem anderen „Blickwinkel“ betrachtet.
+这意味着从不同的“视角”查看相同的信息</p>
+</blockquote>
+<h3 id="5-2-4-wellenzahlraum">5.2.4 Wellenzahlraum</h3>
+<h4 id="5-2-4-1-periodische-basisbilder-im-ortsraum">5.2.4.1 Periodische Basisbilder im Ortsraum</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_18.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_19.png"></p>
+<p>Ein <strong>zweidimensionales periodisches Muster</strong> (G(x) = r cos(2πk&gt;x − ’)) ist gegeben durch:</p>
+<ul>
+<li>Wellenzahl-Vektor k = [k1, k2]T</li>
+<li>Wellenlänge λ</li>
+<li>Betrag des Wellenzahl-Vektors |k| = 1/λ</li>
+<li>Amplitude r</li>
+<li>Abstand des ersten Maximums vom Ursprung ∆x</li>
+<li>Phasenwinkel ’ = 2π∆x=λ = 2π∆xjkj</li>
+</ul>
+<h4 id="5-2-4-2-2d-fouriertransformation">5.2.4.2 2D Fouriertransformation</h4>
+<p>Die <strong>kontinuierliche 2D Fouriertransformation</strong> zerlegt eine kontinuierliche 2D Bildfunktion in periodische Strukturen unterschiedlicher Wellenlänge und Richtung.
+连续2D傅立叶变换将连续2D图像函数分解为不同波长和方向的周期性结构</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_20.png"></p>
+<h4 id="5-2-4-3-2d-diskrete-fouriertransformation">5.2.4.3 2D Diskrete Fouriertransformation</h4>
+<p>Die <strong>2D-DFT</strong> bildet komplexwertige (oder reellwertige) M×N-Matrizen auf komplexwertige M × N-Matrizen ab:
+2D-DFT将复值（或实值）MxN矩阵映射到复值MxN矩阵：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_21.png"></p>
+<p>Die <strong>inverse 2D-DFT</strong> ergibt sich entsprechend zu:</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_22.png"></p>
+<p>Die Matrizen Wu,v können als Basisbilder aufgefasst werden, die einen N × M dimensionalen Vektorraum über dem Körper der komplexen Zahlen aufspannen
+矩阵Wu，v可以被认为是跨越复数体上的N×M维空间的基本图像</p>
+<p>Deswegen kann die <strong>DFT</strong> auch als eine <em>Koordinatentransformation in einem komplexen N × M-dimensionalen Vektorraum</em> verstanden werden
+因此，DFT也可以被理解为复N×M维向量空间中的坐标变换</p>
+<h4 id="5-2-4-4-komplexe-basisbilder">5.2.4.4 Komplexe Basisbilder</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_23.png"></p>
+<p>Die <strong>2D DFT</strong> berechnet die <strong>Projektionen des Bildes G</strong> <em>auf alle Basisbilder Wu,v des Fourierraums</em>, also die Komponenten Gˆ u,v von G in Richtung der Basisbilder
+2D DFT计算图像G在傅立叶空间的所有基本图像Wu，v上的投影，即在基本图像的方向上的G的分量G u，v</p>
+<p><strong>Real- und Imaginärteil der Basisbilder</strong> sind <em>abgetastete periodische Muster mit unterschiedlichen Wellenzahl-Vektoren k</em> von ganzzahligen Vektorkomponenten k1 = u, k2 = v.
+基本图像的实部和虚部是采样周期模式，其中不同的波数矢量k为整数矢量分量k1 = u，k2 = v</p>
+<h3 id="5-2-5-fouriertransformation">5.2.5 Fouriertransformation</h3>
+<h4 id="5-2-5-1-beispiel">5.2.5.1 Beispiel</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_24.png"></p>
+<h4 id="5-2-5-2-separabilit-t">5.2.5.2 Separabilität</h4>
+<p>Durch die <strong>Eigenschaft der Separabilität</strong> können Probleme aus dem Zweidimensionalen auf den eindimensionalen Fall zurückgeführt werden
+由于可分离性，可以将问题从二维情况归因于一维情况</p>
+<p>Das <strong>Prinzip</strong> findet in der Bildverarbeitung <em>sehr oft Anwendung</em>, weil es <em>getrennte Berechnungen entlang von Zeilen und Spalten der Bildmatrix erlaubt</em>
+该原理经常用于图像处理，因为它允许沿图像矩阵的行和列进行单独计算</p>
+<p>Eine mehrdimensionale Funktion ist <strong>separabel</strong> falls gilt:
+在以下情况下，多维函数是可分离的：
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_25.png"></p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_26.png"></p>
+<p>Die <strong>Singulärwertzerlegung (SVD)</strong> erzeugt eine <strong>Matrixzerlegung</strong> in eine gewichtete Summe von separablen Matrizen
+奇异值分解（SVD）生成矩阵分解为可分离阵列的加权和</p>
+<p>Damit kann überprüft werden, ob eine Matrix <strong>separabel</strong> ist
+这可用于检查矩阵是否可分离</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_27.png"></p>
+<h4 id="5-2-5-3-faltungstheorem">5.2.5.3 Faltungstheorem</h4>
+<p>Die <strong>diskrete 2D Faltung</strong> ist eine der <strong>bedeutendsten Operationen</strong> der Bildverarbeitung im Ortsraum (siehe auch Filterung):
+离散2D卷积是空间中最重要的图像处理操作之一（另请参见过滤）:</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_28.png"></p>
+<p>Das bedeutet, die <strong>Faltung im Ortsraum</strong> ist äquivalent zu einer <strong>komplexen Multiplikation im Fourierraum</strong>
+这意味着空间卷积相当于傅立叶空间中的复数乘法</p>
+<p><strong>Faltungstheorem</strong>:
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_29.png"></p>
+<p>Diese <strong>Eigenschaft</strong> wird vor allem dazu verwendet eine Menge an Faltungen von einem Bild mit unterschiedlichen Faltungskernen schnell zu berechnen, indem man alle Kerne und das Bild in den Fourierraum transformiert, jeden Kern mit dem Bild multipliziert, und dann alle Ergebnisbilder in den Ortsraum rücktransformiert
+此属性主要用于通过将所有内核和图像转换为傅里叶空间，将每个内核与图像相乘，然后将所有结果图像反向转换为位置空间，从具有不同卷积内核的图片中快速计算一组卷积</p>
+<p>Zusätzliche <strong>Beschleunigung</strong> erreicht man durch <em>effiziente Berechnung der DFT mit der FFT</em>
+通过FFT有效地计算DFT来实现额外的加速</p>
+<hr>
+<h2 id="5-3-2d-signalverarbeitung">5.3 2D Signalverarbeitung</h2>
+<h3 id="5-3-1-nachbarschaftsoperationen">5.3.1 Nachbarschaftsoperationen</h3>
+<h4 id="5-3-1-1-bedeutung">5.3.1.1 Bedeutung</h4>
+<p><strong>Nachbarschaftsoperationen</strong> sind wahrscheinlich die wichtigsten und am meisten verwendeten Operationen in der Bildverarbeitung
+邻域操作可能是最重要和最常用的图像处理操作</p>
+<p>Das liegt daran, dass die <strong>wesentliche Information</strong> eines Bildes <em>in der räumlichen Konfiguration der Grauwerte verborgen ist</em>
+这是因为图像的基本信息隐藏在灰度值的空间配置中</p>
+<p><strong>Nachbarschaftsoperationen</strong> <em>geben Auskunft über bestimmte Eigenschaften</em> der räumlichen Konfiguration innerhalb eines kleinen Bildausschnittes
+邻域操作在小图像细节内提供有关空间配置的特定属性的信息</p>
+<p>Damit <strong>liefern sie die Grundlage</strong> zur Analyse von Bildern und für komplexere Muster- und Objekterkennungsaufgaben.
+它们为分析图像和更复杂的图案和对象识别任务提供了基础</p>
+<p>Einige <strong>Eigenschaften</strong> von Nachbarschaftsoperatoren:
+邻里运营商的一些属性：</p>
+<ul>
+<li>Detektion einfacher lokaler Strukturen, wie Kanten, Ecken, Linien und homogene Bereiche,
+检测简单的局部结构，如边缘，角落，线和均匀区域，</li>
+<li>Korrektur von Störungen,
+干扰校正，</li>
+<li>Texturanalyse, usw.
+纹理分析等</li>
+</ul>
+<h4 id="5-3-1-2-definition">5.3.1.2 Definition</h4>
+<p>Ein <strong>Nachbarschaftsoperator N</strong> <strong>verknüpft</strong> durch eine geeignete Operation die Werte <em>in einer Nachbarschaft</em> um einen Bildpunkt und schreibt das Ergebnis <strong>zurück</strong> an diesen Punkt
+邻域运算符N通过适当的操作将邻域中的值与一个像素相关联，并将结果写回该点</p>
+<p>Diese <strong>Operation</strong> wird <em>für alle Punkte im Bild durchgeführt</em>
+对图像中的所有点执行此操作</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_30.png"></p>
+<p>Das <strong>Gebiet M</strong> wird als <em>Maske oder Fenster</em> bezeichnet
+区域M称为掩模或窗口</p>
+<p>Die <strong>Größe und Form von M</strong> bestimmen die Eingangswerte aus g bzw. G zur Berechnung von g' bzw. G'.
+M的大小和形状分别确定g和G的输入值，以分别计算g'和G'。</p>
+<p><strong>Unterschiedliche Arten von Operatoren</strong>:
+不同类型的运营商：</p>
+<ul>
+<li>Nichtlinear, verschiebungsvariant (ortsadaptiv)
+非线性，位移可变（适应位置）</li>
+<li>Nichtlinear, verschiebungsinvariant (translationsinvariant)
+非线性，移位不变量（平移不变量）</li>
+<li>Linear, verschiebungsvariant
+线性，位移可变</li>
+<li>Linear, verschiebungsinvariant = LSI-Operator (linear, shift-invariant)
+线性，verschiebungsinvariant = LSI-Operator（线性，移位不变）</li>
+</ul>
+<p><strong>Kenngrößen/Eigenschaften einer Maske</strong>:
+面具的特征/属性：</p>
+<ul>
+<li>Lage des Bezugspunkts bzw. Ankers (meistens im Zentrum)
+参考点的位置或Ankers（主要在中心）</li>
+<li>Maskengröße gerade oder ungerade
+面罩尺寸均匀或奇数</li>
+<li>Maskenfunktion symmetrisch oder nicht
+掩模功能是否对称</li>
+</ul>
+<blockquote>
+<p><strong>Achtung</strong>: Bei gerader Maskengröße verschiebt sich das Ergebnisbild um einen halben Pixel
+注意：使用直接掩模大小时，结果图像会移动半个像素</p>
+</blockquote>
+<blockquote>
+<p>Das <strong>führt zu</strong> Fehlern bei der Kombination des Ergebnisbildes mit dem Ausgangsbild
+这导致结果图像与输出图像的组合中的错误</p>
+</blockquote>
+<blockquote>
+<p><strong>Hinweis</strong>: Grundsätzlich kann jede Verschiebung mit einem LSI-Operator erzeugt werde
+注意：基本上每个班次都可以通过LSI操作员生成</p>
+</blockquote>
+<h4 id="5-3-1-3-diskrete-faltung">5.3.1.3 Diskrete Faltung</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_32.png"></p>
+<p>Bei der <strong>diskreten Faltung</strong> wird jeder Bildpunkt im Bereich der Maske mit einem Wichtungsfaktor multipliziert, die Produkte addiert und die Summe an die Position des Ankers geschrieben.
+在离散卷积的情况下，掩模区域中的每个像素乘以加权因子，将乘积加在一起，并将总和写入电枢的位置</p>
+<h4 id="5-3-1-4-faltung-korrelation">5.3.1.4 Faltung &amp; Korrelation</h4>
+<p><strong>Diskrete Faltung</strong> mit quadratischer Maske und Anker im Zentrum:
+在中心使用方形面具和锚点进行离散折叠：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_33.png"></p>
+<p><strong>Diskrete Korrelation</strong> mit quadratischer Maske und Anker im Zentrum:
+在中心与方形掩模和锚点的离散相关：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_34.png"></p>
+<blockquote>
+<p>Wenn eine Maske symmetrisch ist h−m,−n = hm,n, wird sie durch eine Spiegelung nicht verändert
+如果掩模是对称的h-m，-n = hm，n，则它不会被反射改变</p>
+</blockquote>
+<blockquote>
+<p>Damit unterscheiden sich Faltung und Korrelation für symmetrische Masken nicht.
+因此，对称掩模的卷积和相关性没有差别。</p>
+</blockquote>
+<h5 id="5-3-1-4-1-randbehandlung">5.3.1.4.1 Randbehandlung</h5>
+<p>Am Rand des Bildes geht der Bereich der Maske über den Bildrand hinaus
+在图像的边缘，掩模的区域超出图像的边缘</p>
+<p>Was für Bildpunkte sollen dort angenommen werden? Wenn die <em>Faltung im Ortsraum einer Multiplikation im Fourierraum entsprechen</em> soll, dann muss die <em>Bildmatrix als periodisch wiederholende Struktur</em> betrachtet werden
+那里应该接受什么样的像素？如果空间空间中的卷积对应于傅立叶空间中的乘法，那么图像矩阵必须被视为周期性重复结构</p>
+<p>Wird das angenommen spricht man auch von <strong>zyklischer Faltung</strong>
+如果假设这一点，人们也会谈到循环卷积</p>
+<p><strong>In der Praxis</strong> wird jedoch zwischen drei anderen Methoden gewählt, wobei zwischen <em>geringen Artefakten und schneller Berechnung</em> <strong>abgewägt</strong> werden muss
+然而，在实践中，还需要在低伪像和快速计算之间权衡其他三种方法</p>
+<ul>
+<li>Rand mit Nullen auffüllen (schnell aber viel Artefakte)
+用零填充边距（快速但很多工件）</li>
+<li>Rand spiegeln
+镜边</li>
+<li>Rand extrapolieren (z.B Grauwert fortführen, Überbetonung der Ränder).
+外推边缘（例如，继续灰度值，过度强调边缘）</li>
+</ul>
+<h5 id="5-3-1-4-2-effektive-berechnung">5.3.1.4.2 Effektive Berechnung</h5>
+<p>Wie man eine <strong>diskrete Faltung</strong> mit der <em>geringstmöglichen Anzahl an Rechenoperationen</em> berechnet <strong>hängt</strong> zum einen von der <em>Maskengröße</em> und zum anderen von den <em>Eigenschaften des Faltungskerns</em> ab
+如何使用最少数量的计算操作来计算离散卷积取决于掩码大小和卷积核的属性</p>
+<p><strong>Separabilität</strong> und <strong>Symmetrie</strong> sind die beiden Eigenschaften, deren <em>konsequente Ausnutzung große Beschleunigungen erlauben</em>
+可分离性和对称性是两个属性，其一致使用允许很大的加速度</p>
+<p>Ab einer <strong>bestimmten Maskengröße</strong> <em>lohnt sich</em> die <em>zusätzliche Hin- und Rücktransformation in den Fourierraum</em>, um eine wenig rechenaufwendige Multiplikation im Frequenzbereich auszuführen (Filter können eventuell schon vor der Laufzeit transformiert werden)
+从某个掩模大小开始，额外来回转换到傅立叶空间是值得的，以便在频域中执行一点计算密集的乘法（滤波器可能在运行时之前被转换）</p>
+<p><strong>Weitere Möglichkeiten</strong> der Beschleunigung sind die <em>Zerlegung von Filtermasken</em> und <em>Lookup-Tabellen</em>
+加速的其他可能性包括滤波器掩码和查找表的分解</p>
+<p>Sind die <strong>Filterkerne sehr klein</strong>, können <em>alle möglichen Multiplikationen vorab berechnet werden und in Lookup-Tabellen abgelegt</em> werden
+如果滤波器内核非常小，则可以预先计算所有可能的乘法并将其存储在查找表中</p>
+<p>Manchmal ist es möglich die <strong>Faltung mit einer großen Filtermaske</strong> <em>in ein sequentielles Ausführen von Faltungen mit kleineren Masken zu überführen</em>.
+有时可以将带有大滤波器掩码的卷积转换为带有较小滤波器的卷积的顺序执行</p>
+<h6 id="5-3-1-4-2-1-ipp-vergleich">5.3.1.4.2.1 IPP Vergleich</h6>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_35.png"></p>
+<p>Vergleich verschiedener Möglichkeiten der beschleunigten Berechnung von Faltungen in Abhängigkeit von der Größe der Filtermasken
+比较根据滤光片掩模的大小加速计算卷积的不同可能性</p>
+<p>Benutzt wurde eine für Bildverarbeitung optimierte C-Bibliothek, die Intel Integrated Performance Primitives (Intel® IPP).
+它使用了一个名为Intel Integrated Performance Primitives（英特尔®IPP）的图像处理优化C库</p>
+<h4 id="5-3-1-5-faltung">5.3.1.5 Faltung</h4>
+<h5 id="5-3-1-5-1-punktantwort">5.3.1.5.1 Punktantwort</h5>
+<p>Die <strong>Punktantwort∗ oder point spread function (PSF)</strong> ist die Antwort einer Faltungsoperation auf ein Punktbild (Basisbild) und ist mit der Faltungsmaske identisch:
+点响应*或点扩散函数（PSF）是对点图像（基本图像）进行卷积运算的答案，与折叠掩码相同：</p>
+<p>P = H ∗ Bm,n = H</p>
+<p>Die <strong>Punktantwort</strong> zeigt, wie sich jeder Pixel in die Nachbarschaft ausbreitet
+答案显示每个像素如何传播到邻域</p>
+<p>Da die Faltung ein <strong>LSI-Operator</strong> ist, für sie also das Superpositionsprinzip gilt und sie verschiebungsinvariant ist, ist das <strong>Ergebnis einer Faltung</strong> vollständig durch die Antwort auf ein beliebiges Basisbild bestimmt.
+由于卷积是LSI算子，即它具有叠加原理并且是移位不变的，因此卷积的结果完全由对任何基本图像的答案决定</p>
+<h5 id="5-3-1-5-2-transferfunktion">5.3.1.5.2 Transferfunktion</h5>
+<p>Die <em>Fouriertransformierte einer Faltungsmaske oder PSF</em> heißt <strong>Transferfunktion (TF) eines Filters∗</strong>
+卷积掩模或PSF的傅立叶变换称为滤波器的传递函数（TF）*</p>
+<p>Die <strong>TF</strong> gibt für jeden Wellenzahlvektor den Faktor an, mit dem die entsprechende periodische Struktur durch eine Filteroperation multipliziert wird
+TF为每个波数矢量指示相应的周期结构乘以滤波操作的因子</p>
+<p>Da dieser <strong>Faktor komplex</strong> ist, wird <strong>sowohl</strong> die Amplitude, <strong>als auch</strong> die Phase der periodischen Struktur verändert
+由于该因子很复杂，周期性结构的幅度和相位都会发生变化</p>
+<p>Man <em>sieht also welche Frequenzen</em> im Bild wie <strong>stark gefiltert werden</strong>
+因此，您可以看到图片中的哪些频率被过滤掉了</p>
+<p>Damit ist die <strong>TF sehr nützlich</strong>, um einen <em>Filter mit speziellen Eigenschaften</em> zu entwickeln.
+因此，TF对于开发具有特殊属性的过滤器非常有用</p>
+<hr>
+<h2 id="5-4-digitale-kamera">5.4 Digitale Kamera</h2>
+<h3 id="5-4-1-digitalisierung">5.4.1 Digitalisierung</h3>
+<h4 id="5-4-1-1-mathematische-beschreibung">5.4.1.1 Mathematische Beschreibung</h4>
+<p>Die <strong>Transformation</strong> von einem kontinuierlichen Bild zu einer <em>räumlich begrenzten Bildmatrix</em> kann <strong>mathematisch in drei Schritte zerlegt</strong> werden:
+从连续图像到空间受限图像矩阵的转换可以在数学上分解为三个步骤：</p>
+<ul>
+<li>Die Mittelung der Intensität,
+强度平均，</li>
+<li>die Abtastung und
+抽样和</li>
+<li>die Ortsbegrenzung
+位置限制</li>
+</ul>
+<p>Aus den <strong>Zusammenhängen</strong> lassen sich
+从连接可以</p>
+<ul>
+<li>das Abtasttheorem und
+采样定理和</li>
+<li>der Aliasing-Effekt erklären. Außerdem liefert das Abtasttheorem die Bedingung für eine perfekte
+解释别名效应. 此外，采样定理为采样点的完美</li>
+<li>Rekonstruktion aus Abtastpunkten.
+重建提供了条件</li>
+</ul>
+<h4 id="5-4-1-2-intensit-tsmittelung">5.4.1.2 Intensitätsmittelung</h4>
+<p>Die <strong>Intensität für einen Bildpunkt</strong> wird gleichmäßig über die Fläche der einzelnen Photodioden gemittelt (ideale CCD Kamera)
+像素的强度在各个光电二极管的区域上均匀平均（理想的CCD相机）</p>
+<p>Das <strong>entspricht</strong> einer <em>Faltung der kontinuierlichen Bildfunktion</em> E(x, y) z.B mit einer rechteckigen Kastenfunktion r1(x, y):
+这对应于连续图像函数E（x，y）的卷积，例如矩形框函数r1（x，y）：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_36.png"></p>
+<p>wobei die Punktantwort folgendermaßen gegeben ist:
+点响应的地方如下：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_37.png"></p>
+<p>Diese <strong>Faltung</strong> bewirkt eine <em>Glättung des Bildes</em>, wobei feine Details verloren gehen.
+这种卷积使图像平滑，失去了细节</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_40.png"></p>
+<p>Eine <strong>Faltung im Ortsraum (x, y)</strong> entspricht einer <em>Multiplikation im Fourierraumˆ</em>
+空间（x，y）中的卷积对应于傅里叶空间中的乘法</p>
+<p>Dabei ist (k1, k2)T der Wellenzahlvektor
+其中(k1，k2)T是波数矢量</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_38.png"></p>
+<p>wobei die <strong>optische Transferfunktion</strong> folgendermaßen gegeben ist:
+光学传递函数如下：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_39.png"></p>
+<p><strong>Im Fourierraum</strong> führt die Multiplikation des Bildspektrums mit der optischen Transferfunktion zu einer Dämpfung hoher Wellenzahlen.
+在傅里叶空间中，图像光谱与光学传递函数的相乘导致高波数的衰减</p>
+<h4 id="5-4-1-3-abtastung">5.4.1.3 Abtastung</h4>
+<p>Die <strong>Abtastung des geglätteten Bildes</strong> wird an den Gitterpunkten eines zweidimensionalen Gitters mit konstanten Gitterpunktabständen durchgeführt
+在具有恒定网格间距的二维网格的网格点处执行平滑图像的扫描</p>
+<p>Dadurch geht alle Bildinformation außerhalb der Gitterpunkte verloren
+结果，网格点之外的所有图像信息都丢失了</p>
+<p><strong>Mathematisch</strong> entspricht das einer Multiplikation der Bildfunktion E1(x, y) im Ortsraum mit einem zweidimensionalen Deltakamm:
+在数学方面，这对应于空间域中图像函数E1（x，y）与二维delta梳的相乘：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_41.png"></p>
+<p>Dies <strong>entspricht im Fourierraum</strong> einer Faltung des Bildspektrums Eˆ1(k1, k2) mit einem Deltakamm des reziproken Gitters
+在傅立叶空间中，这对应于图像光谱E1（k1，k2）与参考proch网格的三角梳的卷积</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_5_42.png"></p>
+<h4 id="5-4-1-4-abtasttheorem">5.4.1.4 Abtasttheorem</h4>
+<h4 id="5-4-1-5-ortsbegrenzung">5.4.1.5 Ortsbegrenzung</h4>
+<h4 id="5-4-1-6-perfekte-rekonstruktion">5.4.1.6 Perfekte Rekonstruktion</h4>
+<h3 id="5-4-2-aliasing">5.4.2 Aliasing</h3>
+<h4 id="5-4-2-1-moire-effekt">5.4.2.1 Moire-Effekt</h4></body>
+</html>

@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>Folien 3 Optik und Epipolargeometrie</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); border-image: initial; background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.04); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.markdown-preview pre.editor-colors { user-select: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.markdown-preview ul label { vertical-align: top; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher.bracket-matcher {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+
+.ftpconfig_line_error {
+  background: rgba(255, 0, 0, 0.5) !important;
+}
+.btn.btn-float-left {
+  float: left !important;
+}
+.btn.btn-float-right {
+  float: right !important;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 139, 255, 0.24);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #528bff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #abb2bf;
+}
+.syntax--comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #5c6370;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #98c379;
+}
+.syntax--keyword {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--control {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #61afef;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #d19a66;
+}
+.syntax--storage {
+  color: #c678dd;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #c678dd;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #abb2bf;
+}
+.syntax--constant {
+  color: #d19a66;
+}
+.syntax--constant.syntax--variable {
+  color: #d19a66;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--numeric {
+  color: #d19a66;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #56b6c2;
+}
+.syntax--variable {
+  color: #e06c75;
+}
+.syntax--variable.syntax--interpolation {
+  color: #be5046;
+}
+.syntax--variable.syntax--parameter {
+  color: #abb2bf;
+}
+.syntax--string {
+  color: #98c379;
+}
+.syntax--string > .syntax--source,
+.syntax--string .syntax--embedded {
+  color: #abb2bf;
+}
+.syntax--string.syntax--regexp {
+  color: #56b6c2;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #e5c07b;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e06c75;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #5c6370;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #61afef;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #be5046;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #abb2bf;
+}
+.syntax--support.syntax--class {
+  color: #e5c07b;
+}
+.syntax--support.syntax--type {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e06c75;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #d19a66;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #61afef;
+}
+.syntax--meta.syntax--class {
+  color: #e5c07b;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e06c75;
+}
+.syntax--meta.syntax--link {
+  color: #d19a66;
+}
+.syntax--meta.syntax--require {
+  color: #61afef;
+}
+.syntax--meta.syntax--selector {
+  color: #c678dd;
+}
+.syntax--meta.syntax--separator {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--tag {
+  color: #abb2bf;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #abb2bf;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: white !important;
+  background-color: #e05252 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #c678dd;
+}
+.syntax--markup.syntax--deleted {
+  color: #e06c75;
+}
+.syntax--markup.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e06c75;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #61afef;
+}
+.syntax--markup.syntax--link {
+  color: #56b6c2;
+}
+.syntax--markup.syntax--inserted {
+  color: #98c379;
+}
+.syntax--markup.syntax--quote {
+  color: #d19a66;
+}
+.syntax--markup.syntax--raw {
+  color: #98c379;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--constant.syntax--language,
+.syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
+.syntax--source.syntax--elixir .syntax--constant.syntax--definition {
+  color: #61afef;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--definition,
+.syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
+  color: #c678dd;
+}
+.syntax--source.syntax--elixir .syntax--parameter.syntax--variable.syntax--function {
+  color: #d19a66;
+  font-style: italic;
+}
+.syntax--source.syntax--elixir .syntax--quoted {
+  color: #98c379;
+}
+.syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--section,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--regexp.syntax--section,
+.syntax--source.syntax--elixir .syntax--regexp.syntax--string {
+  color: #be5046;
+}
+.syntax--source.syntax--elixir .syntax--separator,
+.syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
+  color: #d19a66;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--constant {
+  color: #e5c07b;
+}
+.syntax--source.syntax--elixir .syntax--array,
+.syntax--source.syntax--elixir .syntax--scope,
+.syntax--source.syntax--elixir .syntax--section {
+  color: #828997;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #61afef;
+}
+.syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
+  color: #c678dd;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e06c75;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #c678dd;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e06c75;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #abb2bf;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
+  color: #c678dd;
+}
+.syntax--source.syntax--ts .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--flow .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--interpolation {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation.syntax--begin,
+.syntax--ng.syntax--interpolation.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--function {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation .syntax--function.syntax--begin,
+.syntax--ng.syntax--interpolation .syntax--function.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--bool {
+  color: #d19a66;
+}
+.syntax--ng.syntax--interpolation .syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--pipe,
+.syntax--ng.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--tag {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--attribute-name {
+  color: #e5c07b;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string {
+  color: #c678dd;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--begin,
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--end {
+  color: #abb2bf;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
+  color: inherit;
+}
+.syntax--source.syntax--php .syntax--class.syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
+  color: #c678dd;
+}
+.syntax--source.syntax--python .syntax--variable.syntax--parameter {
+  color: #d19a66;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><ul>
+<li><a href="#folien-3-optik-epipolargeometrie">Folien 3. Optik &amp; Epipolargeometrie</a><ul>
+<li><a href="#31-das-opjektiv">3.1 Das Opjektiv</a><ul>
+<li><a href="#312-motivation">3.1.2 Motivation</a></li>
+<li><a href="#313-linsensystem-mit-blende">3.1.3 Linsensystem mit Blende</a></li>
+<li><a href="#314-bildentstehung-bei-linsenabbildungen">3.1.4 Bildentstehung bei Linsenabbildungen</a></li>
+<li><a href="#315-kennwerte">3.1.5 Kennwerte</a><ul>
+<li><a href="#3151-brennweite-焦距">3.1.5.1 Brennweite 焦距</a></li>
+<li><a href="#3152-brechzahl-折射率">3.1.5.2 Brechzahl 折射率</a></li>
+<li><a href="#3153-brechzahl-brennweite-farbe-des-lichtes">3.1.5.3 Brechzahl, Brennweite &amp; Farbe des Lichtes</a></li>
+<li><a href="#3154-abbildungsmastab-图像比例">3.1.5.4 Abbildungsmaßstab 图像比例</a></li>
+<li><a href="#3155-sichtfeld-视野">3.1.5.5 Sichtfeld 视野</a><ul>
+<li><a href="#31551-beispiel">3.1.5.5.1 Beispiel</a></li>
+</ul>
+</li>
+<li><a href="#3156-blendenzahl-belichtungszeit-光圈-曝光">3.1.5.6 Blendenzahl &amp; Belichtungszeit 光圈 &amp; 曝光</a></li>
+<li><a href="#3157-schärfentiefe-景深">3.1.5.7 Schärfentiefe 景深</a><ul>
+<li><a href="#31571-blendenöffung-brennweite-光圈-焦距">3.1.5.7.1 Blendenöffung &amp; Brennweite 光圈 &amp; 焦距</a></li>
+<li><a href="#31572-beispiele">3.1.5.7.2 Beispiele</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#316-sammellinse">3.1.6 Sammellinse</a><ul>
+<li><a href="#3161-dünne-linse">3.1.6.1 Dünne Linse</a><ul>
+<li><a href="#31611-strahlenoptisches-grundgesetz">3.1.6.1.1 Strahlenoptisches Grundgesetz</a></li>
+<li><a href="#31612-abbildungsmastab-图像比例">3.1.6.1.2 Abbildungsmaßstab 图像比例</a></li>
+<li><a href="#31613-tiefenschärfe-e-schärfentiefe-g-ghgv-焦点和景深">3.1.6.1.3 Tiefenschärfe (e) &amp; Schärfentiefe (∆g = gh−gv) 焦点和景深</a><ul>
+<li><a href="#316131-anwendung-3d-profil-mittels-schärfemessung">3.1.6.1.3.1 Anwendung -- 3D Profil mittels Schärfemessung</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#317-abbildungsfehler">3.1.7 Abbildungsfehler</a><ul>
+<li><a href="#3171-überblick">3.1.7.1 Überblick</a></li>
+<li><a href="#3172-beugungsunschärfe-衍射模糊">3.1.7.2 Beugungsunschärfe 衍射模糊</a></li>
+<li><a href="#3173-sphärische-aberration-abschweifung-球面像差">3.1.7.3 Sphärische Aberration (Abschweifung) 球面像差</a></li>
+<li><a href="#3174-astigmatismus-punktlosigkeit-散光">3.1.7.4 Astigmatismus (Punktlosigkeit) 散光</a></li>
+<li><a href="#3175-chromatische-aberration-色差">3.1.7.5 Chromatische Aberration 色差</a></li>
+<li><a href="#3176-verzeichnungen-扭曲">3.1.7.6 Verzeichnungen 扭曲</a></li>
+</ul>
+</li>
+<li><a href="#318-kamerakalibrierung-ii">3.1.8 Kamerakalibrierung II</a><ul>
+<li><a href="#3181-radiale-verzeichnungen">3.1.8.1 Radiale Verzeichnungen</a></li>
+<li><a href="#3182-normierte-koordinaten">3.1.8.2 Normierte Koordinaten</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#32-epipolargeometrie">3.2 Epipolargeometrie</a><ul>
+<li><a href="#321-eigeninduzierter-optischer-fluss">3.2.1 Eigeninduzierter Optischer Fluss</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<h1 id="folien-3-optik-epipolargeometrie">Folien 3. Optik &amp; Epipolargeometrie</h1>
+<hr>
+<h2 id="3-1-das-opjektiv">3.1 Das Opjektiv</h2>
+<h3 id="3-1-2-motivation">3.1.2 Motivation</h3>
+<h3 id="3-1-3-linsensystem-mit-blende">3.1.3 Linsensystem mit Blende</h3>
+<p>Jede <strong>reale Kamera</strong> besitzt ein Objektiv mit einem <strong>sammelnden Linsensystem</strong> und einer <strong>Blende</strong>
+每个真正的相机都有一个带有聚光透镜系统和快门的镜头</p>
+<p>Das <strong>Linsensystem</strong> <em>beeinflusst</em> die Richtung der Ausbreitung von Lichtstrahlen <em>über</em> Beugung, Brechung und Reflexion
+透镜系统通过衍射，折射和反射影响光线的传播方向</p>
+<p>Mit Hilfe der <strong>Blende</strong> wird die <em>Lichtmenge durch das Objektiv vorgegeben</em>
+在光圈的帮助下，光量由镜头提供</p>
+<p>Die <strong>drei wichtigsten Größen</strong> sind die <em>Brennweite f, die Blendenöffnung D und die Bildweite b</em>
+三个最重要的变量是焦距f，光圈D和图像宽度b</p>
+<p>Diese Größen <strong>beeinflussen</strong> z.B. die <em>Schärfe der Bildaufnahme</em>, oder bestimmen z.B. den <em>Abbildungsmaßstab</em>
+例如，这些数量会影响图像的清晰度捕获,或确定图片比例</p>
+<p>Im folgenden werden verschiedene Kennwerte eines Objektivs und deren Abhängigkeiten genauer besprochen
+在下文中，更详细地讨论透镜的各种特性及其依赖性</p>
+<h3 id="3-1-4-bildentstehung-bei-linsenabbildungen">3.1.4 Bildentstehung bei Linsenabbildungen</h3>
+<h2 id="alt-text"><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_1.png"></h2>
+<h3 id="3-1-5-kennwerte">3.1.5 Kennwerte</h3>
+<h4 id="3-1-5-1-brennweite-">3.1.5.1 Brennweite 焦距</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_2.png"></p>
+<p>Das <strong>Linsensystem eines Objektivs</strong> besteht meist aus mehreren <em>konvexen (Sammel-) und konkaven (Zerstreuungs-) Linsen</em>.
+镜片的镜片系统通常由几个凸（收集）和凹（发散）镜片组成</p>
+<p>Die <strong>optischen Eigenschaften</strong> einer Linse werden durch die <em>Brennweite f</em> beschrieben
+透镜的光学特性由焦距f描述</p>
+<p>Die <strong>Brennweite</strong> entspricht dem <em>Abstand des Brennpunkts F</em> von der Hauptebene einer Linse und ist bei <em>Sammellinsen positiv f &gt; 0</em>
+焦距对应于焦点F距镜头主平面的距离，并且在会聚透镜处正f&gt; 0</p>
+<p>Die <strong>Brennweite</strong> läßt sich aus der Brechzahl des Linsenmaterials n, der Brechzahl des umgebenden Mediums n0 (für Luft gilt n0 = 1), sowie den Krümmungsradien R1 und R2, und der Dicke d der Linse <strong>berechnen</strong>.
+可以根据透镜材料的折射率n，周围介质的折射率n0（对于空气n0 = 1），以及曲率半径R1和R2以及透镜的厚度d来计算焦距。</p>
+<h4 id="3-1-5-2-brechzahl-">3.1.5.2 Brechzahl 折射率</h4>
+<p>Die <strong>Brechzahl n der Linse</strong> kennzeichnet die <em>Brechung und das Reflexionsverhalten</em> von Lichtwellen beim Treffen auf die Linsenoberfläche
+透镜的折射率n表征光波撞击透镜表面时的折射和反射行为</p>
+<p>Sie ist durch das Verhältnis der Ausbreitungsgeschwindigkeiten einer Lichtwelle im Vakuum c0 und im Material der Linse c definiert
+它由真空c0中的光波和透镜c的材料中的光传播速度的比率来定义 -- <strong>n = c0/c &gt; 1</strong></p>
+<p>Wenn Lichtwellen eine Linse durchqueren, dann reduziert sich die Ausbreitungsgeschwindigkeit c
+当光波穿过透镜时，传播速度c减小</p>
+<p>Die Ausbreitungsgeschwindigkeit einer Welle hängt von ihrer Wellenlänge λ und der Frequenz ν ab:
+波的传播速度取决于其波长λ和频率ν： <strong>c = λν = c0/n</strong></p>
+<h4 id="3-1-5-3-brechzahl-brennweite-farbe-des-lichtes">3.1.5.3 Brechzahl, Brennweite &amp; Farbe des Lichtes</h4>
+<p>Da sich die <strong>Frequenz</strong> beim Übergang in einen anderen Stoff <em>nie ändert</em>, ändert sich die Wellenlänge in gleicher Weise wie die Ausbreitungsgeschwindigkeit
+由于频率在换成另一种物质时不会改变，因此波长的变化方式与传播速度相同 -- <strong>λ=λ0/n</strong></p>
+<p>Die Wellenlänge und die Lichtgeschwindigkeiten in zwei verschiedenen Stoffen verhalten sich umgekehrt wie die Brechzahlen
+两种不同材料中的光的波长和速度与折射率相反 -- <strong>λ1/λ2 = c1/c2 = n2/n1</strong></p>
+<p>Die Brechzahl n hängt also von der Wellenlänge λ ab und deswegen ist auch die Brennweite f von der Wellenlänge und damit der Farbe des Lichtes abhängig.
+因此，折射率n取决于波长λ，因此焦距f取决于波长并因此取决于光的颜色。-- <strong>f ~ λ/(λ0 - λ)</strong></p>
+<h4 id="3-1-5-4-abbildungsma-stab-">3.1.5.4 Abbildungsmaßstab 图像比例</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_6.png"></p>
+<h4 id="3-1-5-5-sichtfeld-">3.1.5.5 Sichtfeld 视野</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_9.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_10.png"></p>
+<p>Wie bereits im Abschnitt über geometrische Projektionen für das Lochkameramodell gezeigt, ist in der Praxis die Bildebene auf eine maximale Bildgröße Bmax räumlich begrenzt
+如针孔相机模型的几何投影部分所示，实际上图像平面在空间上受限于最大图像尺寸Bmax</p>
+<p>Es ergibt sich ein eingeschränktes Sichtfeld field of view (FOV)
+结果是受限制的视野（FOV）视野</p>
+<p>Falls die Entfernung zum Motiv größer als die Brennweite ist g &gt; f, erhält man für das Sichtfeld bzw. den Bildwinkel
+如果到主体的距离大于焦距g&gt; f，则可以获得视野或视角</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_8.png"></p>
+<ul>
+<li><p>Bei einer flachen Bildebene ist dieser Winkel immer kleiner als θ ≤ 180◦
+对于平面图像平面，此角度始终小于θ≤180°</p>
+</li>
+<li><p>Je kleiner die Brennweite f, desto größer ist das Sichtfeld θ.
+焦距f越小，视场θ越大。</p>
+</li>
+</ul>
+<h5 id="3-1-5-5-1-beispiel">3.1.5.5.1 Beispiel</h5>
+<p>Wenn man eine <em>konstante Bildgröße B</em> eines Gegestandes für unterschiedliche Gegenstandsweiten g scharf abgebildet erhalten möchte, dann muss die <em>Brennweite f und die Bildweite b entsprechend angepasst werden</em>, womit sich auch der <strong>Bildwinkel θ</strong> ändert.
+如果希望针对不同的物体宽度g获得给定物品的恒定图像尺寸B，则必须相应地调整焦距f和图像距离b，这也改变了图像角度θ</p>
+<h4 id="3-1-5-6-blendenzahl-belichtungszeit-">3.1.5.6 Blendenzahl &amp; Belichtungszeit 光圈 &amp; 曝光</h4>
+<p>Die <strong>Blendenzahl κ</strong> bezeichnet das Verhältnis der Brennweite f zum Durchmesser D der Eintrittspupille des Objektivs
+κ表示焦距f与物镜的入射光瞳的直径D的比率 -- <strong>k = f/D</strong></p>
+<p>Die <strong>Eintrittspupille</strong> ist die Öffnung des Objektivs, das die einfallenden Strahlenbündel begrenzt
+入射光瞳是限制入射光束的透镜的开口</p>
+<p>Je kleiner κ
+k越小</p>
+<ul>
+<li><p>desto mehr Lichteinfall vorhanden
+存在的光越多</p>
+</li>
+<li><p>desto kürzere Belichtungszeit notwendig
+需要更短的曝光时间</p>
+</li>
+<li><p>desto größere Bildwiederholrate möglich
+更高的刷新率可能</p>
+</li>
+<li><p>desto weniger Bewegungsunschärfe tritt auf
+运动模糊越少</p>
+</li>
+<li><p>desto kleiner die Schärfentiefe (siehe Abschnitt Schärfentiefe)
+景深越小（参见景深部分）</p>
+</li>
+</ul>
+<h4 id="3-1-5-7-sch-rfentiefe-">3.1.5.7 Schärfentiefe 景深</h4>
+<h5 id="3-1-5-7-1-blenden-ffung-brennweite-">3.1.5.7.1 Blendenöffung &amp; Brennweite 光圈 &amp; 焦距</h5>
+<h5 id="3-1-5-7-2-beispiele">3.1.5.7.2 Beispiele</h5>
+<hr>
+<h3 id="3-1-6-sammellinse">3.1.6 Sammellinse</h3>
+<h4 id="3-1-6-1-d-nne-linse">3.1.6.1 Dünne Linse</h4>
+<p>Die <strong>einfachste Möglichkeit Lichtstrahlen zu bündeln</strong> geschieht über eine <em>Blende</em> und eine <em>konvexe Sammellinse</em>
+聚焦光线最简单的方法是通过光圈和凸聚光透镜</p>
+<p><em>Vernachlässigt man die Dicke d der Linse</em> erhält man das <strong>Modell der dünnen Linse</strong>
+忽略透镜的厚度d给出了薄透镜的模型</p>
+<p>Es wird <strong>angenommen</strong>, dass die Bildebene parallel zur Linsenebene liegt und beide senkrecht auf der optischen Achse stehen, wobei die optische Achse durch das Projektionszentrum der Linse verläuft
+假设图像平面与透镜平面平行并且两者都垂直于光轴，光轴穿过透镜的投影中心</p>
+<p>Wird <strong>nur die Brechung von Licht berücksichtigt</strong> und Linsenfehler sowie Beugungserscheinungen werden vernachlässigt, dann <em>treffen sich alle Strahlen eines parallelen Lichtbündels in der Brennebene</em> und man erhält das <strong>strahlenoptische Grundgesetz</strong>.
+如果仅考虑光的折射并且忽略透镜像差和衍射现象，那么平行光束的所有光线在焦平面中相遇并且获得辐射光学基本定律。</p>
+<h5 id="3-1-6-1-1-strahlenoptisches-grundgesetz">3.1.6.1.1 Strahlenoptisches Grundgesetz</h5>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_3.png"></p>
+<p>Diese Abbildungsgleichung für dünne Linsen (d ! 0) ergibt sich über den <strong>Abbildungsmaßstab</strong> aus dem Strahlensatz und den Beziehungen zwischen Gegenstandsgröße G, Bildgröße B, Gegenstandsweite g und der Bildweite b
+薄透镜的成像方程（d！0）由光束组的放大率和物体尺寸G，图像尺寸B，物体宽度g和图像尺寸b之间的关系给出 <img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_4.png"></p>
+<p>Unter den gemachten Annahmen entspricht die Bildweite der rein geometrisch definierten Kamerakonstanten b = c.
+在所做的假设下，图像宽度对应于纯几何定义的相机常数b = c
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_5.png"></p>
+<h5 id="3-1-6-1-2-abbildungsma-stab-">3.1.6.1.2 Abbildungsmaßstab 图像比例</h5>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_6.png"></p>
+<p>Der <strong>Abbildungsmaßstab β</strong> ist definiert als Verhältnis zwischen Bildgröße B eines abgebildeten Gegenstandes und der realen Gegenstandsgröße G
+放大率β被定义为成像对象的图像尺寸B与真实对象尺寸G之间的比率
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_7.png"></p>
+<p>Jedes Objektiv besitzt eine <strong>Naheinstellgrenze</strong>
+每个镜头都有一个近距离聚焦限制</p>
+<p><em>Unterhalb diesem Mindestabstand gmin</em> zum Objekt ist es <strong>nicht mehr möglich</strong> auf das <strong>Objekt zu fokussieren</strong>
+在距离物体的最小距离gmin之下，不再可能聚焦在物体上</p>
+<p>Ein Objektiv besitzt also einen <strong>maximalen Abbildungsmaßstab</strong>.
+因此，透镜具有最大放大率</p>
+<h5 id="3-1-6-1-3-tiefensch-rfe-e-sch-rfentiefe-g-gh-gv-">3.1.6.1.3 Tiefenschärfe (e) &amp; Schärfentiefe (∆g = gh−gv) 焦点和景深</h5>
+<p>Vernachlässigt man Auswirkungen wie Linsenfehler und Beugungserscheinungen, dann gibt es <em>für jede Gegenstandsweite g eine bestimmte Bildweite b</em> in der es zu einer <strong>punktförmigen Wiedervereinigung aller Lichtstrahlen</strong> kommt
+如果忽略诸如透镜像差和衍射现象之类的影响，那么对于每个物体宽g，存在一定的图像宽度b，其中发生所有光线的点状重新统一。
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_13.png"></p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_11.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_12.png"></p>
+<p>In dieser <strong>optimal eingestellten Bildebene</strong> entsteht ein <strong>optimal scharfes Bild</strong> des Gegenstandes in der Gegenstandsebene
+在该最佳调整的图像平面中，产生对象平面中的对象的最佳清晰图像</p>
+<p>Wird der Abstand des Gegenstandes verringert, muss die Bildweite vergrößert werden.
+如果物体的距离减小，则必须增加图像尺寸。</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_14.png"></p>
+<p>Alle <em>Gegenstände vor gv oder hinter gh der eingestellten Gegenstandsweite g</em> werden <em>auf der Bildebene mit Abstand b</em> <strong>unscharf</strong> mit einem Zerstreuungskreis vom Durchmesser e abgebildet
+gv前面或设定对象g后面的所有物体在图像平面上变得模糊，距离b与直径混淆的圆圈e显示</p>
+<p>Das bedeutet, dass <em>alle Gegenstände im Bereich der Schärfentiefe ∆g = gh−gv auf der Bildebene</em> mit einem Zerstreuungskreis kleiner als e abgebildet werden
+这意味着在图像平面上景深范围Δg= gh-gv的所有物体的色散圆小于e成像</p>
+<p>Man nennt <strong>e die Tiefenschärfe</strong>, wobei für eine Digitalkamera eine Tiefenschärfe von <em>unter einem Pixel</em> angestrebt werden muss, um eine scharfe Abbildung in Abhängigkeit von der Pixelgröße zu erreichen.
+一个电话e对于数字相机，必须寻找小于一个像素的景深，以便根据像素尺寸获得清晰的图像。</p>
+<p>Die <strong>Blendenöffnung D und die Tiefenschärfe e</strong> hängen über die Bildweiten b, bv und bh folgendermaßen zusammen
+光圈D和景深？将图像宽度b，bv和bh挂在一起，如下所示
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_15.png"></p>
+<p>??? Durch Einsetzen der Beziehung (1) für b, bv und bh ergibt sich mit der Blendenzahl κ und einer gewünschten Tiefenschärfe e der Schärfentiefebereich um einen Abstand g bei dem ein Gegenstand optimal scharf e -- 0 abgebildet wird.
+通过将关系式（1）代入b，bv和bh，它给出了f数κ和所需的焦深e景深是物体最佳锐利的距离g
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_16.png"></p>
+<ul>
+<li><p>Wenn <em>gv und gh des Arbeitsbereiches vorgegeben sind</em>, dann erhält man die <strong>Gegenstandsweite g</strong>, bei der die Tiefenschärfe e optimal klein ist
+如果给出工作区域的gv和gh，那么你得到的物体宽度为g，景深最小
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_17.png"></p>
+</li>
+<li><p>Wenn der <strong>Schärfentiefenbereich</strong> für ein vorgegebenes e zwischen gv(g) und gh = inf liegen soll, dann ergibt sich g zu
+如果给定的景深e在gv（g）和gh = 1之间，然后加入g
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_18.png"></p>
+</li>
+<li><p>Wenn die eingestellte Gegenstandsweite g und die tatsächliche Gegenstandsweite gi bekannt sind, dann kann für gi ≥ g die resultierende Tiefenschärfe berechnet werden
+如果设定物距g和实际物距gi是已知的，则对于gi≥g，可以计算得到的焦深。
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_19.png"></p>
+</li>
+<li><p>Und für Fernaufnahmen g &gt;&gt; f, b ≈ f, ergibt sich näherungsweise.
+而对于远程录音 g &gt;&gt; f ，b≈f ，是近似值。
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_20.png"></p>
+</li>
+</ul>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_21.png"></p>
+<p>Daraus folgt für die <strong>Schärfentiefe</strong>:
+它遵循景深</p>
+<ul>
+<li><p>Die <strong>Schärfentiefe</strong> ist <em>umgekehrt proportional</em> zum <strong>Quadrat der Brennweite</strong>
+景深与焦距的平方成反比</p>
+</li>
+<li><p>Damit ergeben kleinere Brennweiten trotz einer zu f proportionalen Bildgröße eine größere Schärfentiefe
+尽管与f图像尺寸成比例且景深更大，但这导致更小的焦距</p>
+</li>
+<li><p>Eine <strong>kleinere Blendenöffnung</strong> und damit eine <strong>größere Blendenzahl</strong>, vergrößert den Bereich der Schärfentiefe
+较小的光圈因此较大的f数增加了景深</p>
+</li>
+<li><p>Eine <strong>kleine Blendenöffnung</strong> jedoch verringert die Lichtmenge, deswegen muss die Belichtungszeit erhöht werden.
+但是，小光圈会减少光量，因此必须增加曝光时间。</p>
+</li>
+</ul>
+<h6 id="3-1-6-1-3-1-anwendung-3d-profil-mittels-sch-rfemessung">3.1.6.1.3.1 Anwendung -- 3D Profil mittels Schärfemessung</h6>
+<hr>
+<h3 id="3-1-7-abbildungsfehler">3.1.7 Abbildungsfehler</h3>
+<p><strong>Abbildungsfehler oder Aberrationen</strong> sind Abweichungen von der idealen optischen Abbildung, die ein unscharfes oder verzerrtes Bild bewirken
+图像像差或像差是理想光学图像的偏差，导致图像模糊或失真</p>
+<p>Es gibt eine Reihe von <strong>Gründen für solche Abweichungen</strong>, die unter anderem das optische Auflösungsvermögen und die Kontrastübertragung (siehe Kraus S 66-73) beeinflussen:
+造成这种偏差的原因有很多，其中包括光学分辨率和对比度传输（见Kraus S 66-73）：</p>
+<h4 id="3-1-7-1-berblick">3.1.7.1 Überblick</h4>
+<ul>
+<li>Beugungsunschärfe 衍射模糊</li>
+<li>Sphärische Aberration 球面像差</li>
+<li>Astigmatismus 散光</li>
+<li>Chromatische Aberration 色差</li>
+<li>Verzeichnungen 扭曲</li>
+<li>Bildfeldwölbung 场曲</li>
+<li>Helligkeitsverteilung (natürlicher Randlichtabfall, Vignettierung) 亮度分布（自然边缘光线下降，渐晕）</li>
+<li>Umwelteinflüsse (Temperatur, Verschmutzung, Alterung)  环境影响（温度，污染，老化）</li>
+</ul>
+<h4 id="3-1-7-2-beugungsunsch-rfe-">3.1.7.2 Beugungsunschärfe 衍射模糊</h4>
+<p>Aufgrund des <strong>Wellencharakters des Lichtes</strong> und dessen Beugung an der kreisförmigen Blende des Objektives gibt es in der Bildebene der Kamera keinen idealen Bildpunkt, sondern ein sogenanntes Beugungsscheibchen mit theoretischem Gesamtdurchmesser
+由于光的波动特性及其在物镜圆孔处的衍射，在相机的像平面中没有理想的像素，而是具有理论总直径的所谓衍射盘 -- <strong>uth = 2.44κλ</strong></p>
+<p>Praktisch entspricht die <strong>Beugungsunschärfe</strong> näherungsweise der <strong>Blendenzahl</strong>
+实际上，衍射大致对应于f数 -- <strong>u ≈ κ = f / D</strong></p>
+<p><strong>Je kleiner die Blendenöffnung D</strong>, <strong>desto größer wird die Beugungsunschärfe</strong> und desto weniger Licht kommt durch die Blende hindurch.
+孔径D越小，衍射衍射变得越大并且光通过孔径越少</p>
+<h4 id="3-1-7-3-sph-rische-aberration-abschweifung-">3.1.7.3 Sphärische Aberration (Abschweifung) 球面像差</h4>
+<p>Bei der <strong>sphärischen Abberation</strong> bilden sphärisch geschliffene Linsen <em>parallele Lichtstrahlen nicht mehr exakt im Brennpunkt</em> ab
+对于球面像差，球面透镜不再精确地在焦点处形成平行光线</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_22.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_23.png"></p>
+<p><strong>Effekt</strong>: Verschwommenes Bild, scharfes Kernbild wird von einem unscharfen überlagert
+效果：图像模糊，锐利的核心图像被模糊覆盖</p>
+<p><strong>Abhilfe</strong>: Vorschalten von Blenden
+补救措施：孔径上游</p>
+<h4 id="3-1-7-4-astigmatismus-punktlosigkeit-">3.1.7.4 Astigmatismus (Punktlosigkeit) 散光</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_24.png"></p>
+<p>Trifft ein divergierender <em>Lichtstrahl nicht senkrecht sondern schräg auf die Linsenoberfläche</em> und verläuft dadurch unsymmetrisch zur optischen Achse, tritt an sphärischen Linsenoberflächen <strong>Astigmatismus</strong> auf
+如果发散光束不垂直但倾斜地照射到透镜表面并因此相对于光轴不对称地行进，则在球面透镜表面上发生像散</p>
+<p><strong>Ursache</strong> dafür sind <em>unterschiedliche lokale Krümmungsradien der Linse</em>
+这是由于镜片的局部曲率半径不同</p>
+<p>Es <em>entstehen unterschiedliche Brennpunkte und Brennweiten</em> <strong>für</strong> <em>unterschiedliche Teilstrahlengänge</em>
+不同的部分光束路径有不同的焦点和焦距</p>
+<p><strong>Effekt</strong>: Das Kamerabild wirkt für den Betrachter <em>nicht mehr scharf fokussiert</em>, da ein Szenenpunkt nicht mehr als Bildpunkt sondern unscharf abgebildet wird (punktlos).
+效果：相机图像不再具有用于观察者的清晰焦点，因为场景点不再显示为像素而是模糊（没有点）</p>
+<h4 id="3-1-7-5-chromatische-aberration-">3.1.7.5 Chromatische Aberration 色差</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_25.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_26.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_27.png"></p>
+<p>Wie bereits im Abschnitt Kennwerte besprochen, hängt die <strong>Brechzahl n</strong> hängt von der <strong>Wellenlänge λ</strong> ab und deswegen ist auch die <strong>Brennweite f</strong> von der Wellenlänge und damit der <strong>Farbe des Lichtes</strong> abhängig
+正如在特性部分中已经讨论的那样，折射率n取决于波长λ，因此焦距f取决于波长，因此取决于光的颜色</p>
+<p>Das hat zur Folge, dass auch das <strong>optische Auflösungsvermögen</strong> von der <strong>Wellenlänge</strong> abhängt
+结果，光学分辨率也取决于波长 -- <strong>c = λν = c0/n -- n = c0/λν</strong></p>
+<p><strong>Kurzwelliges Licht wird stärker als langwelliges Licht gebrochen</strong>, deswegen werden die Spektralanteile des weißen Lichtes unterschiedlich fokussiert und damit an unterschiedlichen Orten auf der Bildebene abgebildet
+短波光比长波光更强烈地破碎，因此白光的光谱分量被不同地聚焦，因此在图像平面上的不同位置成像</p>
+<p>Das nennt man auch <strong>chromatische Abberation</strong>.
+这也称为色差</p>
+<h4 id="3-1-7-6-verzeichnungen-">3.1.7.6 Verzeichnungen 扭曲</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_28.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_29.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_30.png"></p>
+<p>Eine <strong>Verzeichnung</strong> ist eine nichtlineare optische Verzerrung, die <em>lokal den Abbildungsmaßstab verändert</em>
+失真是局部改变放大率的非线性光学失真</p>
+<p>Sie wird z.B <strong>durch</strong></p>
+<ul>
+<li>die Abweichung des Ein- und Austrittswinkels eines Strahles bei einem realen optischen System, 真实光学系统中光束的入射角和出射角的偏差</li>
+<li>der Abweichung von der mechanisch realisierten Bildweite zur optischen Bildweite 机械实现的图像距离与光学图像距离的偏差</li>
+<li>Zentrierfehlern der Linsen im Objektiv hervorgerufen 物镜中的透镜的定心误差引起的</li>
+</ul>
+<p>Es gibt <strong>sowohl</strong> radiale <strong>als auch</strong> tangentiale Verzeichnungen
+有径向和切向扭曲</p>
+<p>Da die <strong>tangentiale</strong> meistens um eine Größenordung kleiner als die radiale ist, kann sie <em>vernachlässigt werden</em>
+由于切向通常比径向小一个数量级，因此可以忽略不计</p>
+<hr>
+<h3 id="3-1-8-kamerakalibrierung-ii">3.1.8 Kamerakalibrierung II</h3>
+<h4 id="3-1-8-1-radiale-verzeichnungen">3.1.8.1 Radiale Verzeichnungen</h4>
+<p>Besonders bei <strong>Weitwinkelobjektiven</strong> kann eine <em>starke radiale Verzeichnung</em> auftreten
+特别是对于广角镜头，会发生强烈的径向畸变</p>
+<p>Sie äußern sich in einer tonnen- oder kissenförmigen Verzerrung gerader Linien im Bild
+它们表现为画面中的桶状或枕形扭曲的直线</p>
+<p>Die Parameter, welche die <strong>optische Verzeichnung charakterisieren</strong>, zählen auch zu der <em>inneren Orientierung, den intrinsischen Kameraparametern</em>.
+表征光学畸变的参数也属于内部方向，即固有的相机参数</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_31.png"></p>
+<p>Je nachdem, welches Modell zur Beschreibung der radialen Verzeichnungen gewählt wird, ergibt sich eine unterschiedliche Anzahl von Verzeichnungsparametern {L'(rd), c}
+根据选择哪种模型来描述径向畸变，会产生不同数量的失真参数{L'(rd)，c}</p>
+<p>Durch Bestimmung der Parameter kann man mit diesen Modellen die tatsächliche Verzerrung xd' = (xd' , yd' )T eines Bildes korrigieren und ein entzerrtes Bild xu' = (xu', yu')T berechnen.
+通过确定参数，可以用这些模型校正图像的实际失真xd'=（xd'，yd'）T，并计算均衡图像xu'=（xu'，yu'）T</p>
+<p>Das Zentrum der Verzerrung c und die Verzerrungs Korrekturfaktoren a1, a2, a3, a4, ... sind zu bestimmen. 将确定失真c的中心和失真校正因子a1，a2，a3，a4 ......</p>
+<h4 id="3-1-8-2-normierte-koordinaten">3.1.8.2 Normierte Koordinaten</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_32.png"></p>
+<p>Ideale normierte Bildkoordinaten entstehen bei einer rein kanonischen Projektion
+理想的标准化图像坐标出现在纯粹的规范投影中</p>
+<p>Je besser die Kamerakalibrierung durchgeführt wird, desto näher kommt man an dieses Ideal heran.
+相机校准越好，您就越接近理想状态</p>
+<hr>
+<h2 id="3-2-epipolargeometrie">3.2 Epipolargeometrie</h2>
+<h3 id="3-2-1-eigeninduzierter-optischer-fluss">3.2.1 Eigeninduzierter Optischer Fluss</h3>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_3_33.png"></p>
+<p><strong>Eigeninduzierten optischen Fluss</strong> u = [u, v]T , der sich additiv aus einem rotatorischen u! und translatorischen uν Geschwindigkeitsanteil zusammensetzt, wobei nur der translatorische Anteil von der Entfernung ZK abhängig ist
+自感光流u = [u，v] T，它是从旋转的u！和平移速度分量，其中只有平移分量取决于距离ZK</p></body>
+</html>

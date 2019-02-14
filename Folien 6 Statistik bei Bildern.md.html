@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>Folien 6 Statistik bei Bildern</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); border-image: initial; background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.04); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.markdown-preview pre.editor-colors { user-select: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.markdown-preview ul label { vertical-align: top; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher.bracket-matcher {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+
+.ftpconfig_line_error {
+  background: rgba(255, 0, 0, 0.5) !important;
+}
+.btn.btn-float-left {
+  float: left !important;
+}
+.btn.btn-float-right {
+  float: right !important;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 139, 255, 0.24);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #528bff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #abb2bf;
+}
+.syntax--comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #5c6370;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #98c379;
+}
+.syntax--keyword {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--control {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #61afef;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #d19a66;
+}
+.syntax--storage {
+  color: #c678dd;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #c678dd;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #abb2bf;
+}
+.syntax--constant {
+  color: #d19a66;
+}
+.syntax--constant.syntax--variable {
+  color: #d19a66;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--numeric {
+  color: #d19a66;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #56b6c2;
+}
+.syntax--variable {
+  color: #e06c75;
+}
+.syntax--variable.syntax--interpolation {
+  color: #be5046;
+}
+.syntax--variable.syntax--parameter {
+  color: #abb2bf;
+}
+.syntax--string {
+  color: #98c379;
+}
+.syntax--string > .syntax--source,
+.syntax--string .syntax--embedded {
+  color: #abb2bf;
+}
+.syntax--string.syntax--regexp {
+  color: #56b6c2;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #e5c07b;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e06c75;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #5c6370;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #61afef;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #be5046;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #abb2bf;
+}
+.syntax--support.syntax--class {
+  color: #e5c07b;
+}
+.syntax--support.syntax--type {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e06c75;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #d19a66;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #61afef;
+}
+.syntax--meta.syntax--class {
+  color: #e5c07b;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e06c75;
+}
+.syntax--meta.syntax--link {
+  color: #d19a66;
+}
+.syntax--meta.syntax--require {
+  color: #61afef;
+}
+.syntax--meta.syntax--selector {
+  color: #c678dd;
+}
+.syntax--meta.syntax--separator {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--tag {
+  color: #abb2bf;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #abb2bf;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: white !important;
+  background-color: #e05252 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #c678dd;
+}
+.syntax--markup.syntax--deleted {
+  color: #e06c75;
+}
+.syntax--markup.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e06c75;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #61afef;
+}
+.syntax--markup.syntax--link {
+  color: #56b6c2;
+}
+.syntax--markup.syntax--inserted {
+  color: #98c379;
+}
+.syntax--markup.syntax--quote {
+  color: #d19a66;
+}
+.syntax--markup.syntax--raw {
+  color: #98c379;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--constant.syntax--language,
+.syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
+.syntax--source.syntax--elixir .syntax--constant.syntax--definition {
+  color: #61afef;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--definition,
+.syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
+  color: #c678dd;
+}
+.syntax--source.syntax--elixir .syntax--parameter.syntax--variable.syntax--function {
+  color: #d19a66;
+  font-style: italic;
+}
+.syntax--source.syntax--elixir .syntax--quoted {
+  color: #98c379;
+}
+.syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--section,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--regexp.syntax--section,
+.syntax--source.syntax--elixir .syntax--regexp.syntax--string {
+  color: #be5046;
+}
+.syntax--source.syntax--elixir .syntax--separator,
+.syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
+  color: #d19a66;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--constant {
+  color: #e5c07b;
+}
+.syntax--source.syntax--elixir .syntax--array,
+.syntax--source.syntax--elixir .syntax--scope,
+.syntax--source.syntax--elixir .syntax--section {
+  color: #828997;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #61afef;
+}
+.syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
+  color: #c678dd;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e06c75;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #c678dd;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e06c75;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #abb2bf;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
+  color: #c678dd;
+}
+.syntax--source.syntax--ts .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--flow .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--interpolation {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation.syntax--begin,
+.syntax--ng.syntax--interpolation.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--function {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation .syntax--function.syntax--begin,
+.syntax--ng.syntax--interpolation .syntax--function.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--bool {
+  color: #d19a66;
+}
+.syntax--ng.syntax--interpolation .syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--pipe,
+.syntax--ng.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--tag {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--attribute-name {
+  color: #e5c07b;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string {
+  color: #c678dd;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--begin,
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--end {
+  color: #abb2bf;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
+  color: inherit;
+}
+.syntax--source.syntax--php .syntax--class.syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
+  color: #c678dd;
+}
+.syntax--source.syntax--python .syntax--variable.syntax--parameter {
+  color: #d19a66;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><ul>
+<li><a href="#folien-6-statistik-bei-bildern">Folien 6 Statistik bei Bildern</a><ul>
+<li><a href="#61-motivation">6.1 Motivation</a><ul>
+<li><a href="#611-statistik-in-natürlichen-bildern">6.1.1 Statistik in natürlichen Bildern</a></li>
+</ul>
+</li>
+<li><a href="#62-zufallsvariablen">6.2 Zufallsvariablen</a><ul>
+<li><a href="#621-wahrscheinlichkeitsdichtefunktion">6.2.1 Wahrscheinlichkeitsdichtefunktion</a></li>
+<li><a href="#622-histogramm">6.2.2 Histogramm</a><ul>
+<li><a href="#6221-beispiel">6.2.2.1 Beispiel</a></li>
+</ul>
+</li>
+<li><a href="#623-verteilungsfunktion">6.2.3 Verteilungsfunktion</a></li>
+<li><a href="#624-kenngröen">6.2.4 Kenngrößen</a><ul>
+<li><a href="#6241-erwartungswert">6.2.4.1 Erwartungswert</a></li>
+<li><a href="#6242-varianz">6.2.4.2 Varianz</a></li>
+<li><a href="#6243-zentrale-momente">6.2.4.3 Zentrale Momente</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#63-funktionen-von-zufallsvariablen">6.3 Funktionen von Zufallsvariablen</a><ul>
+<li><a href="#631-herleitung">6.3.1 Herleitung</a></li>
+<li><a href="#632-beispiel">6.3.2 Beispiel</a></li>
+</ul>
+</li>
+<li><a href="#64-multiple-zufallsvariablen">6.4 Multiple Zufallsvariablen</a><ul>
+<li><a href="#641-eigenschaften">6.4.1 Eigenschaften</a></li>
+<li><a href="#642-kovarianzmatrix">6.4.2 Kovarianzmatrix</a></li>
+<li><a href="#643-kovarianz">6.4.3 Kovarianz</a></li>
+</ul>
+</li>
+<li><a href="#65-rgb-barbbild">6.5 RGB Barbbild</a><ul>
+<li><a href="#651-korrelationen">6.5.1 Korrelationen</a></li>
+<li><a href="#652-korrelationskoeffizienten">6.5.2 Korrelationskoeffizienten</a></li>
+<li><a href="#653-vertauschen-der-kanäle">6.5.3 Vertauschen der Kanäle</a></li>
+</ul>
+</li>
+<li><a href="#66-verteilungsfunktionen">6.6 Verteilungsfunktionen</a><ul>
+<li><a href="#661-poissonverteilung">6.6.1 Poissonverteilung</a></li>
+<li><a href="#662-gauvertielung">6.6.2 Gaußvertielung</a></li>
+<li><a href="#663-zentraler-grenzwertsatz">6.6.3 Zentraler Grenzwertsatz</a></li>
+<li><a href="#664-multivariate-gauverteilung">6.6.4 Multivariate Gaußverteilung</a></li>
+<li><a href="#665-hauptachsentransformation">6.6.5 Hauptachsentransformation</a><ul>
+<li><a href="#6651-beispiel">6.6.5.1 Beispiel</a><ul>
+<li><a href="#66511-whitening-von-bildern">6.6.5.1.1 Whitening von Bildern</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#666-binomialverteilung">6.6.6 Binomialverteilung</a></li>
+<li><a href="#667-studentische-t-verteilung">6.6.7 Studentische t-Verteilung</a></li>
+<li><a href="#668-gausche-mischverteilung">6.6.8 Gaußsche Mischverteilung</a></li>
+</ul>
+</li>
+<li><a href="#67-stochastische-prozesse-und-felder">6.7 Stochastische Prozesse und Felder</a><ul>
+<li><a href="#671-definition">6.7.1 Definition</a></li>
+<li><a href="#672-problem">6.7.2 Problem</a></li>
+<li><a href="#673-annahmen">6.7.3 Annahmen</a></li>
+</ul>
+</li>
+<li><a href="#68-korrelationsanalyse">6.8 Korrelationsanalyse</a><ul>
+<li><a href="#681-autokorrelationsfunktion">6.8.1 Autokorrelationsfunktion</a></li>
+<li><a href="#682-normierte-autokovarianzfunktion">6.8.2 Normierte Autokovarianzfunktion</a></li>
+<li><a href="#683-beispiel-autokorrelationsfunktion">6.8.3 Beispiel Autokorrelationsfunktion</a></li>
+<li><a href="#684-kreuzkorrelationsfunktion">6.8.4 Kreuzkorrelationsfunktion</a></li>
+<li><a href="#685-normierte-kreuzkovarianzfunktion">6.8.5 Normierte Kreuzkovarianzfunktion</a></li>
+<li><a href="#686-lokale-kreuzkorrelationsfunktion">6.8.6 Lokale Kreuzkorrelationsfunktion</a></li>
+<li><a href="#687-vergleich">6.8.7 Vergleich</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<h1 id="folien-6-statistik-bei-bildern">Folien 6 Statistik bei Bildern</h1>
+<hr>
+<h2 id="6-1-motivation">6.1 Motivation</h2>
+<p>Es gibt im wesentlichen <strong>zwei Gründe</strong>, warum die Statistik interessant für die Bildverarbeitung ist:
+统计数据对于图像处理有趣的原因主要有两个：</p>
+<ul>
+<li>Die Bildaufnahme ist <strong>Störungen</strong> unterworfen
+图像采集受到干扰</li>
+<li>„Natürliche Bilder“ weisen <strong>charakteristische raumzeitliche Abhängigkeiten</strong> zwischen visuellen Merkmalen auf
+“自然图像”具有视觉特征之间的特征时空依赖性<ul>
+<li>ausgeprägte Strukturen
+明显的结构</li>
+<li>gemeinsame statistische Eigenschaften.
+常见的统计特性</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-1-1-statistik-in-nat-rlichen-bildern">6.1.1 Statistik in natürlichen Bildern</h3>
+<ul>
+<li><strong>Grauwertstatistik</strong>: Huang &amp; Mumford 1999 (Statistics of Natural Images and Models)</li>
+<li><strong>2 × 2 Musterstatistik</strong>: Lee, Mumford &amp; Huang 2001 (Occlusion Models for Natural Images)</li>
+<li><strong>Bewegungsstatistik</strong>: Liu, Freeman, Adelson, Weiss 2008 (Human-Assisted Motion Annotation)</li>
+</ul>
+<hr>
+<h2 id="6-2-zufallsvariablen">6.2 Zufallsvariablen</h2>
+<h3 id="6-2-1-wahrscheinlichkeitsdichtefunktion">6.2.1 Wahrscheinlichkeitsdichtefunktion</h3>
+<p>Der <strong>Grauwert</strong> G eines Bildes an einem bestimmten Pixel ist <em>ein Maß für die gemessene Bestrahlungsstärke E</em>
+特定像素处的图像的灰度值G是测量的辐照度E的量度</p>
+<p>Da der <strong>Messprozess</strong> <em>statistischen Schwankungen</em> unterworfen ist, muss die Bestrahlungsstärke bzw der Grauwert eines jeden Pixel als <strong>Zufallsvariable mit</strong> einer bestimmten kontinuierlichen p(x = E) bzw diskreten p(X = G) <strong>Wahrscheinlichkeitsdichtefunktion (pdf)</strong> angenommen werden
+由于测量过程受统计波动的影响，每个像素的辐照度或灰度值必须假定为具有一定连续p（x = E）或离散p（X = G）概率密度函数（pdf）的随机变量</p>
+<p>Jede pdf erfüllt <em>zwei Bedingungen</em>:
+每个pdf都符合两个条件：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_1.png"></p>
+<h3 id="6-2-2-histogramm">6.2.2 Histogramm</h3>
+<p>Wenn man annimmt, dass die <em>Zufallsvariable X unabhängig vom Bildort</em> ist, dann kann die <em>pdf durch</em> ein <strong>Histogramm</strong> angenähert werden
+假设随机变量X独立于图像位置，则可以通过直方图来近似pdf</p>
+<p>Ein <strong>Histogramm</strong> entspricht der <em>Häufigkeitsverteilung der Variablen</em> z.B der Grauwerte in einem Bild:
+直方图对应于变量的频率分布，例如图像中的灰度值：</p>
+<p>p(X) ≈ hN(X) = Nx/N</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_2.png"></p>
+<p>wobei <strong>Nx</strong> der <em>Anzahl der jeweiligen Variable X</em> z.B des jeweiligen Grauwertes G im Bild entspricht. Es gilt:
+其中NX对应于相应变量X的数量，例如图像中的相应灰度值G.</p>
+<p>lim N-inf hN(X) = p(X)</p>
+<h4 id="6-2-2-1-beispiel">6.2.2.1 Beispiel</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_3.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_4.png"></p>
+<h3 id="6-2-3-verteilungsfunktion">6.2.3 Verteilungsfunktion</h3>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_5.png"></p>
+<p>Die <strong>Wahrscheinlichkeit P(x)</strong>, dass z.B die Beleuchtungsstärke E im Intervall von ]−inf; E] liegt wird <strong>Verteilungsfunktion</strong> genannt und entspricht der <strong>Stammfunktion der pdf</strong>
+概率P（x），例如，间隔中的照度E，-inf; E]称为分布函数，对应于pdf的父函数</p>
+<p>Die <strong>Verteilungsfunktion</strong> wächst monoton von 0 nach 1 an und es gilt:
+分布函数从0单调增加到1，以下情况适用：</p>
+<p>P'(x) = dP(x)/dx = p(x)</p>
+<h3 id="6-2-4-kenngr-en">6.2.4 Kenngrößen</h3>
+<h4 id="6-2-4-1-erwartungswert">6.2.4.1 Erwartungswert</h4>
+<p>Der <strong>Mittelwert µx</strong> bzw. der <strong>Erwartungswert E{x}</strong> ist definiert als:</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_6.png"></p>
+<p>Der <strong>Erwartungswert</strong> kann durch <em>N-malige Messung und Mittelung</em> gemessener Werte <em>Xi</em> ohne Wissen der pdf approximiert werden (empirischer Mittelwert µ):
+期望值可以通过测量N次并且在不知道pdf（经验平均μ）的情况下平均测量值Xi来近似：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_7.png"></p>
+<p>Z.B kann der <strong>Erwartungswert des Grauwertes</strong> eines Bildes durch die Summe aller Grauwerte geteilt durch die Grauwertanzahl approximiert werden.
+例如，图像的灰度值的期望值可以通过所有灰度值之和除以灰度值数来近似</p>
+<h4 id="6-2-4-2-varianz">6.2.4.2 Varianz</h4>
+<p>Die <strong>Varianz</strong> beschreibt die <em>Abweichung vom Mittelwert µx</em>:</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_8.png"></p>
+<p>Auch die Varianz kann <strong>durch</strong> <em>N-malige Messung</em> ohne Wissen der pdf approximiert werden. Es ergibt sich die sogenannte <strong>Stichprobenvarianz</strong>:</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_9.png"></p>
+<h4 id="6-2-4-3-zentrale-momente">6.2.4.3 Zentrale Momente</h4>
+<p>Weitere Eigenschaften der pdf von Zufallsvariablen werden durch <strong>zentrale Momente n-ter Ordnung</strong> ermittelt:</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_10.png"></p>
+<p>Das dritte Moment, auch <strong>Schiefheit</strong> genannt, ist z.B ein Maß für die <em>Asymmetrie der pdf</em>
+第三个时刻，也称为歪曲，例如衡量pdf的不对称性</p>
+<p>Die <strong>Kurtosis κ</strong> bzw <strong>Wölbung einer pdf</strong> ist durch das <em>normierte vierte zentrale Moment</em> gegeben, wobei der <strong>Normierungsfaktor σ4</strong> der vierten Potenz der Standardabweichung entspricht:
+pdf的峰度κ或跳跃由归一化的第四中心力矩给出，其中归一化因子σ4对应于标准偏差的四次幂：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_11.png"></p>
+<hr>
+<h2 id="6-3-funktionen-von-zufallsvariablen">6.3 Funktionen von Zufallsvariablen</h2>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_12.png"></p>
+<p>Sogenannte <strong>Punktoperatoren</strong> dienen unter anderem dazu die Grauwerte in einem Bild nach <em>bestimmten Kriterien zu verändern</em>, so dass z.B der Bildkontrast verbessert wird
+除此之外，所谓的点运算符用于根据特定标准改变图像中的灰度值，从而例如改善图像对比度</p>
+<p>Das hat <strong>nicht nur</strong> <em>Auswirkungen auf die Grauwerte</em> an sich, <strong>sondern auch</strong> auf die <em>Bildstatistik</em>
+这不仅影响灰度值本身，还影响图像统计</p>
+<p>Wenn die <strong>Grauwerte G</strong> nach einem bestimmten funktionalen Zusammenhang G' = g(G) zu anderen Grauwerten G' verändert werden, dann <em>ändert sich auch die Grauwertverteilung</em> P(G) -- P(G0) bzw das <em>Histogramm</em>.
+如果根据某个函数关系G'= g（G）将灰度值G改变为其他灰度值G'，则灰度值分布P（G）-P（G0）或直方图也改变</p>
+<h3 id="6-3-1-herleitung">6.3.1 Herleitung</h3>
+<p>Wird eine <strong>pdf p(x)</strong> in eine <strong>pdf p(y)</strong> über eine <em>Kennlinie y = g(x)</em> überführt, dann gilt für alle i = 1, ... n:
+如果pdf p（x）在特征y = g（x）上转换为pdf p（y），那么对于所有i = 1，...n:</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_13.png"></p>
+<p>Für kleine δy kann man näherungsweise annehmen, dass gilt:
+对于小的δy，可以大致假设以下适用：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_14.png"></p>
+<p>Ist y = g(x) differenzierbar, dann ergibt sich:</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_15.png"></p>
+<h3 id="6-3-2-beispiel">6.3.2 Beispiel</h3>
+<p>Beispiel einer <strong>gaußverteilten Zufallsvariable</strong>, die über eine <em>nichtlineare monoton steigende Funktion abgebildet wird</em>
+高斯分布随机变量的示例，其映射在非线性单调递增函数上</p>
+<ul>
+<li>bleibt unimodal
+仍然是单峰的</li>
+<li>aber nicht mehr gaußverteilt
+但不再是高​​斯分布式的</li>
+</ul>
+<p><strong>Vorkommen in der Bildverarbeitung</strong> z.B beim Messen der Entfernung über Disparitäten von Bildpunktkoordinaten unterschiedlicher Kameras aus unterschiedlichen Blickwinkeln.
+图像处理中的出现，例如，测量不同相机的像素坐标从不同角度的差异的距离 ???</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_16.png"></p>
+<p>Positionierung im Raum über den räumlichen Rückwärtsschnitt
+通过空间向后切割在空间中定位</p>
+<hr>
+<h2 id="6-4-multiple-zufallsvariablen">6.4 Multiple Zufallsvariablen</h2>
+<h3 id="6-4-1-eigenschaften">6.4.1 Eigenschaften</h3>
+<p><strong>Multiple Zufallsvariablen</strong> x = (x1, x2, , xN)T besitzen eine <em>gemeinsame pdf p(x) mit den Eigenschaften p(x) ≥ 0 und Px p(x) = 1</em>, wobei die einzelnen Zufallsvariablen ZV im Allgemeinen <em>korreliert und statistisch voneinander abhängig</em> sind.
+多个随机变量x =（x1，x2，xN）T具有共同的pdf p（x），其属性为p（x）≥0且Px p（x）= 1，其中各个随机变量ZV通常是相关的且在统计上不同依赖</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_17.png"></p>
+<p><strong>Statistische Unabhängigkeit</strong> schließt immer <em>Unkorreliertheit</em> mit ein
+统计独立性总是包括不相关
+Der Umkehrschluss gilt jedoch nicht.
+反之则不然</p>
+<h3 id="6-4-2-kovarianzmatrix">6.4.2 Kovarianzmatrix</h3>
+<p>Gemeinsame <strong>zentrale Momente höherer Ordnung</strong> bieten die <strong>Möglichkeit</strong> <em>statistische Abhängigkeiten zwischen den Zufallsvariablen Xn eines Vektors X</em> zu bewerten
+高阶的共同中心矩提供了评估向量X的随机变量Xn之间的统计依赖性的可能性</p>
+<p>Hierbei ist das wichtigste Instrument die <strong>Kovarianzmatrix Σ</strong>.
+这里，最重要的工具是协方差矩阵Σ</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_18.png"></p>
+<p>Diese <strong>Matrix</strong> ist <em>symmetrisch und positiv semidefinit (alle Eigenwerte ≥ Null)</em>
+该矩阵是对称的和半正的（所有特征值≥零）</p>
+<p>Die <strong>Varianzen σ2i</strong> sind stets positiv, die <strong>Kovarianzen σij</strong> können positiv oder negativ sein (korreliert bzw antikorreliert)
+方差σ2i总是正的，协方差σij可以是正的或负的（相关的或反相关的）</p>
+<p>Falls die <strong>Kovarianzen Null</strong> sind, dann sind die Variablen <em>statistisch unabhängig</em> und die <em>Kovarianzmatrix diagonal</em>.
+如果协方差为零，则变量在统计上是独立的，并且协方差矩阵是对角线的</p>
+<h3 id="6-4-3-kovarianz">6.4.3 Kovarianz</h3>
+<p>Da die <strong>Kovarianzmatrix</strong> <em>symmetrisch</em> ist, kann <em>immer ein Koordinatensystem, also eine Linearkombination der Zufallsvariablen, gefunden werden</em>, in dem die <strong>Kovarianzmatrix</strong> diagonal und damit die <strong>Zufallsvariablen</strong> unkorreliert sind
+由于协方差矩阵是对称的，因此总是可以找到坐标系，即随机变量的线性组合，其中协方差矩阵是对角线的，因此随机变量是不相关的</p>
+<p>Die <strong>Kovarianz von zwei Zufallsvariablen</strong> gibt an in welchem Maß die Fluktuationen zueinander in Beziehung stehen.
+两个随机变量的协方差表明波动彼此相关的程度</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_19.png"></p>
+<p>Der <strong>Korrelationskoeffizient</strong> ist die <em>mit den Varianzen normierte Kovarianz</em>:
+相关系数是用方差归一化的协方差：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_20.png"></p>
+<p><strong>Unkorrelierte Zufallsvariablen</strong> erfüllen folgende Beziehungen:
+不相关的随机变量满足以下关系：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_21.png"></p>
+<hr>
+<h2 id="6-5-rgb-barbbild">6.5 RGB Barbbild</h2>
+<h3 id="6-5-1-korrelationen">6.5.1 Korrelationen</h3>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_22.png"></p>
+<h3 id="6-5-2-korrelationskoeffizienten">6.5.2 Korrelationskoeffizienten</h3>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_23.png"></p>
+<h3 id="6-5-3-vertauschen-der-kan-le">6.5.3 Vertauschen der Kanäle</h3>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_24.png"></p>
+<hr>
+<h2 id="6-6-verteilungsfunktionen">6.6 Verteilungsfunktionen</h2>
+<h3 id="6-6-1-poissonverteilung">6.6.1 Poissonverteilung</h3>
+<p><strong>Rauschmodell für Bildsensoren</strong>:
+图像传感器的噪声模型：</p>
+<p>Der von einem <em>einzelnen Sensorelement aufgenommene mittlere Strom von Ladungsträgern λ</em> ist <strong>proportional</strong> zur <em>Bestrahlungsstärke E</em>
+由单个传感器元件吸收的电荷载流子λ的平均电流与照射强度E成比例</p>
+<p>Da der <strong>Photonenstrom statistischen Schwankungen</strong> unterworfen ist, werden bei <em>jeder Aufnahme mit einer festen Belichtungszeit ∆t unterschiedliche Anzahlen N von Elektronen gesammelt</em>
+由于光子电流经历统计波动，因此在每次发射时以固定的曝光时间Δt收集不同数量的N个电子</p>
+<p>Die <strong>diskrete Verteilung</strong> der Elektronenanzahl N ist <strong>poissonverteilt</strong>:
+电子数N的离散分布是泊松分布的：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_25.png"></p>
+<p>Der <strong>Mittelwert und die Varianz</strong> sind abhängig von λ, also auch von der Bestrahlungsstärke, und identisch:
+平均值和方差取决于λ，因此也取决于照射强度，并且相同：a</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_26.png"></p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_27.png"></p>
+<p>Schon für <strong>moderate Bestrahlungsstärken</strong> approximiert folgende <em>Gaußverteilung N (N|λ∆t, λ∆t)</em> die <em>Poissonverteilung</em> fast <em>perfekt</em>
+即使对于中等辐照度，以下高斯分布N（NjλΔt，λΔt）几乎完全近似泊松分布</p>
+<p>Selbst ein <strong>idealer Bildsensor</strong> ohne elektronisches Rauschen weist <strong>aufgrund</strong> des Photonenrauschens bei 10000 Elektronen (durch Absorbtion von Photonen) eine <strong>Standardabweichung</strong> von etwa 100 Elektronen also 1% auf.
+即使没有电子噪声的理想图像传感器也具有约100个电子的标准偏差，这是由于10000个电子（通过光子的吸收）的光子噪声，即1％</p>
+<h3 id="6-6-2-gau-vertielung">6.6.2 Gaußvertielung</h3>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_29.png"></p>
+<p>Bei der <strong>Modellierung von Rauschen und Nachbarschaftsbeziehungen</strong>, sowie beim Filtern spielt <strong>sowohl</strong> die eindimensionale <strong>als auch</strong> die multivariate <em>Gaußverteilung die wichtigste Rolle</em>
+在噪声和邻域关系以及滤波的建模中，一维和多元高斯分布都起着最重要的作用</p>
+<p>Die eindimensionale Normalverteilung bzw Gaußverteilung N (x|µ, σ2) über der Zufallsvariablen x mit dem Mittelwert µ und der Varianz σ2 (bzw der Präzision β = 1/σ2) hat die Form:
+随机变量x上的一维正态分布或高斯分布N（x |μ，σ2）具有均值μ和方差σ2（或精度β= 1 /σ2）具有以下形式：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_28.png"></p>
+<h3 id="6-6-3-zentraler-grenzwertsatz">6.6.3 Zentraler Grenzwertsatz</h3>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_30.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_31.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_32.png"></p>
+<p>Der <strong>zentrale Grenzwertsatz</strong> besagt im Wesentlichen, dass die <em>Summe einer großen Zahl von unabhängigen, identisch verteilten Zufallsvariablen annähernd normalverteilt ist</em>
+本质上，中心极限定理表示大量独立的，相同分布的随机变量的总和大致正态分布</p>
+<p>Betrachtet man beispielsweise <strong>N gleichverteilte Zufallsvariablen (X1, , XN)</strong>, dann tendiert die Verteilung der Summe dieser Zufallsvariablen Y = 1/N Sigma (i=1 Xi) mit steigendem N <em>immer mehr zu einer Gaußverteilung</em>
+考虑到，例如，N个均匀分布的随机变量（X1，XN），这些随机变量之和的分布Y = 1/N Sigma (i=1 Xi)随着N的增加趋于越来越高的高斯分布</p>
+<p>Aus dem <strong>zentralen Grenzwertsatz</strong> folgt auch, dass <em>kaskadierte Faltungen</em> besonders bei <em>glatten Faltungskernen</em> schon bei einer geringen Anzahl an Faltungen (N &gt; 5) durch eine einzige Faltung <em>mit einem Gaußkern</em> approximiert werden kann.
+从中心极限定理得出，级联卷积可以通过单个卷积与高斯核近似，即使在平滑卷积核的情况下，即使具有少量卷积（N&gt; 5）</p>
+<h3 id="6-6-4-multivariate-gau-verteilung">6.6.4 Multivariate Gaußverteilung</h3>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_34.png"></p>
+<p>Die <strong>multivariate Gaußverteilung N (x|µ,Σ)</strong> über einer <em>multiplen D-dimensionalen Zufallsvariablen x</em> mit den Mittelwerten µ und der Kovarianzmatrix Σ bzw der Präzisionsmatrix Λ = Σ−1 hat die Form:
+具有平均值μ和协方差矩阵Σ或精度矩阵Λ=Σ-1的多D维随机变量x上的多元高斯分布N（x |μ，Σ）具有以下形式：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_33.png"></p>
+<p>wobei <em>|Σ| die Determinante der Kovarianzmatrix</em> bezeichnet
+其中|Σ|表示协方差矩阵的行列式</p>
+<p>Der Exponent beinhaltet die sogenannte <strong>Mahalanobis Distanz</strong> ∆2 = (x−µ)TΛ(x−µ) die der Euklidischen Distanz entspricht, wenn die Kovarianzmatrix der Einheitsmatrix entspricht Λ = I.
+如果协方差矩阵对应于单位矩阵Λ= I，则指数包含所谓的马哈拉诺比斯距离Δ2=（x-μ）TΛ（x-μ），其对应于欧几里德距离</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_35.png"></p>
+<p>Die <strong>Kovarianzmatrix</strong> läßt sich immer in eine <em>gewichtete Summe von folgenden separablen Matrizen zerlegen</em>:
+协方差矩阵总是可以分解为以下可分离矩阵的加权和</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_36.png"></p>
+<p>Die <strong>Vektoren ui</strong> entsprechen den <em>Eigenvektoren von Σ</em> und bilden eine <em>Orthonormalbasis</em>
+矢量ui对应于Σ的特征向量并形成标准正交基</p>
+<p>Die <strong>Gewichte λi</strong> entsprechen den <em>Eigenwerten von Σ</em>.
+权重λi对应于Σ的特征值</p>
+<p><strong>Vorherige Zerlegung kann auch folgendermaßen geschrieben werden:</strong>
+以前的分解也可以写成如下：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_37.png"></p>
+<p>wobei S = diag(λi) , i = 1,  , D
+其中S = diag（λi），i = 1，D</p>
+<p>Die <strong>Zeilenvektoren u&gt; i</strong> erzeugen die <em>Rotationsmatix U</em> und die <strong>Eigenwerte λi</strong> die <em>Diagonalmatrix S</em>
+线矢量u&gt; i生成旋转矩阵U，特征值λi生成对角矩阵S.</p>
+<p>Damit kann die <strong>Mahalanobis Distanz</strong> auch in einem um den Vektor µ verschobenen und um U rotierten Koordinatensystem y = U(x − µ) dargestellt werden:
+因此，马哈拉诺比斯距离也可以用坐标系y = U（x-μ）表示，该坐标系偏移了矢量μ并绕U旋转：
+∆2 = yTS−1y</p>
+<p>Damit entspricht jede <strong>multivariate Gaußverteilung</strong> im Koordinatensystem x einer <em>mittelwertfreien multivariaten Normalverteilung</em> im transformierten Koordinatensystem y mit den Hauptachsen der Verteilung entlang der Koordinatenachsen
+因此，坐标系x中的每个多元高斯分布对应于变换坐标系y中的无平均多元正态分布，其中沿着坐标轴的分布的主轴</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_38.png"></p>
+<p>wobei die <strong>multivariate Normalverteilung</strong> <em>im transformierten Koordinatensystem</em> einem Produkt von D eindimensionalen Normalverteilungen entspricht.
+其中变换坐标系中的多元正态分布对应于D个一维正态分布的乘积</p>
+<p><strong>Produkt univariater Normalverteilungen</strong>:
+单变量正态分布的乘积：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_39.png"></p>
+<p>Damit gibt es <strong>drei Kategorien</strong> von multivariaten Gaußverteilungen:
+有三类多元高斯分布：</p>
+<ul>
+<li>a) allgemeine anisotrope Σ,
+a）一般各向异性Σ，</li>
+<li>b) separierbare anisotrope Σ = diag(σi2),
+b）各向异性separiqueryΣ= diag（σi2），</li>
+<li>c) separierbare isotrope Σ = σ2I
+c）separierbare各向同性Σ=σ2I</li>
+</ul>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_40.png"></p>
+<h3 id="6-6-5-hauptachsentransformation">6.6.5 Hauptachsentransformation</h3>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_41.png"></p>
+<p><strong>Hauptachsentransformation</strong> bezeichnet die Transformation einer <em>multivariaten Normalverteilung N (x|µ,Σ)</em>, so dass die Kovarianzmatrix zu einer Diagonalmatrix wird
+主轴变换是指多元正态分布N（x |μ，Σ）的变换，因此协方差矩阵成为对角矩阵</p>
+<p>Diese Transformation wird <strong>Whitening</strong> genannt, <strong>wenn</strong> die <em>diagonale Kovarianzmatrix zusätzlich so skaliert</em> wird, dass sie der <em>Einheitsmatrix entspricht Σ = I</em> und damit das <strong>Spektrum der Eigenvektoren</strong> (Menge der unterschiedlichen Eigenvektoren) <strong>uniform</strong> (λi = 1 , i) ist:
+如果对角协方差矩阵被另外缩放以对应于单位矩阵Σ= I并且因此特征向量的光谱（不同特征向量的集合）是均匀的（λi= 1,i），则该变换被称为白化：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_42.png"></p>
+<p><strong>Nach der Transformation</strong> sind die <strong>Zufallsvariablen</strong> <em>unkorreliert</em> und weil sie normalverteilt sind damit auch <em>unabhängig</em>
+转换后，事故变量是不相关的，因为它们是正态分布的，所以它们也是独立的</p>
+<p>Durch die <strong>Projektion von x auf einen beliebigen Vektor a</strong> erhält man die <em>Verteilung N (y|a&gt;µ, aTΣa) entlang des eindimensionalen Unterraumes y</em>
+通过将x投影到任意向量a上，我们得到沿着一维子空间y的分布N（y | a&gt;μ，aTΣa）</p>
+<p>Der Name <strong>Whitening</strong> kommt daher, weil <em>N (0, I)-verteilte Fehler als Gaußsches Weißes Rauschen bzw Gaussian White Noise</em> bezeichnet werden.
+名称白化来自于N（0，I）分布的误差被称为高斯白噪声或高斯白噪声的事实</p>
+<h4 id="6-6-5-1-beispiel">6.6.5.1 Beispiel</h4>
+<h5 id="6-6-5-1-1-whitening-von-bildern">6.6.5.1.1 Whitening von Bildern</h5>
+<p><strong>Whitening</strong> als <em>Vorverarbeitung</em> von Bildern über Hauptkomponentenanalyse (PCA)
+通过主成分分析（PCA）将白化作为图像的预处理</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_43.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_44.png"></p>
+<h3 id="6-6-6-binomialverteilung">6.6.6 Binomialverteilung</h3>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_47.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_48.png"></p>
+<p>Das <em>diskrete Analogon zur Normalverteilung N (x|µ, σ2)</em> ist die <strong>Binomialverteilung</strong>
+与正态分布N（x |μ，σ2）的离散模拟是二项分布</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_45.png"></p>
+<p>Sie beschreibt die Wahrscheinlichkeit der Auftrittsanzahl m eines Zustandswertes X = 1 einer binären Zustandsvariablen X = [0, 1] bei N Wiederholungen des Zufallsexperiments
+它描述了随机性实验的N次重复的二元状态变量X = [0,1]的状态值X = 1的出现次数m的概率</p>
+<p>Der <strong>Mittelwert</strong> und die <strong>Varianz</strong> ergeben sich zu:
+均值和方差是：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_46.png"></p>
+<h3 id="6-6-7-studentische-t-verteilung">6.6.7 Studentische t-Verteilung</h3>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_50.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_51.png"></p>
+<p>Die <strong>Studentsche t-Verteilung S(x|µ, λ, ν)</strong> ist besonders dazu geeignet die <em>Statistik von Datensätzen robust gegenüber Ausreißern zu beschreiben</em> und liefert in vielen Fällen ein besseres Modell für typische Bildstatistiken als die Gaußverteilung.
+学生的t分布S（x |μ，λ，ν）特别适用于描述对异常值具有鲁棒性的数据集的统计量，并且在许多情况下提供了比高斯分布更好的典型图像统计模型</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_49.png"></p>
+<p>Die <strong>Studentsche t-Verteilung</strong> entspricht einer Gaußschen Mischverteilung bestehend aus unendlich vielen Gaußverteilungen mit identischen Mittelwerten und allen möglichen Varianzen
+学生的t分布对应于高斯混合分布，由无数个高斯分布组成，具有相同的平均值和所有可能的方差</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_52.png"></p>
+<p>wobei die Gewichte der Gammaverteilung G(τ|λ, ν) = 1/Γ(λ)νλτ(λ−1)e−ντ entsprechen
+其中伽马分布的权重对应于G（τ|λ，ν）= 1 /Γ（λ）νλτ（λ-1）e-τ
+Für ν-inf ergibt sich wieder eine Gaußverteilung
+对于ν-inf，还有高斯分布</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_53.png"></p>
+<h3 id="6-6-8-gau-sche-mischverteilung">6.6.8 Gaußsche Mischverteilung</h3>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_55.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_56.png"></p>
+<p>Es gibt <strong>einige Fälle</strong> in der Bildverarbeitung (z.B Korrespondenzverteilungen), wo eine <em>unimodale Verteilung nicht ausreicht, um den statistischen Zusammenhang ausreichend zu modellieren</em>
+在图像处理（例如，对应分布）中存在一些情况，其中单峰分布不足以充分地模拟统计关系</p>
+<p>Eine Möglichkeit <strong>multimodale Verteilungen</strong> zu modellieren bieten <strong>Gaußsche Mischverteilungen</strong>
+高斯混合分布提供了建模多模态分布的一种可能性</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_54.png"></p>
+<p>wobei die <strong>Mischkoeffizienten πk</strong> der einzelnen Gaußkomponenten selbst wieder eine <em>diskrete Verteilung</em> bilden
+其中各个高斯分量本身的混合系数πk再次形成离散分布</p>
+<hr>
+<h2 id="6-7-stochastische-prozesse-und-felder">6.7 Stochastische Prozesse und Felder</h2>
+<h3 id="6-7-1-definition">6.7.1 Definition</h3>
+<p><strong>Stochastische Prozesse bzw stochastische Felder</strong> werden dazu benutzt, um die <em>zeitlichen (Prozess) und räumlichen (Feld) Beziehungen</em> zwischen den <em>visuellen Zuständen der einzelnen Bildpunkte</em> zu berücksichtigen
+随机过程或随机场用于解释各个像素的视觉状态之间的时间（过程）和空间（场）关系</p>
+<p>Hierbei wird ein <em>komplettes Bild</em> bzw eine <em>Bildsequenz</em> oder eine <em>zeitliche Folge eines Bildmerkmals</em> als eine <strong>statistische Größe</strong> betrachtet
+在这种情况下，完整图像或图像序列或图像特征的时间序列被视为统计变量</p>
+<p>Die <em>Grauwerte eines Bildes mit M ×N Pixel</em> können z.B mit einem <em>stochastischen Feld</em>, also einer <strong>Matrix aus M ×N Zufallsvariablen</strong> beschrieben werden.
+具有M×N像素的图像的灰度值可以例如用随机场，即M×N个随机变量的矩阵来描述</p>
+<h3 id="6-7-2-problem">6.7.2 Problem</h3>
+<p>Selbst wenn nur der Zusammenhang der Grauwerte G im Bild mit einem stochastischen Feld modelliert werden soll, dann ergeben sich bei <strong>Q Quantisierungsstufen QMN verschiedene Zustände</strong>, die die Zufallsvariable G annehmen kann
+即使仅用随机场对图像中的灰度值G的关系进行建模，在Q量化级QMN处出现不同的状态，随机变量G可以假设</p>
+<p>Das bedeutet, man muss die pdf p(G) = p(G1,1, G1,2,  , GM,N) dieses <strong>hochdimensionalen Zustandes</strong> modellieren, um <strong>statistische Kenngrößen</strong> wie beispielsweise den Erwartungswert auszurechnen
+这意味着必须对这个高维状态的pdf p（G）= p（G1,1，G1,2 ,, GM，N）进行建模，以便计算统计参数，例如期望值</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_57.png"></p>
+<p>Das ist <strong>aufgrund</strong> der <em>hohen Dimension</em> praktisch nicht mehr möglich
+由于高尺寸，这几乎是不可能的</p>
+<p><strong>Deswegen</strong> müssen <em>geeignete Approximationen</em> eingeführt werden, um das Auswerten der <em>hochdimensionalen Zufallsvariablen rechenbar</em> zu machen.
+因此，必须引入适当的近似值以使高维随机变量的计算可计算</p>
+<h3 id="6-7-3-annahmen">6.7.3 Annahmen</h3>
+<p>Anstatt <strong>statistische Kenngrößen</strong>, wie den Mittelwert oder die Varianz, exakt zu berechnen, können sie durch sogenannte <strong>Schar- oder Ensemblekenngrößen</strong> ersetzt werden
+它们不是精确地计算诸如均值或方差的统计参数，而是可以用所谓的族或集合参数代替</p>
+<p>Damit bleiben die <strong>Kenngrößen</strong> aber immer noch <em>zeit- und ortsabhängig</em>
+但是，参数仍然取决于时间和位置</p>
+<p>Folgende <strong>zusätzliche Annahmen</strong> werden normalerweise in der Praxis eingeführt:
+在实践中通常会引入以下附加假设：</p>
+<ul>
+<li><strong>Ergodizität</strong>: <strong>Scharmittelwerte</strong> entsprechen den Zeit- bzw Ortsmittelwerten (eine Realisierung/Signal ist ausreichend)
+锐利的平均值对应于时间或平均值（一个实现/信号就足够了）</li>
+<li><strong>Stationarität</strong>: <strong>Statistische Eigenschaften</strong> eines stochastischen Prozesses sind <em>invariant gegenüber Verschiebungen in der Zeit</em>
+平稳：随机过程的统计特性对于时间变化是不变的</li>
+<li><strong>Homogenität</strong>: <strong>Statistische Eigenschaften</strong> eines stochastischen Feldes sind <em>invariant gegenüber Verschiebungen im Bildort</em>
+同质性：随机场的统计特性对于图像位置的变化是不变的</li>
+</ul>
+<p>Unter diesen Annahmen werden <strong>Mittelwerte und Varianzen</strong> <em>orts- und zeitunabhängig</em> und <strong>Korrelationsfunktionen</strong> hängen <strong>nur</strong> noch <em>von Abständen in Ort und Zeit ab</em>.
+在这些假设下，平均值和方差变得与时间和地点无关，相关函数仅取决于地点和时间的距离</p>
+<hr>
+<h2 id="6-8-korrelationsanalyse">6.8 Korrelationsanalyse</h2>
+<h3 id="6-8-1-autokorrelationsfunktion">6.8.1 Autokorrelationsfunktion</h3>
+<p>Um <em>Grauwerte an unterschiedlichen Positionen im Bild oder der Zeit in Beziehung zu setzen</em> werden unter anderem <strong>Korrelationsfunktionen</strong> benutzt
+相关函数尤其用于将图像中或时间中的不同位置处的灰度值相关联</p>
+<p><strong>Autokorrelationsfunktion</strong>: Messung der Selbstähnlichkeit eines Signals.
+测量信号的自相似性</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_58.png"></p>
+<p>Mittelwertfreie Messung der Selbstähnlichkeit eines Signals
+对信号的自相似性的平均无值测量</p>
+<p>Ortsdiskret, ergodisch &amp; homogen, mit Mittelwert
+空间离散，遍历和均匀，具有均值
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_59.png"></p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_60.png"></p>
+<h3 id="6-8-2-normierte-autokovarianzfunktion">6.8.2 Normierte Autokovarianzfunktion</h3>
+<p>Mittelwertfreie und varianznormierte Messung der Selbstähnlichkeit eines Signals
+信号自相似性的均值正态和方差归一化测量</p>
+<p>Ortsdiskret, ergodisch &amp; homogen:
+局部离散，遍历和同质：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_61.png"></p>
+<h3 id="6-8-3-beispiel-autokorrelationsfunktion">6.8.3 Beispiel Autokorrelationsfunktion</h3>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_62.png"></p>
+<h3 id="6-8-4-kreuzkorrelationsfunktion">6.8.4 Kreuzkorrelationsfunktion</h3>
+<p>Das Vergleichen von zwei unterschiedlichen Bildern an unterschiedlichen Positionen in den Bildern oder entlang der Zeit wird auch Matching oder Korrespondenzanalyse genannt
+比较图像中不同位置或沿时间的两个不同图像也称为匹配或对应分析</p>
+<p>Kreuzkorrelationsfunktion: Messung der Ähnlichkeit zweier Signale.
+互相关函数：测量两个信号的相似性</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_63.png"></p>
+<p><strong>Mittelwertfreie Messung</strong> der <strong>Ähnlichkeit</strong> zwischen zwei Signalen.</p>
+<p>Ortsdiskret, ergodisch &amp; homogen:</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_64.png"></p>
+<h3 id="6-8-5-normierte-kreuzkovarianzfunktion">6.8.5 Normierte Kreuzkovarianzfunktion</h3>
+<p><strong>Mittelwertfreie und varianznormierte Messung</strong> der <strong>Ähnlichkeit</strong> zweier Signale.</p>
+<p>Ortsdiskret, ergodisch &amp; homogen:</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_65.png"></p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_66.png"></p>
+<h3 id="6-8-6-lokale-kreuzkorrelationsfunktion">6.8.6 Lokale Kreuzkorrelationsfunktion</h3>
+<p>Bei Kenntnis eines Prototypen eines Musters bzw Templates T, liefert das Maximum der <strong>lokalen Kreuzkorrelationsfunktion</strong> zwischen dem <strong>Muster T</strong> der Größe K × L und einem <strong>Bild G</strong> der Größe M × N den Ort des <em>wahrscheinlichsten Auftretens des Musters im Bild</em>, wobei gewöhnlich gilt:
+在知道模板T的原型的情况下，尺寸为K×L的图案T与尺寸为M×N的图像G之间的局部互相关函数的最大值给出了图像中可能出现的图案的位置，其中通常</p>
+<p> K × L &lt;&lt; M × N</p>
+<ul>
+<li><strong>Anwendung</strong>: Erkennung von Mustern wie z.B Druckbuchstaben durch Schwellwertoperation auf der Kreuzkorrelation
+应用：通过对互相关的阈值操作识别诸如块字母之类的模式</li>
+<li><strong>Vorteil</strong>: Theoretisch optimale Lösung
+优点：理论上最优的解决方案</li>
+<li><strong>Nachteil</strong>: Rotations- und Skalierungsvariant, hoher Rechenaufwand (eine Faltung pro Prototyp).
+缺点：旋转和缩放变量，高计算量（每个原型一个卷积）</li>
+</ul>
+<p><strong>Lokale Korrelationen</strong> sind <em>orts- bzw zeitabhängig</em>, da örtlich begrenzte Korrelationsfunktionen berechnet werden
+由于计算了局部相关函数，因此局部相关性是位置或时间相关的</p>
+<ul>
+<li>Lokale Kreuzkorrelationsfunktion
+局部互相关函数</li>
+</ul>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_67.png"></p>
+<ul>
+<li>Lokale Kreuzkovarianzfunktion
+局部交叉协方差函数</li>
+</ul>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_68.png"></p>
+<ul>
+<li>Lokale varianznormierte Kreuzkovarianzfunktion
+局部varianznormierte交叉协方差函数</li>
+</ul>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_69.png"></p>
+<p><strong>Alternative Korrelationsmaße</strong>, die vorwiegend z.B in der <em>Photogrammetrie</em> und der <em>visuellen Navigation</em> angewendet werden
+替代相关性测量，主要用于例如摄影测量和视觉导航</p>
+<ul>
+<li><strong>SSD Matching</strong> (Sum of Squared Differences)
+SSD匹配（平方差的和）</li>
+</ul>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_70.png"></p>
+<ul>
+<li><strong>SAD Matching</strong> (Sum of Absolute Differences)
+SAD匹配（绝对差异的总和）</li>
+</ul>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_71.png"></p>
+<h3 id="6-8-7-vergleich">6.8.7 Vergleich</h3>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_72.png"></p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_6_73.png"></p></body>
+</html>

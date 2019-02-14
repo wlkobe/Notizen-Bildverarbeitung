@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>Folien 8 Filter</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); border-image: initial; background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.04); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.markdown-preview pre.editor-colors { user-select: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.markdown-preview ul label { vertical-align: top; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher.bracket-matcher {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+
+.ftpconfig_line_error {
+  background: rgba(255, 0, 0, 0.5) !important;
+}
+.btn.btn-float-left {
+  float: left !important;
+}
+.btn.btn-float-right {
+  float: right !important;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 139, 255, 0.24);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #528bff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #abb2bf;
+}
+.syntax--comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #5c6370;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #98c379;
+}
+.syntax--keyword {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--control {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #61afef;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #d19a66;
+}
+.syntax--storage {
+  color: #c678dd;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #c678dd;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #abb2bf;
+}
+.syntax--constant {
+  color: #d19a66;
+}
+.syntax--constant.syntax--variable {
+  color: #d19a66;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--numeric {
+  color: #d19a66;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #56b6c2;
+}
+.syntax--variable {
+  color: #e06c75;
+}
+.syntax--variable.syntax--interpolation {
+  color: #be5046;
+}
+.syntax--variable.syntax--parameter {
+  color: #abb2bf;
+}
+.syntax--string {
+  color: #98c379;
+}
+.syntax--string > .syntax--source,
+.syntax--string .syntax--embedded {
+  color: #abb2bf;
+}
+.syntax--string.syntax--regexp {
+  color: #56b6c2;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #e5c07b;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e06c75;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #5c6370;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #61afef;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #be5046;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #abb2bf;
+}
+.syntax--support.syntax--class {
+  color: #e5c07b;
+}
+.syntax--support.syntax--type {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e06c75;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #d19a66;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #61afef;
+}
+.syntax--meta.syntax--class {
+  color: #e5c07b;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e06c75;
+}
+.syntax--meta.syntax--link {
+  color: #d19a66;
+}
+.syntax--meta.syntax--require {
+  color: #61afef;
+}
+.syntax--meta.syntax--selector {
+  color: #c678dd;
+}
+.syntax--meta.syntax--separator {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--tag {
+  color: #abb2bf;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #abb2bf;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: white !important;
+  background-color: #e05252 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #c678dd;
+}
+.syntax--markup.syntax--deleted {
+  color: #e06c75;
+}
+.syntax--markup.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e06c75;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #61afef;
+}
+.syntax--markup.syntax--link {
+  color: #56b6c2;
+}
+.syntax--markup.syntax--inserted {
+  color: #98c379;
+}
+.syntax--markup.syntax--quote {
+  color: #d19a66;
+}
+.syntax--markup.syntax--raw {
+  color: #98c379;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--constant.syntax--language,
+.syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
+.syntax--source.syntax--elixir .syntax--constant.syntax--definition {
+  color: #61afef;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--definition,
+.syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
+  color: #c678dd;
+}
+.syntax--source.syntax--elixir .syntax--parameter.syntax--variable.syntax--function {
+  color: #d19a66;
+  font-style: italic;
+}
+.syntax--source.syntax--elixir .syntax--quoted {
+  color: #98c379;
+}
+.syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--section,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--regexp.syntax--section,
+.syntax--source.syntax--elixir .syntax--regexp.syntax--string {
+  color: #be5046;
+}
+.syntax--source.syntax--elixir .syntax--separator,
+.syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
+  color: #d19a66;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--constant {
+  color: #e5c07b;
+}
+.syntax--source.syntax--elixir .syntax--array,
+.syntax--source.syntax--elixir .syntax--scope,
+.syntax--source.syntax--elixir .syntax--section {
+  color: #828997;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #61afef;
+}
+.syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
+  color: #c678dd;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e06c75;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #c678dd;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e06c75;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #abb2bf;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
+  color: #c678dd;
+}
+.syntax--source.syntax--ts .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--flow .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--interpolation {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation.syntax--begin,
+.syntax--ng.syntax--interpolation.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--function {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation .syntax--function.syntax--begin,
+.syntax--ng.syntax--interpolation .syntax--function.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--bool {
+  color: #d19a66;
+}
+.syntax--ng.syntax--interpolation .syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--pipe,
+.syntax--ng.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--tag {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--attribute-name {
+  color: #e5c07b;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string {
+  color: #c678dd;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--begin,
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--end {
+  color: #abb2bf;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
+  color: inherit;
+}
+.syntax--source.syntax--php .syntax--class.syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
+  color: #c678dd;
+}
+.syntax--source.syntax--python .syntax--variable.syntax--parameter {
+  color: #d19a66;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><ul>
+<li><a href="#folien-8-filter">Folien 8 Filter</a><ul>
+<li><a href="#81-lineare-filter">8.1 Lineare Filter</a><ul>
+<li><a href="#811-mittelung">8.1.1 Mittelung</a><ul>
+<li><a href="#8111-gewünschte-eigenschaften">8.1.1.1 Gewünschte Eigenschaften</a></li>
+<li><a href="#8112-ideale-eigenschaften">8.1.1.2 Ideale Eigenschaften</a></li>
+</ul>
+</li>
+<li><a href="#812-rechteckfilter">8.1.2 Rechteckfilter</a><ul>
+<li><a href="#8121-eigenschaften">8.1.2.1 Eigenschaften</a></li>
+<li><a href="#8122-transferfunktion">8.1.2.2 Transferfunktion</a></li>
+</ul>
+</li>
+<li><a href="#813-binomialfilter">8.1.3 Binomialfilter</a><ul>
+<li><a href="#8131-eigenschaften">8.1.3.1 Eigenschaften</a></li>
+<li><a href="#8132-transferfunktion">8.1.3.2 Transferfunktion</a></li>
+<li><a href="#8133-vergleich">8.1.3.3 Vergleich</a></li>
+</ul>
+</li>
+<li><a href="#814-gaufilter">8.1.4 Gaußfilter</a><ul>
+<li><a href="#8141-ideale-glättung">8.1.4.1 Ideale Glättung</a></li>
+<li><a href="#8142-ableitungen">8.1.4.2 Ableitungen</a><ul>
+<li><a href="#81421-finden-lokaler-konturformen">8.1.4.2.1 Finden lokaler Konturformen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#815-differenzialoperatoren">8.1.5 Differenzialoperatoren</a><ul>
+<li><a href="#8151-1-ordnung">8.1.5.1 1. Ordnung</a></li>
+<li><a href="#8152-2-ordnung">8.1.5.2 2. Ordnung</a></li>
+</ul>
+</li>
+<li><a href="#816-kantendetektion">8.1.6 Kantendetektion</a><ul>
+<li><a href="#8161-möglichkeiten">8.1.6.1 Möglichkeiten</a></li>
+<li><a href="#8162-ableitungen">8.1.6.2 Ableitungen</a><ul>
+<li><a href="#81621-ideale-eigenschaften">8.1.6.2.1 Ideale Eigenschaften</a></li>
+<li><a href="#81622-diskrete-differenzen-erster-ordnung">8.1.6.2.2 Diskrete Differenzen erster Ordnung</a></li>
+<li><a href="#81623-differenzenoperator-zweiter-ordnung">8.1.6.2.3 Differenzenoperator zweiter Ordnung</a></li>
+<li><a href="#81624-beispiele">8.1.6.2.4 Beispiele</a></li>
+<li><a href="#81625-regularisierte-kantendetektion">8.1.6.2.5 Regularisierte Kantendetektion</a></li>
+<li><a href="#81626-beispiele-regularisierte-1-ableitungen">8.1.6.2.6 Beispiele regularisierte 1. Ableitungen</a></li>
+<li><a href="#81627-beispiele-regularisierter-laplaceoperator">8.1.6.2.7 Beispiele regularisierter Laplaceoperator</a></li>
+</ul>
+</li>
+<li><a href="#8163-nichtlinearitäten-und-beispiel">8.1.6.3 Nichtlinearitäten und Beispiel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#82-nichtlineare-filter">8.2 Nichtlineare Filter</a><ul>
+<li><a href="#821-rangordnungsfilter">8.2.1 Rangordnungsfilter</a><ul>
+<li><a href="#8211-prinzip">8.2.1.1 Prinzip</a></li>
+<li><a href="#8212-arten">8.2.1.2 Arten</a></li>
+</ul>
+</li>
+<li><a href="#822-medianfilter">8.2.2 Medianfilter</a><ul>
+<li><a href="#8221-eigenschaften">8.2.2.1 Eigenschaften</a></li>
+</ul>
+</li>
+<li><a href="#823-minimum-filter">8.2.3 Minimum-Filter</a><ul>
+<li><a href="#8231-eigenschaften">8.2.3.1 Eigenschaften</a></li>
+</ul>
+</li>
+<li><a href="#824-maximum-filter">8.2.4 Maximum-Filter</a><ul>
+<li><a href="#8241-eigenschaften">8.2.4.1 Eigenschaften</a></li>
+</ul>
+</li>
+<li><a href="#825-morphologiche-operatoren">8.2.5 Morphologiche Operatoren</a><ul>
+<li><a href="#8251-definition">8.2.5.1 Definition</a></li>
+<li><a href="#8252-beispiele">8.2.5.2 Beispiele</a></li>
+</ul>
+</li>
+<li><a href="#826-normalisierte-faltung">8.2.6 Normalisierte Faltung</a><ul>
+<li><a href="#8261-prinzip-und-beispiel">8.2.6.1 Prinzip und Beispiel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#83-adaptive-filter">8.3 Adaptive Filter</a><ul>
+<li><a href="#831-idee-ziel">8.3.1 Idee &amp; Ziel</a><ul>
+<li><a href="#8311-beispiel-anisotroper-gaufilter">8.3.1.1 Beispiel : Anisotroper Gaußfilter</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#84-steuerbare-filter">8.4 Steuerbare Filter</a><ul>
+<li><a href="#841-idee-ziel">8.4.1 Idee &amp; Ziel</a></li>
+<li><a href="#842-entwurf">8.4.2 Entwurf</a></li>
+<li><a href="#843-beispiele">8.4.3 Beispiele</a><ul>
+<li><a href="#8431-adaptive-anisotrope-mittelung-各向异性平均">8.4.3.1 Adaptive Anisotrope Mittelung 各向异性平均</a></li>
+<li><a href="#8432-adaptive-richtungsableitung">8.4.3.2 Adaptive Richtungsableitung</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<h1 id="folien-8-filter">Folien 8 Filter</h1>
+<hr>
+<h2 id="8-1-lineare-filter">8.1 Lineare Filter</h2>
+<h3 id="8-1-1-mittelung">8.1.1 Mittelung</h3>
+<h4 id="8-1-1-1-gew-nschte-eigenschaften">8.1.1.1 Gewünschte Eigenschaften</h4>
+<p><strong>Ziel der Mittelung</strong> ist das <em>Abschwächen von feinen Strukturen</em> <strong>im Ortsraum</strong>
+平均的目的是削弱物理空间中的精细结构</p>
+<p>Das ist gleichbedeutend mit dem <em>Unterdrücken von hohen Wellenzahlen</em> <strong>im Frequenzraum</strong>
+这与抑制频域中的高波数同义</p>
+<p>Eine Mittelung soll also wie ein <strong>2D Tiefpassfilter</strong> wirken und kann damit zur Rauschunterdrückung bzw Bildglättung benutzt werden.
+因此，平均值应该像2D低通滤波器一样，因此可以用于噪声抑制或图像平滑</p>
+<h4 id="8-1-1-2-ideale-eigenschaften">8.1.1.2 Ideale Eigenschaften</h4>
+<p>Für eine ideale Mittelung muss das Filter folgende <strong>Eigenschaften</strong> haben:
+要获得理想的平均值，过滤器必须具有以下属性：(<em>Prinzip auch wichtig</em>)</p>
+<ul>
+<li><strong>Verschiebungsfreiheit</strong>: Keine Veränderung von Objektpositionen -- symmetrische Filtermasken
+运动自由：物体位置无变化 - 对称过滤面罩</li>
+<li><strong>Erhaltung des Mittelwerts</strong>: Keine Veränderung der Helligkeit -- Summe aller Koeffizienten der Maske gleich eins
+保存均值：亮度无变化 - 掩模的所有系数之和等于1</li>
+<li><strong>Glättungseigenschaft</strong>: Feinere Strukturen werden stärker abgeschwächt als gröbere -- monotone Abnahme der Transferfunktion
+平滑性：较细的结构比较粗糙的结构衰减更强 - 单调的传递函数减少</li>
+<li><strong>Isotropie</strong>: Richtungsunabhängigkeit der Glättung -- isotrope Transferfunktion.
+各向同性：平滑 - 各向同性传递函数的方向独立性</li>
+</ul>
+<h3 id="8-1-2-rechteckfilter">8.1.2 Rechteckfilter</h3>
+<h4 id="8-1-2-1-eigenschaften">8.1.2.1 Eigenschaften</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_1.png"></p>
+<p><strong>Vorteile</strong>:
+优点：</p>
+<ul>
+<li>separierbar
+可分离</li>
+<li>rekursiv berechenbar: drei Rechenoperationen pro Bildpunkt unabhängig von der Filtergröße
+递归可计算：每个像素三次算术运算，与滤波器大小无关</li>
+</ul>
+<p><strong>Nachteile</strong>:
+缺点：</p>
+<ul>
+<li>keine isotrope Transferfunktion
+没有各向同性传递函数</li>
+<li>keine monotone Abnahme der Transferfunktion
+传递函数没有单调的减少</li>
+</ul>
+<h4 id="8-1-2-2-transferfunktion">8.1.2.2 Transferfunktion</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_2.png"></p>
+<h3 id="8-1-3-binomialfilter">8.1.3 Binomialfilter</h3>
+<h4 id="8-1-3-1-eigenschaften">8.1.3.1 Eigenschaften</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_4.png"></p>
+<p><strong>Vorteile</strong>:
+优点：</p>
+<ul>
+<li>separierbar, beinahe isotrop
+可分离的，几乎各向同性的</li>
+<li>streng monoton fallende Transferfunktion gegen Null
+严格单调递减向零的传递函数</li>
+</ul>
+<p><strong>Nachteile</strong>:
+缺点：</p>
+<ul>
+<li>leichte Anisotropie entlang der Diagonalen
+沿对角线略微各向异性</li>
+<li>Varianz nicht beliebig wählbar
+方差不是随意的</li>
+</ul>
+<h4 id="8-1-3-2-transferfunktion">8.1.3.2 Transferfunktion</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_3.png"></p>
+<h4 id="8-1-3-3-vergleich">8.1.3.3 Vergleich</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_5.png"></p>
+<h3 id="8-1-4-gau-filter">8.1.4 Gaußfilter</h3>
+<h4 id="8-1-4-1-ideale-gl-ttung">8.1.4.1 Ideale Glättung</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_7.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_8.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_9.png"></p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_6.png"></p>
+<p><strong>Vorteile</strong>:
+优点：</p>
+<ul>
+<li>rein isotrop
+控制各向同性</li>
+<li>streng monoton fallende Gaußsche Transferfunktion
+严格单调递减高斯传递函数</li>
+<li>separierbar
+可分离</li>
+<li>beliebige Standardabweichung wählbar
+可以选择任何标准偏差</li>
+</ul>
+<h4 id="8-1-4-2-ableitungen">8.1.4.2 Ableitungen</h4>
+<h5 id="8-1-4-2-1-finden-lokaler-konturformen">8.1.4.2.1 Finden lokaler Konturformen</h5>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_10.png"></p>
+<p>Ziel von <strong>Ableitungsfiltern</strong> ist das Finden von <em>Kanten, Ecken und lokalen Extremwerten</em> im Ortsraum
+导数滤波器的目标是在空间中找到边缘，角落和局部极值</p>
+<p>Das geschieht über eine <strong>Auswertung</strong> des <em>Gradientenvektors und der Hesse-Matrix</em>
+这是通过评估梯度向量和Hesse矩阵来完成的</p>
+<p>Dabei interessiert <strong>nicht nur</strong> die <em>Konturform</em> <strong>sondern auch</strong> die <em>Stärke der lokalen Kontur</em>
+不仅轮廓形状而且局部轮廓的强度也是令人感兴趣的</p>
+<h3 id="8-1-5-differenzialoperatoren">8.1.5 Differenzialoperatoren</h3>
+<h4 id="8-1-5-1-1-ordnung">8.1.5.1 1. Ordnung</h4>
+<p>Die partiellen Ableitungen der Bildfunktion entlang beider Dimensionen an einem Bildort x ergeben den Gradientenvektor
+沿着位置x处的两个维度的图像函数的偏导数给出梯度向量</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_12.png"></p>
+<p>Die Richtungsableitung entlang der Richtung θ gibt die Stärke der Änderung entlang dieser Richtung an und entspricht dem Skalarprodukt zwischen Richtungsvektor n und Gradient
+沿θ方向的方向导数表示沿该方向的变化幅度，对应于方向矢量n和梯度之间的标量乘积</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_13.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_14.png"></p>
+<h4 id="8-1-5-2-2-ordnung">8.1.5.2 2. Ordnung</h4>
+<p><strong>Differenzialoperatoren zweiter Ordnung</strong> beschreiben die <em>Krümmung eines mehrdimensionalen Signals</em>
+二阶微分算子描述了多维信号的曲率</p>
+<p>Alle möglichen Kombinationen der partiellen Ableitungen zweiter Ordnung bilden die sogenannte <strong>Hesse-Matrix H</strong>
+二阶偏导数的所有可能组合形成所谓的Hesse矩阵H.</p>
+<p>Für <strong>2D-Signale</strong> gilt:
+对于2D信号：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_15.png"></p>
+<p>in einem um den Winkel θ' gedrehten Koordinatensystem x' mit diagonaler Hesse-Matrix H'
+在坐标系x'中，对角线Hesse矩阵H'旋转角度θ'</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_16.png"></p>
+<p>Die <strong>Spur ∆</strong> ist <em>invariant gegenüber Drehungen R(θ') des Koordinatensystems</em>.
+迹线Δ相对于坐标系的旋转R（θ'）是不变的</p>
+<h3 id="8-1-6-kantendetektion">8.1.6 Kantendetektion</h3>
+<h4 id="8-1-6-1-m-glichkeiten">8.1.6.1 Möglichkeiten</h4>
+<p><strong>1. Mittels Richtungsableitung</strong>
+通过方向推导</p>
+<p><strong>Kanten</strong> entsprechen <em>Extremwerten in der ersten Ableitung</em>
+边缘对应于一阶导数中的极值</p>
+<p>Damit erhält man Kanten <strong>durch</strong> eine <em>Suche nach den größten Änderungen des Gradientenvektors</em>, also den <em>Maxima im Betrag von r(x)</em>
+这通过搜索梯度向量中的最大变化（即r（x）的量的最大值）来产生边缘。</p>
+<p><strong>2. Mittels Hesse-Matrix</strong>
+通过Hesse矩阵</p>
+<p><strong>Kanten</strong> sind <em>Nulldurchgänge in der zweiten Ableitung</em>
+边是二阶导数中的过零点</p>
+<p>Damit kann <em>mit dem Laplace-Operator ∆</em> nach <strong>Kanten gesucht</strong> werden
+因此，可以搜索拉普拉斯算子Δ的边缘</p>
+<p>Die <strong>Signalspitzen</strong> neben den Nulldurchgängen müssen <em>deutlich höher als der Rauschpegel</em> sein, damit der <em>Nulldurchgang einer Kante</em> entspricht
+零交叉旁边的信号峰值必须明显高于噪声水平，以使零交叉对应于一个边缘</p>
+<p><strong>Vergleich</strong>: Der <strong>Laplaceoperator</strong> ist deutlich <em>rauschanfälliger</em> als der Betrag des Gradientenvektors.
+比较：拉普拉斯算子比梯度向量的幅度更容易受到噪声的影响</p>
+<h4 id="8-1-6-2-ableitungen">8.1.6.2 Ableitungen</h4>
+<h5 id="8-1-6-2-1-ideale-eigenschaften">8.1.6.2.1 Ideale Eigenschaften</h5>
+<p>Für eine <strong>ideale Ableitung</strong> muss das Filter <strong>folgende Eigenschaften</strong> haben:
+对于理想的派生，过滤器必须具有以下属性：</p>
+<ul>
+<li><p><strong>Verschiebungsfreiheit</strong>: Keine Veränderung von Objektpositionen -- antisymmetrische Filtermasken für 1 Ableitungen, symmetrische Filtermasken für 2 Ableitungen
+移动自由：物体位置无变化 -  1个引线的反对称滤波器掩模，2个引线的对称滤波器掩模</p>
+</li>
+<li><p><strong>Unterdrückung des Mittelwerts</strong>: Keine Antwort auf räumlich konstante Helligkeit -- Summe aller Koeffizienten der Maske gleich Null
+抑制平均值：对空间恒定亮度无响应 - 掩模的所有系数之和等于零</p>
+</li>
+<li><p><strong>Isotropie</strong>: Richtungsunabhängigkeit des Gradienten -- isotrope Transferfunktion
+各向同性：梯度的方向独立性 - 各向同性传递函数</p>
+</li>
+</ul>
+<p><strong>Ziel</strong>: Entwurf diskreter Filter, die eine möglichst genaue Approximation der Ableitungen ergeben.
+目标：设计离散滤波器，给出最精确的导数近似</p>
+<h5 id="8-1-6-2-2-diskrete-differenzen-erster-ordnung">8.1.6.2.2 Diskrete Differenzen erster Ordnung</h5>
+<p>Die <strong>erste partielle Ableitung</strong> im Kontinuierlichen kann <em>im Diskreten durch Differenzen approximiert</em> werden
+连续中的第一偏导数可以通过差异在离散中近似</p>
+<p>Es gibt <strong>drei verschiedene Realisierungsmöglichkeiten</strong> für die Ableitung in x-Richtung @G(x, y)=@x (analog in y-Richtung @G(x, y)=@y), wobei <em>nur die symmetrische Differenz verschiebungsfrei</em> ist:
+在x方向上推导有三种不同的可能性@G（x，y）= @ x（类似于y方向@G（x，y）= @ y），因此只有对称差是无位移的：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_17.png"></p>
+<h5 id="8-1-6-2-3-differenzenoperator-zweiter-ordnung">8.1.6.2.3 Differenzenoperator zweiter Ordnung</h5>
+<p>Die Approximation der zweiten Ableitung in x-Richtung @2G(x, y)=@x2 (analog in y-Richtung @2G(x, y)=@y2) ergibt sich aus <em>einer zweifachen Anwendung</em> der Differenzen erster Ordnung:
+x方向上的二阶导数近似@ 2G（x，y）= @ x2（类似于y方向@ 2G（x，y）= @ y2）是由于一阶差分的两倍应用：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_18.png"></p>
+<p>Damit folgt für den diskreten Laplaceoperator für 2D Bilder die Filtermaske:
+接下来是2D图像的离散拉普拉斯算子的滤镜掩码：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_19.png"></p>
+<p><strong>Nachteile</strong>:
+缺点：</p>
+<ul>
+<li>Schlechte Approximation bei großen Wellenzahlen
+大波数的不良近似值</li>
+<li>Nicht vollkommen isotrop
+不是完全各向同性的</li>
+</ul>
+<p>Ein <strong>optimierter Laplaceoperator L'</strong> mit geringerer Anisotropie ergibt sich über eine lineare Kombination von Binomialfilter B und Impulsfilter P:
+具有较低各向异性的优化拉普拉斯算子L'由二项式滤波器B和脉冲滤波器P的线性组合产生：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_20.png"></p>
+<h5 id="8-1-6-2-4-beispiele">8.1.6.2.4 Beispiele</h5>
+<p>Vergleich der <strong>Kantenstärken</strong> über den <em>Betrag des Gradientenvektors</em> oder die <em>Nulldurchgänge des Laplaceoperators ∆</em>.
+边缘强度与梯度向量的大小或拉普拉斯算子Δ的过零点的比较</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_21.png"></p>
+<h5 id="8-1-6-2-5-regularisierte-kantendetektion">8.1.6.2.5 Regularisierte Kantendetektion</h5>
+<p>Es gibt ein <strong>grundsätzliches Problem</strong>, das bei Ableitungsfiltern auftritt: <em>Ableitungen verrauschter Signale verstärken das Rauschen</em>!
+导数滤波器存在一个基本问题：噪声信号的导数会放大噪声！</p>
+<p>Die Lösung bzw Verringerung dieses Problems erreicht man <strong>durch</strong> eine <em>vorangeschaltete Glättung des Bildes</em>, also einem Unterdrücken von hohen Frequenzen bzw Rauschen
+通过图像的上游平滑，即抑制高频或噪声来实现该问题的解决或减少</p>
+<p>Da <strong>Glättung und Differenzieren</strong> <em>beide durch eine Faltung</em>, also lineare Operatoren, realisiert werden, können sie <strong>vertauscht</strong> werden
+由于平滑和微分都是通过卷积实现的，即线性算子，它们可以互换</p>
+<p>Das bedeutet, die <strong>Ableitung eines Glättungsfilters</strong> kann als <strong>regularisierender Kantenfilter</strong> benutzt werden
+这意味着平滑滤波器的导数可以用作正则化边缘滤波器</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_22.png"></p>
+<h5 id="8-1-6-2-6-beispiele-regularisierte-1-ableitungen">8.1.6.2.6 Beispiele regularisierte 1. Ableitungen</h5>
+<p>Es gibt <strong>mehrere Möglichkeiten</strong> regularisierte Ableitungsfilter zu entwerfen
+有几种方法可以设计正则化的推导滤波器</p>
+<p>Sie unterscheiden sich in der <strong>Güte der Approximationseigenschaften</strong>, wie Isotropie und Transferfunktion.
+它们的近似特性的质量不同，例如各向同性和传递函数</p>
+<ul>
+<li><p><strong>Sobel-Kantendetektoren</strong></p>
+<p><strong>Nachteil</strong>: Zu <em>starke Glättung</em> senkrecht zur Ableitungsrichtung.</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_23.png"></p>
+</li>
+<li><p><strong>Optimierte Sobel-Kantendetektoren</strong></p>
+<p>Verbesserung: Optimale Einstellung der Querglättung -- minimale Anisotropie
+改进：横向平滑的最佳调整 - 最小的各向异性</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_24.png"></p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_25.png"></p>
+</li>
+</ul>
+<h5 id="8-1-6-2-7-beispiele-regularisierter-laplaceoperator">8.1.6.2.7 Beispiele regularisierter Laplaceoperator</h5>
+<p>Da die Transferfunktion des Laplace-Operators proportional zum Quadrat der Wellenzahl ist, ist die Rauschanfälligkeit sehr hoch
+由于拉普拉斯算子的传递函数与波数的平方成比例，因此对噪声的敏感性非常高</p>
+<p>Eine Regularisierung ist hier besonders zu empfehlen.
+这里特别推荐正规化</p>
+<ul>
+<li><p><strong>Laplace of Gaussians</strong>: LoG-Filter
+高斯拉普拉斯：LoG-Filter</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_26.png"></p>
+</li>
+</ul>
+<p>Eine gute Näherung des LoG-Filters liefert der DoG-Filter
+DoG滤波器提供了良好的LoG滤波器近似值</p>
+<ul>
+<li><p><strong>Difference of Gaussians</strong>: DoG-Filter
+高斯差异：DoG-Filter</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_27.png"></p>
+</li>
+</ul>
+<p>wobei p und q die Ordnung der Binomialfilter kennzeichnen und damit <strong>Gaußglättungen</strong> mit <em>unterschiedlichen Varianzen σ2</em> approximieren.
+其中p和q表示二项式滤波器的阶数，因此近似具有不同方差σ2的高斯光滑</p>
+<h4 id="8-1-6-3-nichtlinearit-ten-und-beispiel">8.1.6.3 Nichtlinearitäten und Beispiel</h4>
+<p>Der <strong>letzte Schritt</strong> ist das <em>Bewerten der Gradientenstärke bzw der Steigung in den Nulldurchgängen</em>
+最后一步是评估梯度强度或过零点的斜率</p>
+<p>Dazu werden zwei <strong>zusätzliche nichtlineare Operationen</strong> benötigt:
+这需要两个额外的非线性操作：</p>
+<ul>
+<li>Schwellwertoperation und
+阈值操作</li>
+<li><p>eventuell zusätzliche Hysterese (zwei Schwellwerte).
+可能有额外的滞后（两个阈值）</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_28.png"></p>
+</li>
+</ul>
+<hr>
+<h2 id="8-2-nichtlineare-filter">8.2 Nichtlineare Filter</h2>
+<h3 id="8-2-1-rangordnungsfilter">8.2.1 Rangordnungsfilter</h3>
+<h4 id="8-2-1-1-prinzip">8.2.1.1 Prinzip</h4>
+<p>Eine wichtige Klasse von nichtlinearen Filtern sind die <strong>Rangordnungsfilter</strong>
+一类重要的非线性滤波器是排序滤波器</p>
+<p>Anstatt ein Filterergebnis durch
+而 <strong>不是过滤结果</strong></p>
+<ul>
+<li><strong>Wichtung und Addition</strong> der Grauwerte <em>in einer Nachbarschaft</em>, wie das bei linearen Filtern der Fall ist,
+在邻域中加权和添加灰度值，如线性滤波器的情况，</li>
+</ul>
+<p>zu erhalten, ergibt sich das <strong>Filterergebnis hier durch</strong>
+在这里得到过滤器的结果</p>
+<ul>
+<li><strong>Vergleich und Selektion</strong> der Grauwerte <em>in einer Nachbarschaft</em>
+邻域中灰度值的比较和选择</li>
+</ul>
+<p>Da Rangordnungsfilter <strong>keine</strong> arithmetischen Operationen durchführen, <strong>sondern</strong> <em>Grauwerte selektieren</em>, entstehen <em>keine Rundungsprobleme</em>, wie beim linearen Filterentwurf
+由于排序过滤器不执行算术运算而是选择灰度值，因此没有舍入问题，如线性滤波器设计中那样</p>
+<p>Es wird immer eine diskrete Menge von Grauwerten auf sich selbst abgebildet
+一组离散的灰度值始终映射到自身</p>
+<p>Alle <strong>Rangordnungsfilter</strong> <em>basieren auf</em> einer aufsteigend bzw absteigend sortierten Liste der Grauwerte <em>innerhalb</em> der betrachteten Nachbarschaft
+所有排名过滤器都基于所考虑的邻域内的灰度值的升序或降序排序列表</p>
+<p>Die <strong>Nachbarschaft Np</strong> muss nicht rechteckig sein, kann also <em>beliebige lokale Formen</em> annehmen und <em>ortsabhängig p</em> sein.
+邻居Np不必是矩形的，因此它可以采用任何局部形式并且是位置相关的p</p>
+<h4 id="8-2-1-2-arten">8.2.1.2 Arten</h4>
+<p>Je nach <strong>Filterart</strong> wird entweder der Mittelwert, das Maximum oder das Minimum der sortierten Liste als Filterergebnis gewählt:
+根据过滤器类型，选择排序列表的平均值，最大值或最小值作为过滤结果：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_29.png"></p>
+<p>Damit gibt es <strong>drei verschiedene Arten von Rangordnungsfiltern</strong>:
+有三种不同类型的排名过滤器：</p>
+<ul>
+<li>Median-Filter ,
+中位数过滤器，</li>
+<li>Minimum-Filter,
+最小过滤器，</li>
+<li>Maximum-Filter.
+最大过滤器</li>
+</ul>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_30.png"></p>
+<h3 id="8-2-2-medianfilter">8.2.2 Medianfilter</h3>
+<h4 id="8-2-2-1-eigenschaften">8.2.2.1 Eigenschaften</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_31.png"></p>
+<p>Der <strong>Median-Filter</strong> hat folgende besondere <strong>Eigenschaft</strong>. Er
+中值滤波器具有以下特殊属性</p>
+<ul>
+<li>unterdrückt Salt &amp; Pepper verteiltes Rauschen,
+盐和胡椒抑制分布的噪音，</li>
+<li>ohne dabei markante Kanten zu stark zu glätten
+没有过多地消除明显的边缘</li>
+</ul>
+<p><strong>Je größer</strong> die Nachbarschaft gewählt wird, <strong>desto mehr</strong> gehen feine Strukturen <em>verloren</em>, ohne dabei kontrastreiche Kanten zu verlieren.
+选择的邻域越大，在不损失高对比度边缘的情况下丢失越精细的结构</p>
+<h3 id="8-2-3-minimum-filter">8.2.3 Minimum-Filter</h3>
+<h4 id="8-2-3-1-eigenschaften">8.2.3.1 Eigenschaften</h4>
+<p><strong>Lokaler Minimum-Operator</strong>:</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_33.png"></p>
+<p>Lokaler最小值算子：
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_32.png"></p>
+<p>Auswirkungen der Größe und Form der Filtermaske Np auf
+过滤面罩Np的大小和形状的影响</p>
+<ul>
+<li><strong>Grauwertbild</strong>: Lokale Minima werden auf die Form der Filtermaske Np ausgedehnt, <em>Konturen werden glatter</em>
+灰度值图像：局部最小值扩展到滤镜蒙版Np的形状，轮廓变得更平滑</li>
+<li><strong>Binärbild</strong>: Die Größe der Objekte wird verkleinert. Objekte, die kleiner als die Größe der Filtermaske sind, verschwinden, <em>Objektberührungen werden getrennt</em>.
+二值图像：减少了对象的大小.小于过滤器蒙版大小的对象消失，对象触摸被分开</li>
+</ul>
+<h3 id="8-2-4-maximum-filter">8.2.4 Maximum-Filter</h3>
+<h4 id="8-2-4-1-eigenschaften">8.2.4.1 Eigenschaften</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_35.png"></p>
+<p>Lokaler Maximum Operator:
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_34.png"></p>
+<p>Auswirkungen der Größe und Form der Filtermaske Np auf
+过滤面罩Np的大小和形状的影响</p>
+<ul>
+<li><strong>Grauwertbild</strong>: Lokale Maxima werden auf die Form der Filtermaske Np ausgedehnt, <em>Konturen werden glatter</em>
+灰度值图像：局部最大值扩展到滤镜蒙版Np的形状，轮廓变得更平滑</li>
+<li><strong>Binärbild</strong>: Die Größe der Objekte wird ausgedehnt, <em>kleine Löcher oder Sprünge werden gefüllt</em>.
+二值图像：物体的大小扩大，小孔或裂缝被填充</li>
+</ul>
+<h3 id="8-2-5-morphologiche-operatoren">8.2.5 Morphologiche Operatoren</h3>
+<h4 id="8-2-5-1-definition">8.2.5.1 Definition</h4>
+<p><strong>Morphologische Operatoren</strong> beeinflussen die <em>Form von Objekten über Referenzformen M</em>
+形态算子通过参考形式M影响物体的形式</p>
+<p>Der <em>Minimum- und Maximum-Operator</em> bilden die <strong>beiden Grundoperationen</strong>, aus denen sich <em>verschiedene zusammengesetzte Operatoren</em> erzeugen lassen
+最小和最大运算符构成两个基础运算符，可以从中生成不同的复合运算符</p>
+<p>Bei <strong>Binärbildern</strong> entsprechen der Minimum- und Maximum Operator den folgenden Mengenoperationen:
+对于二进制图像，最小和最大运算符对应于以下设置操作：</p>
+<ul>
+<li><strong>Erosion</strong>: G (-) M (Menge aller Pixel, für die M vollständig in G enthalten ist.)
+侵蚀：G (-) M（M完全包含在G中的所有像素的集合）</li>
+<li><strong>Dilatation</strong>: G ⊕ M (Menge aller Pixel, für die die Schnittmenge von M und G nicht die leere Menge ist.)
+扩张：G⊕M（M和G的交点不是空集的所有像素的集合）</li>
+</ul>
+<p><strong>Gängige Mengenoperationen</strong> sind:
+常用数量操作是：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_36.png"></p>
+<h4 id="8-2-5-2-beispiele">8.2.5.2 Beispiele</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_37.png"></p>
+<h3 id="8-2-6-normalisierte-faltung">8.2.6 Normalisierte Faltung</h3>
+<h4 id="8-2-6-1-prinzip-und-beispiel">8.2.6.1 Prinzip und Beispiel</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_39.png"></p>
+<p>Mit einer <strong>normierten Faltung</strong> kann der <em>Einfluss der Faltungsoperation lokal variiert</em> werden
+利用归一化卷积，卷积运算的影响可以在本地变化</p>
+<p>Im <strong>speziellen Fall</strong> bei einer Glättungsmaske entspricht das einer <em>lokal variierenden gewichteten Mittelung</em>
+在平滑掩模的特殊情况下，这对应于局部变化的加权平均</p>
+<p>Dazu benötigt man für jeden Grauwert G(m, n) einen entsprechenden <strong>Gewichtungsfaktor W(m, n)</strong>, der den Einfluss des Filters H auf den Grauwert variiert
+为此，每个灰度值G（m，n）需要相应的加权因子W（m，n），这改变了滤波器H对灰度值的影响</p>
+<p>Die <strong>nichtlineare Berechnungsvorschrift</strong> lautet:
+非线性计算规则是：
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_38.png"></p>
+<hr>
+<h2 id="8-3-adaptive-filter">8.3 Adaptive Filter</h2>
+<h3 id="8-3-1-idee-ziel">8.3.1 Idee &amp; Ziel</h3>
+<h4 id="8-3-1-1-beispiel-anisotroper-gau-filter">8.3.1.1 Beispiel : Anisotroper Gaußfilter</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_40.png"></p>
+<p><strong>Idee</strong>: Die <strong>Faltungsmaske Hp</strong> soll sich in Abhängigkeit <em>von der lokalen Bildstruktur ändern</em>, um die <strong>Filtereigenschaften</strong> optimal an bestimmte Eigenschaften der <em>lokalen Bildstruktur anzupassen</em>
+想法：卷积蒙版Hp应根据局部图像结构而改变，以使滤镜属性最佳地适应局部图像结构的某些属性</p>
+<p><strong>Problem</strong>: Die <strong>Filtermasken Hα(p)</strong> müssen alle berechnet und abgespeichert werden! Dabei ist es vorteilhaft die <strong>Filterkoeffizienten</strong> <em>über Funktionen mit frei justierbaren Parametern α(p) ortsabhängig zu adaptieren</em>.
+问题：过滤掩模Hα（p）必须全部计算并保存！有利的是，通过具有可自由调节的参数α（P）的函数，以位置相关的方式调整滤波器系数。</p>
+<hr>
+<h2 id="8-4-steuerbare-filter">8.4 Steuerbare Filter</h2>
+<h3 id="8-4-1-idee-ziel">8.4.1 Idee &amp; Ziel</h3>
+<ul>
+<li><p><strong>Idee</strong>: Die <strong>Faltungsmaske Hp</strong> soll <em>abhängig von der lokalen Bildstruktur</em> in einer bestimmten Nachbarschaft Np um den Bildpunkt p sein, um die <strong>Filtereigenschaften</strong> <em>optimal</em> an bestimmte Eigenschaften der lokalen Bildstruktur anzupassen
+想法：卷积掩模Hp将依赖于像素p周围的特定邻域Np中的局部图像结构，以便最优地使滤波器属性适应于局部图像结构的某些属性</p>
+</li>
+<li><p><strong>Definition</strong>: <strong>Steuerbare Filter Hα(p)</strong> haben einige <em>frei justierbare Parameter α(p)</em>, die die <strong>Filterung</strong> <em>ortsabhängig</em> steuern
+定义：可控滤波器Hα（p）具有一些可自由调节的参数α（p），它们以位置相关的方式控制滤波</p>
+</li>
+<li><p><strong>Ziel</strong>: Einen Satz von wenigen <strong>Basisfiltern Hi</strong> zu konstruieren, mit denen man sich jede beliebige Antwort eines steuerbaren Filters <strong>über</strong> eine <em>α- abhängige Interpolation</em> der Filterantworten der Basisfilter <strong>erzeugen</strong> kann.
+目标：构建一组少数基滤波器，可用于通过基本滤波器的滤波响应的α依赖插值从可控滤波器生成任何响应</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_41.png"></p>
+</li>
+</ul>
+<h3 id="8-4-2-entwurf">8.4.2 Entwurf</h3>
+<p><strong>Ziel</strong> ist also der Entwurf eines Sets an <strong>Basisfiltern Hi</strong> und <strong>Interpolationsfunktionen fi(α(p))</strong>, so dass der <strong>steuerbare Filter Hα(p)</strong> möglichst gut approximiert wird:
+因此，目的是设计一组基本滤波器Hi和插值函数fi（α（p）），以便可控滤波器Hα（p）尽可能近似：
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_42.png"></p>
+<p>Damit läßt sich eine <strong>adaptive Filterung</strong> mit einem <strong>steuerbaren Filter Hα(p)</strong> sehr effizient implementieren:
+这使得可以非常有效地使用可控滤波器Hα（p）实现自适应滤波：
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_43.png"></p>
+<h3 id="8-4-3-beispiele">8.4.3 Beispiele</h3>
+<h4 id="8-4-3-1-adaptive-anisotrope-mittelung-">8.4.3.1 Adaptive Anisotrope Mittelung 各向异性平均</h4>
+<p>Für jedes steuerbare Filter gilt wegen der Linearitätseigenschaft der Fouriertransformation:
+对于每个可控滤波器，由于傅里叶变换的线性特性，</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_44.png"></p>
+<p>Deswegen können die Basisfilter eines steuerbaren Filters über seine Transferfunktion entworfen werden
+因此，可控滤波器的基础滤波器可以通过其传递函数来设计</p>
+<p>Beispiel einer <strong>Transferfunktion eines gerichteten Glättungsfilters</strong> in Polarkoordinaten (k, θ) im Fourierraum:
+傅立叶空间中极坐标（k，θ）中方向平滑滤波器的传递函数示例：
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_45.png"></p>
+<p>Der <strong>frei wählbare Parameter θ0</strong> bestimmt die Richtung in die nicht geglättet werden soll
+可自由选择的参数θ0决定了您不想平滑的方向</p>
+<p>Die Radialfunktion f(k) bestimmt die Grenzfrequenz.
+径向函数f（k）确定截止频率</p>
+<p>Es ergibt sich folgende Zerlegung in Basisfilter Hˆ i und Interpolationsfunktionen fi(θ0):
+结果是以下分解为基本滤波器H i和插值函数fi（θ0）：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_46.png"></p>
+<p>Durch Optimierung kann ein Basisset an 3×3 großen separierbaren Filtern im Ortsraum gefunden werden:
+通过优化，可以在空间中的3×3可分离滤波器上找到基本集：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_47.png"></p>
+<p>Bei diesem Filterset nimmt die Direktionalität bei höheren Frequenzen ab.
+使用此滤波器设置，方向性在较高频率下降低</p>
+<p>Im einfachsten Fall kann der Winkel θ0 über die Maximierung der Richtungsableitung nach der Richtung berechnet werden:
+在最简单的情况下，角度θ0可以通过根据方向最大化方向导数来计算：</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_48.png"></p>
+<h4 id="8-4-3-2-adaptive-richtungsableitung">8.4.3.2 Adaptive Richtungsableitung</h4>
+<p>Die Richtungsableitung entlang der Richtung θ0 ist an sich schon steuerbar!.
+沿θ0方向的方向导数本身是可控的</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_49.png"></p>
+<p>Filterbank für sieben verschiedene Richtungsableitungen berechnet aus nur zwei Ableitungen G ∗ H0◦ und G ∗ H90◦.
+从仅有两个导数G <em> H0◦和G </em> H90 计算的七个不同方向导数的滤波器组</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_8_50.png"></p></body>
+</html>

@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>Folien 4 Beleuchtung und Digitalisierung</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); border-image: initial; background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.04); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.markdown-preview pre.editor-colors { user-select: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.markdown-preview ul label { vertical-align: top; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher.bracket-matcher {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+
+.ftpconfig_line_error {
+  background: rgba(255, 0, 0, 0.5) !important;
+}
+.btn.btn-float-left {
+  float: left !important;
+}
+.btn.btn-float-right {
+  float: right !important;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 139, 255, 0.24);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #528bff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #abb2bf;
+}
+.syntax--comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #5c6370;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #98c379;
+}
+.syntax--keyword {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--control {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #61afef;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #d19a66;
+}
+.syntax--storage {
+  color: #c678dd;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #c678dd;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #abb2bf;
+}
+.syntax--constant {
+  color: #d19a66;
+}
+.syntax--constant.syntax--variable {
+  color: #d19a66;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--numeric {
+  color: #d19a66;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #56b6c2;
+}
+.syntax--variable {
+  color: #e06c75;
+}
+.syntax--variable.syntax--interpolation {
+  color: #be5046;
+}
+.syntax--variable.syntax--parameter {
+  color: #abb2bf;
+}
+.syntax--string {
+  color: #98c379;
+}
+.syntax--string > .syntax--source,
+.syntax--string .syntax--embedded {
+  color: #abb2bf;
+}
+.syntax--string.syntax--regexp {
+  color: #56b6c2;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #e5c07b;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e06c75;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #5c6370;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #61afef;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #be5046;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #abb2bf;
+}
+.syntax--support.syntax--class {
+  color: #e5c07b;
+}
+.syntax--support.syntax--type {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e06c75;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #d19a66;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #61afef;
+}
+.syntax--meta.syntax--class {
+  color: #e5c07b;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e06c75;
+}
+.syntax--meta.syntax--link {
+  color: #d19a66;
+}
+.syntax--meta.syntax--require {
+  color: #61afef;
+}
+.syntax--meta.syntax--selector {
+  color: #c678dd;
+}
+.syntax--meta.syntax--separator {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--tag {
+  color: #abb2bf;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #abb2bf;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: white !important;
+  background-color: #e05252 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #c678dd;
+}
+.syntax--markup.syntax--deleted {
+  color: #e06c75;
+}
+.syntax--markup.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e06c75;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #61afef;
+}
+.syntax--markup.syntax--link {
+  color: #56b6c2;
+}
+.syntax--markup.syntax--inserted {
+  color: #98c379;
+}
+.syntax--markup.syntax--quote {
+  color: #d19a66;
+}
+.syntax--markup.syntax--raw {
+  color: #98c379;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--constant.syntax--language,
+.syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
+.syntax--source.syntax--elixir .syntax--constant.syntax--definition {
+  color: #61afef;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--definition,
+.syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
+  color: #c678dd;
+}
+.syntax--source.syntax--elixir .syntax--parameter.syntax--variable.syntax--function {
+  color: #d19a66;
+  font-style: italic;
+}
+.syntax--source.syntax--elixir .syntax--quoted {
+  color: #98c379;
+}
+.syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--section,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--regexp.syntax--section,
+.syntax--source.syntax--elixir .syntax--regexp.syntax--string {
+  color: #be5046;
+}
+.syntax--source.syntax--elixir .syntax--separator,
+.syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
+  color: #d19a66;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--constant {
+  color: #e5c07b;
+}
+.syntax--source.syntax--elixir .syntax--array,
+.syntax--source.syntax--elixir .syntax--scope,
+.syntax--source.syntax--elixir .syntax--section {
+  color: #828997;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #61afef;
+}
+.syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
+  color: #c678dd;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e06c75;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #c678dd;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e06c75;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #abb2bf;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
+  color: #c678dd;
+}
+.syntax--source.syntax--ts .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--flow .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--interpolation {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation.syntax--begin,
+.syntax--ng.syntax--interpolation.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--function {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation .syntax--function.syntax--begin,
+.syntax--ng.syntax--interpolation .syntax--function.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--bool {
+  color: #d19a66;
+}
+.syntax--ng.syntax--interpolation .syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--pipe,
+.syntax--ng.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--tag {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--attribute-name {
+  color: #e5c07b;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string {
+  color: #c678dd;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--begin,
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--end {
+  color: #abb2bf;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
+  color: inherit;
+}
+.syntax--source.syntax--php .syntax--class.syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
+  color: #c678dd;
+}
+.syntax--source.syntax--python .syntax--variable.syntax--parameter {
+  color: #d19a66;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><ul>
+<li><a href="#folien-4-beleuchtung-und-digitalisierung">Folien 4 Beleuchtung und Digitalisierung</a><ul>
+<li><a href="#41-beleuchtung">4.1 Beleuchtung</a><ul>
+<li><a href="#411-lichtquellen-objekteigenschaften">4.1.1 Lichtquellen &amp; Objekteigenschaften</a></li>
+<li><a href="#412-anwendungsbeispiel">4.1.2 Anwendungsbeispiel</a><ul>
+<li><a href="#4121-aktive-beleuchtung">4.1.2.1 Aktive Beleuchtung</a></li>
+<li><a href="#4122-gestalt-aus-schattierung">4.1.2.2 Gestalt aus Schattierung</a></li>
+</ul>
+</li>
+<li><a href="#413-anforderungen-und-auslegung">4.1.3 Anforderungen und Auslegung</a></li>
+<li><a href="#414-strahlungsphysik">4.1.4 Strahlungsphysik</a><ul>
+<li><a href="#4141-lichttechnik">4.1.4.1 Lichttechnik</a></li>
+</ul>
+</li>
+<li><a href="#415-hellempfindlichkeitskurve">4.1.5 Hellempfindlichkeitskurve</a></li>
+<li><a href="#416-radiometrische-gröen-辐射量">4.1.6 Radiometrische Größen 辐射量</a></li>
+<li><a href="#417-punktlichtquelle">4.1.7 Punktlichtquelle</a><ul>
+<li><a href="#4171-modell">4.1.7.1 Modell</a></li>
+</ul>
+</li>
+<li><a href="#418-strahlengang">4.1.8 Strahlengang</a><ul>
+<li><a href="#4181-helligkeit">4.1.8.1 Helligkeit</a></li>
+</ul>
+</li>
+<li><a href="#419-oberflächen">4.1.9 Oberflächen</a><ul>
+<li><a href="#4191-reflexionen">4.1.9.1 Reflexionen</a><ul>
+<li><a href="#41911-gerichtete-reflexion">4.1.9.1.1 Gerichtete Reflexion</a></li>
+<li><a href="#41912-diffuse-reflexion">4.1.9.1.2 Diffuse Reflexion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#4110-arten-6">4.1.10 Arten (6)</a><ul>
+<li><a href="#41101-auflicht-durchlicht">4.1.10.1 Auflicht &amp; Durchlicht</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#42-digitales-bild">4.2 Digitales Bild</a><ul>
+<li><a href="#421-bildaufnahmesysteme">4.2.1 Bildaufnahmesysteme</a></li>
+<li><a href="#422-bildaufzeichnung">4.2.2 Bildaufzeichnung</a><ul>
+<li><a href="#4221-prinzip">4.2.2.1 Prinzip</a></li>
+</ul>
+</li>
+<li><a href="#423-farbaufnahmen">4.2.3 Farbaufnahmen</a><ul>
+<li><a href="#4231-bayer-filter">4.2.3.1 Bayer-Filter</a></li>
+<li><a href="#4232-foveon-x3-direkt-bildsensor">4.2.3.2 Foveon X3 Direkt-Bildsensor</a></li>
+<li><a href="#4233-vergleich">4.2.3.3 Vergleich</a></li>
+</ul>
+</li>
+<li><a href="#424-digitalisierungsfehler">4.2.4 Digitalisierungsfehler</a><ul>
+<li><a href="#4241-überblick">4.2.4.1 Überblick</a></li>
+<li><a href="#4242-bildrauschen">4.2.4.2 Bildrauschen</a></li>
+</ul>
+</li>
+<li><a href="#425-funktionsprinzipien-unterschiedlicher-typen">4.2.5 Funktionsprinzipien unterschiedlicher Typen</a><ul>
+<li><a href="#4251-zeilenkamera">4.2.5.1 Zeilenkamera</a></li>
+<li><a href="#4252-aktive-kamera">4.2.5.2 Aktive Kamera</a><ul>
+<li><a href="#42521-laufzeitkamera">4.2.5.2.1 Laufzeitkamera</a><ul>
+<li><a href="#425211-pmd-photonic-mixer-device">4.2.5.2.1.1 PMD (Photonic Mixer Device)</a></li>
+</ul>
+</li>
+<li><a href="#42522-strukturiertes-licht">4.2.5.2.2 Strukturiertes Licht</a><ul>
+<li><a href="#425221-prinzip">4.2.5.2.2.1 Prinzip</a></li>
+<li><a href="#425222-beispiel-microsoft-kinect">4.2.5.2.2.2 Beispiel Microsoft KINECT</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<h1 id="folien-4-beleuchtung-und-digitalisierung">Folien 4 Beleuchtung und Digitalisierung</h1>
+<hr>
+<h2 id="4-1-beleuchtung">4.1 Beleuchtung</h2>
+<h3 id="4-1-1-lichtquellen-objekteigenschaften">4.1.1 Lichtquellen &amp; Objekteigenschaften</h3>
+<p><strong>Um Bilder zu interpretieren und 3D-Szenen zu rekonstruieren</strong>, ist es notwendig <em>alle Faktoren der Bildaufnahme zu verstehen</em>
+为了解释图像并重建3D场景，有必要了解图像采集的所有因素</p>
+<p>Dazu gehört neben der Abbildung auch die <strong>Sichtbarmachung</strong> einer Szene
+这不仅包括图片，还包括场景的可视化</p>
+<p>Dies geschieht durch <em>Reflexion, Brechung und Streuung von Licht</em>
+这是通过光的反射，折射和散射来完成的</p>
+<ul>
+<li>Sowohl die Objekteigenschaften,</li>
+<li>als auch die Art und Lage(n) der Lichtquelle(n) spielen dabei eine <strong>wichtige Rolle</strong>
+物体属性以及光源的类型和位置都起着重要作用</li>
+</ul>
+<p>Die <strong>Lösung eines Bildverarbeitungsproblems</strong> hängt maßgeblich davon ab, <strong>ob</strong> die Lichtverhältnisse unveränderbar vorgegeben sind, <strong>oder</strong> optimal gestaltet werden können
+图像处理问题的解决在很大程度上取决于照明条件是否不可改变，或者是否可以最佳地设计</p>
+<p>Falls die Beleuchtungsverhältnisse beeinflussbar sind, hilft eine <strong>gute Abstimmung von Beleuchtung und Auswertetechnik</strong> die <strong>Qualität der Auswertung</strong> entscheidend zu <strong>verbessern</strong>.
+如果照明条件受到影响，照明和评估技术的良好协调有助于显着提高评估质量</p>
+<h3 id="4-1-2-anwendungsbeispiel">4.1.2 Anwendungsbeispiel</h3>
+<h4 id="4-1-2-1-aktive-beleuchtung">4.1.2.1 Aktive Beleuchtung</h4>
+<h4 id="4-1-2-2-gestalt-aus-schattierung">4.1.2.2 Gestalt aus Schattierung</h4>
+<ul>
+<li>Lage der Lichtquelle bekannt 已知光源的位置</li>
+<li>Annahme einer Lambertschen Oberfläche (gleichmäßige diffuse Reflexion) 朗伯表面的假设（均匀漫反射）</li>
+<li>Profil aus Bestrahlungsstärke 辐照度分布</li>
+</ul>
+<h3 id="4-1-3-anforderungen-und-auslegung">4.1.3 Anforderungen und Auslegung</h3>
+<p><strong>Ziel der Beleuchtung</strong> 照明目标：</p>
+<p>Herstellen von homogenen Beleuchtungsbedingungen und Erzeugen eines optimalen Hell/ Dunkel-Kontrasts
+创造均匀的照明条件并创造最佳的明暗对比度</p>
+<p><strong>Anforderungen</strong>
+要求</p>
+<ul>
+<li><p>Konstanz der Beleuchtung in Wellenlänge und Intensität
+照度在波长和强度上的恒定性</p>
+</li>
+<li><p>bestimmte Farbzusammensetzungen (Wellenlängenbereiche)
+某些颜色成分（波长范围）</p>
+</li>
+<li><p>bestimmte Formgebung (Ringfeld, Langfeld)
+某种形状（环场，长场）</p>
+</li>
+<li><p>kein Flimmern, geringe Erwärmung
+没有闪烁，轻微的变暖</p>
+</li>
+</ul>
+<p><strong>Auslegung</strong>
+解释</p>
+<ul>
+<li><p>Anpassung von <strong>Wellenlängenbereichen der Lichterzeugung</strong> an die <strong>Empfindlichkeit des Sensors</strong>
+适应波长范围的光产生对传感器的灵敏度</p>
+</li>
+<li><p>Anpassung von <strong>Wellenlängenbereichen</strong> und der <strong>Beleuchtungsart an die Reflexions- und Absorbtionseigenschaften der Objekte</strong>.
+使波长范围和照明类型适应物体的反射和吸收特性</p>
+</li>
+</ul>
+<h3 id="4-1-4-strahlungsphysik">4.1.4 Strahlungsphysik</h3>
+<h4 id="4-1-4-1-lichttechnik">4.1.4.1 Lichttechnik</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_1.png"></p>
+<ul>
+<li><p><strong>Strahlungsphysik (Radiometrie):</strong> Beschreibt die <em>objektiv ausgesandte Strahlung</em>
+辐射物理学（辐射测量学）：描述客观发射的辐射</p>
+</li>
+<li><p><strong>Lichttechnik (Photometrie):</strong> Beschreibt die <em>subjektiv vom Menschen wahrgenommene Strahlung</em> (berücksichtigt die Wellenlängenabhängigkeit der Empfindlichkeit des menschlichen Auges).
+光技术（光度测定）：描述人体辐射主观感知（考虑到人眼灵敏度的波长依赖性）</p>
+</li>
+</ul>
+<h3 id="4-1-5-hellempfindlichkeitskurve">4.1.5 Hellempfindlichkeitskurve</h3>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_2.png"></p>
+<p>Beschreibt den spektralen HellEmpfindlichkeitsgrad von Testpersonen bei Tageslicht (rot) und bei Nacht (blau).
+描述测试对象在白天（红色）和夜晚（蓝色）的光谱亮度级别</p>
+<h3 id="4-1-6-radiometrische-gr-en-">4.1.6 Radiometrische Größen 辐射量</h3>
+<ul>
+<li><p><strong>Strahlungsenergie</strong>: <em>Summe</em> der Energien aller beteiligter Photonen 辐射能量：所有相关光子的能量之和
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_3.png"></p>
+</li>
+<li><p><strong>Strahlungsfluss</strong>: Energie die eine Lichtquelle <em>pro Zeit</em> emittiert 辐射流量：每次发射一个光源的能量
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_4.png"></p>
+</li>
+<li><p><strong>Strahlstärke</strong>:  Strahlungsfluss der <em>in einem bestimmten Raumwinkel</em> von einer Lichtquelle abgestrahlt wird 辐射强度：光源以给定立体角发射的辐射通量
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_5.png"></p>
+</li>
+<li><p><strong>Bestrahlungsstärke</strong>: Leistung, die <em>an einem Punkt x</em> aus <em>allen Richtungen</em> empfangen wird 辐照度：从各个方向x点接收的功率
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_6.png"></p>
+</li>
+<li><p><strong>Raumwinkel</strong>: Ist die Fläche S eines <em>Ausschnittes einer Kugeloberfläche</em> pro quadratischem Kugelradius r2 立体角：每平方球面半径r2的球面截面的面积S.
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_7.png">
+wobei θ der Einfallswinkel der Strahlung auf die Fläche A ist. 其中θ是表面A上辐射的入射角。</p>
+</li>
+</ul>
+<h3 id="4-1-7-punktlichtquelle">4.1.7 Punktlichtquelle</h3>
+<h4 id="4-1-7-1-modell">4.1.7.1 Modell</h4>
+<p>Das einfachste Modell einer Lichtquelle, ist die <strong>Punktlichtquelle</strong>
+最简单的光源模型是点光源</p>
+<p>Jede <em>beliebig geformte Lichtquelle</em> läßt sich durch <strong>räumlich zusammengesetzte Punktlichtquellen modellieren</strong>
+任何任意形状的光源可以通过空间组合的点光源建模</p>
+<p>Das <em>Abstrahlverhalten einer Lichtquelle</em> ergibt sich durch <strong>Integration der Abstrahlungen der einzelnen Punktlichtquellen</strong>
+光源的辐射行为是由各个点光源的发射的积分产生的</p>
+<p>Eine <em>isotrop ausstrahlende Punktlichtquelle</em> strahlt <strong>gleichmäßig in alle Richtungen</strong> mit einem gesamten Strahlungsfluss von
+各向同性发射点光源在所有方向上均匀地辐射，总辐射通量为
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_8.png"></p>
+<p>Damit ergibt sich die <strong>Bestrahlungsstärke</strong> durch eine Punktquelle zu
+这导致通过点源的辐照度
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_9.png"></p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_10.png"></p>
+<p>Für eine Punktlichtquelle liegt eine <em>mit dem Abstand quadratische Abnahme</em> der <strong>Bestrahlungsstärke (E)</strong> vor
+对于点光源，存在一个具有辐照度的距离二次减小的光源</p>
+<p>Jedes <em>Objekt das kleiner als die Auflösung der Kamera</em> ist, kann als <strong>Punktlichtquelle</strong> aufgefasst werden
+任何小于相机分辨率的物体都可以被捕获为点光源</p>
+<p>Aber die Objekte sind normalerweise größer als die Auflösung der Kamera, <strong>kompensiert</strong> die <em>quadratisch ansteigende Größe der Fläche</em> den <em>quadratischen Abfall der Intensität</em>, und die <strong>Helligkeit</strong> kann als <strong>entfernungsunabhängig</strong> angenommen werden.
+由于物体通常大于相机的分辨率，因此表面的二次增大尺寸补偿了强度的二次下降，并且可以假设亮度与距离无关</p>
+<h3 id="4-1-8-strahlengang">4.1.8 Strahlengang</h3>
+<h4 id="4-1-8-1-helligkeit">4.1.8.1 Helligkeit</h4>
+<p><strong>Licht</strong> wird von <em>einer oder mehreren Lichtquellen ausgestrahlt</em>
+光从一个或多个光源发射</p>
+<p>Es trifft mit einer <strong>gewissen Beleuchtungsstärke</strong> auf die Objekte
+它以一定程度的照度击中物体</p>
+<p>In <strong>Abhängigkeit</strong> von der <em>Oberflächenbeschaffenheit und der Lichtdurchlässigkeit von Objekten</em> wird das <strong>Licht</strong> <em>unterschiedlich</em> <strong>absorbiert, gebrochen und reflektiert</strong>
+根据物体的表面纹理和透光率，光被不同地吸收，破坏和反射</p>
+<p>Ein <strong>Bruchteil des gestreuten Lichtes</strong> <em>trifft auf das Objektiv</em> und <em>beeinflusst die Helligkeit des abgebildeten Objektes</em>
+一部分散射光照射到镜头上并影响成像物体的亮度</p>
+<p>Ein <strong>Oberflächenelement</strong> erhält <strong>nicht nur</strong> direktes Licht von den Lichtquellen, <strong>sondern auch</strong> indirektes Licht von allen reflektierenden Oberflächen in der Szene.
+表面元件不仅接收来自光源的直射光，还接收来自场景中所有反射表面的间接光</p>
+<blockquote>
+<p>Deswegen ist die <strong>Helligkeit eines projizierten Bildpunktes</strong> von der <em>Lage</em> und dem <em>Reflexionsverhalten aller Objekte</em> einer Szene abhängig
+因此，投影像素的亮度取决于场景的所有对象的位置和反射行为</p>
+</blockquote>
+<h3 id="4-1-9-oberfl-chen">4.1.9 Oberflächen</h3>
+<h4 id="4-1-9-1-reflexionen">4.1.9.1 Reflexionen</h4>
+<h5 id="4-1-9-1-1-gerichtete-reflexion">4.1.9.1.1 Gerichtete Reflexion</h5>
+<ul>
+<li><p><strong>Einfallendes Licht</strong> wird von der Oberfläche <strong>nur</strong> in einer Richtung reflektiert
+入射光仅在一个方向上被表面反射</p>
+</li>
+<li><p>Tritt bei <em>spiegelnden Oberflächen</em> auf und erzeugt <strong>Glanzlichter</strong>, die sich bei <em>geringer Lageänderung von Objekt oder Kamera verschieben</em> und das <em>Aussehen des Abbildes verändern</em>.
+在反射表面上发生并产生高光，这些高光在物体或相机位置变化很小的情况下移动，并改变图像的外观</p>
+</li>
+</ul>
+<h5 id="4-1-9-1-2-diffuse-reflexion">4.1.9.1.2 Diffuse Reflexion</h5>
+<ul>
+<li><p>Das Licht wird von der Oberfläche <strong>in alle Richtungen gleichmäßig gestreut</strong>
+光从各个方向均匀地散射到表面</p>
+</li>
+<li><p>Eine <em>komplett diffuse Oberfläche</em> nennt man auch <strong>Lambert-Strahler</strong>
+完全漫射的表面也称为Lambert辐射器</p>
+</li>
+</ul>
+<p>Die <em>meisten Oberflächen</em> weisen ein <strong>gemischtes Streuverhalten</strong> auf, z.B lackierte Metalloberflächen.
+大多数表面具有混合散射行为，例如涂漆的金属表面</p>
+<h3 id="4-1-10-arten-6-">4.1.10 Arten (6)</h3>
+<p>Durch eine <strong>geeinete Wahl der Beleuchtung</strong>, können <em>störende Reflexionen vermieden</em> werden
+通过精心挑选的照明选择，可以避免干扰反射</p>
+<ul>
+<li><strong>Diffuse Beleuchtung</strong> Beleuchtung die <em>aus allen Richtungen</em> erfolgt
+散射照明来自各个方向的照明</li>
+<li><strong>Dombeleuchtung</strong> Homogene Beleuchtung (örtlich konstantes Beleuchtungsfeld) die <em>aus allen Richtungen</em> erfolgt
+圆顶照明来自所有方向的均匀照明（局部恒定照明场）</li>
+<li><strong>Koaxiale Beleuchtung</strong> Gerichtete Beleuchtung bei der die Beleuchtungsrichtung mit der <em>Beobachtungsrichtung übereinstimmt</em>
+同轴照明定向照明，其中照明方向与观察方向一致</li>
+<li><strong>Telezentrische Beleuchtung</strong> Beleuchtung eines Objektes <em>durch parallel verlaufende Lichtstrahlen</em>
+远心照明平行光束照射物体</li>
+<li><strong>Dunkelfeldbeleuchtung</strong> Nur an aufgabenrelevante Strukturen eines Objektes erfolgt eine Lichtablenkung in das Abbildungssystem. <em>Alles andere bleibt dunkel</em>
+暗场照明仅在物体的任务相关结构处是对成像系统的光偏转. 其他一切都保持黑暗</li>
+<li><strong>Hellfeldbeleuchtung</strong> Der <em>überwiegende Teil einer Objektoberfläche</em> bewirkt eine <em>Lichtablenkung in das Abbildungssystem</em> und erscheint <em>hell</em>.
+明场照明绝大多数物体表面会导致光线偏转进入成像系统并显得明亮</li>
+</ul>
+<h4 id="4-1-10-1-auflicht-durchlicht">4.1.10.1 Auflicht &amp; Durchlicht</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_11.png"></p>
+<p>Alle Arten der Beleuchtung können im Durchlicht oder Auflicht erfolgen
+所有类型的照明都可以在透射或反射光下完成</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_12.png"></p>
+<ul>
+<li><strong>Durchlicht 逆光</strong> Beleuchtung die sich in dem Halbraum befindet, der der Abbildungsoptik bezüglich des Objekts <strong>gegenüberliegt</strong> (“hinter dem Objekt”)
+位于与成像光学器件相对的物体的半球中的透射光照射（“物体后面”）</li>
+</ul>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_13.png"></p>
+<ul>
+<li><strong>Auflicht 顺光</strong> Beleuchtung bei der sich die Lichtquelle bezüglich des Objekts im <strong>gleichen Halbraum</strong> wie die Abbildungsoptik befindet (“vor dem Objekt”).
+入射光照明，其中光源相对于物体处于与成像光学器件相同的半空间中（“在物体前面”）</li>
+</ul>
+<hr>
+<h2 id="4-2-digitales-bild">4.2 Digitales Bild</h2>
+<h3 id="4-2-1-bildaufnahmesysteme">4.2.1 Bildaufnahmesysteme</h3>
+<p><strong>Unterscheidung</strong> zwischen</p>
+<ul>
+<li>passiven und aktiven Kamerasystemen</li>
+<li>unterschiedliche Frequenzbereiche</li>
+</ul>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_14.png"></p>
+<p><strong>Beispiele</strong></p>
+<ul>
+<li>Digitale Kamera<ul>
+<li>Flächen- &amp; Zeilenkamera</li>
+<li>S/W- &amp; Farbkamera</li>
+</ul>
+</li>
+<li>Wärmebildkamera (Infrarotkamera)</li>
+<li>Time-of-Flight Kamera</li>
+<li>Dynamic Vision Sensor “Silicon Retina”</li>
+</ul>
+<h3 id="4-2-2-bildaufzeichnung">4.2.2 Bildaufzeichnung</h3>
+<h4 id="4-2-2-1-prinzip">4.2.2.1 Prinzip</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_15.png"></p>
+<p>Zur digitalen Bildaufzeichnung werden Festkörperbildsensoren (vorwiegend auf Silicium-Basis), also als flächenhafte Matrix angeordnete integrierte Halbleiterbauelemente meist auf Grundlage der CCD (Charge Coupled Devices, ladungsgekoppelte Bauelemente) eingesetzt
+对于数字图像记录，固态图像传感器（主要是基于硅的），即布置为平面矩阵的集成半导体器件，主要用于CCD（电荷耦合器件，电荷耦合器件）的基础上。</p>
+<p>Ein <strong>CCD-Bildsensor</strong> arbeitet in drei Stufen: CCD图像传感器分三个阶段运行：</p>
+<ul>
+<li><p>Die <strong>Photonen</strong> des einfallenden Lichtes werden <strong>in</strong> eine zur Beleuchtungsstärke proportionale <strong>Ladungsmenge umgewandelt</strong> (photoelektrischer Effekt). Integrationsdauer ≈ 20ms
+入射光的光子转换成与照度成比例的量（光电效应）</p>
+</li>
+<li><p>Während der <strong>Auslesephase (&lt; 1ms)</strong> erfolgt der <em>sequentielle Transfer</em> der angesammelten Ladungspakete längs einer Kette von MOS-Kondensatoren (Transferregister, vertikales Schieberegister) zu einer <strong>Auslesestufe</strong>
+在读出阶段（&lt;1 ms）期间，累积电荷包沿着一系列MOS电容（传输寄存器，垂直移位寄存器）顺序传输到读出阶段</p>
+</li>
+<li><p>In der <strong>Auslesestufe</strong> wird <em>jedes ankommende Ladungspaket</em> in ein zur Ladungsmenge proportionales <strong>Spannungssignal</strong> umgewandelt (A/D-Wandler).
+在读出阶段，每个输入电荷包被转换成与电荷量成比例的电压信号（A / D转换器）</p>
+</li>
+</ul>
+<h3 id="4-2-3-farbaufnahmen">4.2.3 Farbaufnahmen</h3>
+<h4 id="4-2-3-1-bayer-filter">4.2.3.1 Bayer-Filter</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_16.png"></p>
+<p>Der <strong>Bayer-Filter</strong> ist ein Farbfilter für einen Fotosensor, angeordnet ähnlich wie ein <em>Schachbrett</em>, das zu 50% aus Grün, und je zu 25% aus Rot und Blau besteht
+拜耳滤光片是一种用于光电传感器的滤色片，类似于棋盘，由50％绿色和25％红色和蓝色组成</p>
+<p>Die <strong>fehlenden Farbwerte</strong> der nicht belegten Pixel in den einzelnen Farbkanälen müssen über <em>Interpolation künstlich erzeugt werden</em>
+必须通过插值人工生成各个颜色通道中未占用像素的缺失颜色值</p>
+<p>Das führt zu <strong>Farbfehlern an Farbdiskontinuitäten</strong>.
+这导致颜色不连续性的颜色错误</p>
+<h4 id="4-2-3-2-foveon-x3-direkt-bildsensor">4.2.3.2 Foveon X3 Direkt-Bildsensor</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_17.png"></p>
+<p>Der <strong>Foveon X3</strong> ist ein CMOS-Bildsensor bestehend aus <em>drei übereinander liegenden Schichten</em> von <strong>Photodioden</strong>
+Foveon X3是一个CMOS图像传感器，由三层光电二极管组成</p>
+<p>Die <strong>unterschiedlichen Wellenlängen der Farben</strong> Rot, Grün und Blau werden in <em>unterschiedlichen Schichten absorbiert</em>, weil <strong>langwelliges (rotes) Licht</strong> in Silizium eine <em>größere Eindringtiefe</em> hat, als kurzwelliges (blaues)
+红色，绿色和蓝色的不同波长被不同层吸收，因为硅中的长波（红色）光比短波（蓝色）具有更大的穿透深度</p>
+<p><strong>Jede der Schichten</strong> hat eine eigene <em>Farbempfindlichkeit</em>
+每个层都有自己的颜色灵敏度</p>
+<p>Damit läßt sich die <strong>Farbempfindlichkeit</strong> des menschlichen Auges <em>relativ gut nachbilden</em>.
+这允许人眼的颜色灵敏度相对较好地模拟</p>
+<h4 id="4-2-3-3-vergleich">4.2.3.3 Vergleich</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_18.png"></p>
+<h3 id="4-2-4-digitalisierungsfehler">4.2.4 Digitalisierungsfehler</h3>
+<h4 id="4-2-4-1-berblick">4.2.4.1 Überblick</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_19.png"></p>
+<ul>
+<li><strong>Bildrauschen</strong>
+噪音</li>
+<li><strong>Smear &amp; Blooming</strong>: Überschreiten der Ladungsmenge durch Überbelichtung
+涂抹和绽放：超过曝光过度导致的电荷量</li>
+<li><strong>Moiré-Muster</strong>: Periodische Muster auf einem Objekt werden durch eine unzureichend aufgelöste Bildrasterung unterabgetastet. Dadurch entstehen “Scheinmuster” (Aliasing-Effekt)
+莫尔条纹图案：对象上的周期性图案由未充分分辨的帧进行二次采样. 这会产生“虚拟图案”（锯齿效果）</li>
+<li><strong>Kompressionsartefakte</strong> z.B. jpeg 压缩</li>
+</ul>
+<h4 id="4-2-4-2-bildrauschen">4.2.4.2 Bildrauschen</h4>
+<p>Gründe für das <strong>Bildrauschen bei CCD Sensoren</strong>
+CCD传感器产生图像噪声的原因</p>
+<ul>
+<li><strong>Pixelvariabler Dunkelstrom</strong> (z.B. wegen Temperaturerhöhung) und Rauschen des <strong>Ausleseverstärkers</strong>
+像素可变暗电流（例如， 由于温度升高）和读出放大器的噪声</li>
+<li><strong>Photonenrauschen</strong>, <strong>Schwankungen der Lichtempfindlichkeit</strong> eines Pixels
+光子噪声，像素光敏度的变化</li>
+<li><strong>Pixelgröße und Pixelabstand</strong>: Je kleiner desto mehr Rauschen
+像素大小和像素间距：噪点越小</li>
+<li><strong>Quantisierungsrauschen</strong>
+量化</li>
+<li><strong>Belichtungszeit</strong>: Je länger desto mehr Rauschen
+快门速度：噪音越大</li>
+</ul>
+<h3 id="4-2-5-funktionsprinzipien-unterschiedlicher-typen">4.2.5 Funktionsprinzipien unterschiedlicher Typen</h3>
+<h4 id="4-2-5-1-zeilenkamera">4.2.5.1 Zeilenkamera</h4>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_20.png"></p>
+<p><strong>Eigenschaften/Besonderheiten</strong> 属性/特殊功能</p>
+<ul>
+<li>Auflösungen bis 12288 Pixel in X-Richtung, in <strong>Transport-Richtung</strong> ist die <em>Auflösung (fast) beliebig</em>
+在X方向上分辨率高达12288像素，在传输方向上，分辨率（几乎）是任意的</li>
+<li>Kamera oder Objekt <strong>muss bewegt</strong> werden
+需要移动相机或物体</li>
+<li>einfachere <strong>Beleuchtung</strong> (linienförmig)
+更简单的照明（线性）</li>
+<li>höhere <strong>Beleuchtungsstärken</strong> realisierbar
+可以实现更高的照度水平</li>
+<li>Einsatz vor allem bei <strong>Scannern und Inspektion</strong>
+尤其适用于扫描仪和检查</li>
+</ul>
+<h4 id="4-2-5-2-aktive-kamera">4.2.5.2 Aktive Kamera</h4>
+<h5 id="4-2-5-2-1-laufzeitkamera">4.2.5.2.1 Laufzeitkamera</h5>
+<h6 id="4-2-5-2-1-1-pmd-photonic-mixer-device-">4.2.5.2.1.1 PMD (Photonic Mixer Device)</h6>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_21.png"></p>
+<p>Funktionsweise eines <strong>PMD-Sensors</strong> (Photonic Mixer Device)
+PMD传感器的工作原理（光子混合器装置）</p>
+<ul>
+<li>Gepulstes oder moduliertes Infrarotlicht
+脉冲或调制红外光</li>
+<li>Zeit- oder Phasenverschiebung zwischen emittierten und empfangenen Lichtwellen kodiert Entfernung
+发射和接收光波之间的时间或相移编码距离</li>
+</ul>
+<p><strong>Gepulstes Infrarotlicht</strong>
+脉冲红外线</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_23.png">
+(n -- 折射率)</p>
+<p>Licht durchläuft 1cm in 33ps. D.h., <strong>sehr genaue Zeitmessungen nötig</strong>. 光线以33ps的速度穿过1cm。 也就是说，需要非常精确的时间测量。</p>
+<p><strong>Moduliertes Infrarotlicht</strong> 调制红外光</p>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_24.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_22.png"></p>
+<p><strong>Fehlerquellen</strong>
+错误的来源</p>
+<ul>
+<li><strong>Mehrdeutigkeiten</strong> bei periodischem Trägersignal
+具有周期性载波信号的模糊度</li>
+<li><strong>Intensitätsabhängigkeit</strong> der Tiefenmessung
+深度测量的强度依赖性</li>
+<li><strong>Umgebungslicht</strong> beeinflusst Messqualität
+环境光会影响测量质量</li>
+<li><strong>Bewegungsartefakte</strong>
+运动伪影</li>
+<li><strong>Temperaturdrift</strong></li>
+<li><strong>Rauschen</strong></li>
+</ul>
+<h5 id="4-2-5-2-2-strukturiertes-licht">4.2.5.2.2 Strukturiertes Licht</h5>
+<h6 id="4-2-5-2-2-1-prinzip">4.2.5.2.2.1 Prinzip</h6>
+<p>Funktionsweise bei <strong>strukturiertem Licht</strong>
+使用结构光</p>
+<ul>
+<li>Projektor <strong>projiziert ein Lichtmuster</strong> einer bestimmten Struktur und Wellenlänge auf eine Szene
+投影仪将特定结构和波长的光投射到场景上</li>
+<li>Aus dem <strong>Abbild der Verzerrung des Lichtmusters</strong> wird das 3D Profil rekonstruiert (Verschiebung der Punkte)
+从光图案的扭曲图像中，重建3D轮廓（点的位移）</li>
+<li><strong>Voraussetzung</strong> für fehlerfreie Rekonstruktionen ist ein <em>vollständig kalibriertes Projektor-Kamera-System</em>.
+无差错重建的先决条件是完全校准的投影仪 - 相机系统</li>
+</ul>
+<h6 id="4-2-5-2-2-2-beispiel-microsoft-kinect">4.2.5.2.2.2 Beispiel Microsoft KINECT</h6>
+<p><strong>Funktionsprinzip</strong> des KINECT-Sensors
+KINECT传感器的功能原理</p>
+<ul>
+<li>Infrarot Laser Projektor <strong>projiziert ein Punktmuster</strong> auf die Szene
+红外激光投影仪将点图案投射到场景上</li>
+<li><strong>Infrarotkamera (CMOS)</strong> mit einer Auflösung 1600x1200 Pixel nimmt das Abbild der <strong>Verzerrung des Punktemusters</strong> auf
+分辨率为1600x1200像素的红外相机（CMOS）拾取点图案失真的图像</li>
+<li><strong>Farbkamera (CMOS)</strong> mit einer Auflösung von 640x480 Pixel nimmt die <strong>Bestrahlungsstärke</strong> des sichtbaren Lichts auf
+分辨率为640x480像素的彩色相机（CMOS）吸收可见光的辐照度</li>
+<li><strong>Verzerrtes Punktemuster und Bestrahlungsstärken</strong> werden zu einem farbgetreuen 3D Profil mit einer Bildwiederholrate von 30 Hz in Echtzeit umgerechnet
+扭曲的点图案和辐照度被实时转换为帧频为30 Hz的真彩色3D轮廓</li>
+</ul>
+<p><img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_25.png">
+<img alt="Alt text" src="C:\Users\wlkob\OneDrive\Projects\Notizen MD\Bildverarbeitung für Ingenieure\Figures\Folien_4_26.png"></p>
+<p><strong>Fehlerquellen</strong>
+错误的来源</p>
+<ul>
+<li><strong>Infrarotes Umgebungslicht</strong> beeinflusst Messqualität
+红外环境光影响测量质量</li>
+<li>Es kann <strong>nur ein Sensor</strong> gleichzeitig betrieben werden (ansonsten Mehrdeutigkeiten durch mehrere Muster).
+只能同时操作一个传感器（否则会出现多种模式的模糊）</li>
+</ul></body>
+</html>
